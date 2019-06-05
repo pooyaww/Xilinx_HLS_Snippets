@@ -1,0 +1,12 @@
+
+****** Vivado v2018.3.1 (64-bit)
+  **** SW Build 2489853 on Tue Mar 26 04:18:30 MDT 2019
+  **** IP Build 2486929 on Tue Mar 26 06:44:21 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+CRITICAL WARNING: [Common 17-741] No write access right to the local Tcl store at '/home/amiri/.Xilinx/Vivado/2018.3/XilinxTclStore'. XilinxTclStore is reverted to the installation area. If you want to use local Tcl Store, please change the access right and relaunch Vivado.
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2018.3/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Wed Jun  5 12:05:31 2019...

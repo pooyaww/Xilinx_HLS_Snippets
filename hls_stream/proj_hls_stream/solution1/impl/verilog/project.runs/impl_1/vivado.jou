@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3.1 (64-bit)
+# SW Build 2489853 on Tue Mar 26 04:18:30 MDT 2019
+# IP Build 2486929 on Tue Mar 26 06:44:21 MDT 2019
+# Start of session at: Wed Jun  5 12:06:42 2019
+# Process ID: 8142
+# Current directory: /home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.runs/impl_1
+# Command line: vivado -log bd_0_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source bd_0_wrapper.tcl -notrace
+# Log file: /home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.runs/impl_1/bd_0_wrapper.vdi
+# Journal file: /home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source bd_0_wrapper.tcl -notrace

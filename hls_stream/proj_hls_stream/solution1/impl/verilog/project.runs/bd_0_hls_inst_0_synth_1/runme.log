@@ -1,0 +1,680 @@
+
+*** Running vivado
+    with args -log bd_0_hls_inst_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_0_hls_inst_0.tcl
+
+
+****** Vivado v2018.3.1 (64-bit)
+  **** SW Build 2489853 on Tue Mar 26 04:18:30 MDT 2019
+  **** IP Build 2486929 on Tue Mar 26 06:44:21 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+CRITICAL WARNING: [Common 17-741] No write access right to the local Tcl store at '/home/amiri/.Xilinx/Vivado/2018.3/XilinxTclStore'. XilinxTclStore is reverted to the installation area. If you want to use local Tcl Store, please change the access right and relaunch Vivado.
+source bd_0_hls_inst_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2018.3/data/ip'.
+Command: synth_design -top bd_0_hls_inst_0 -part xc7z020clg484-1 -directive sdx_optimization_effort_high -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 7725 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1408.973 ; gain = 14.867 ; free physical = 58084 ; free virtual = 62653
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'bd_0_hls_inst_0' [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/synth/bd_0_hls_inst_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'bytestrm_dwordproc' [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/bytestrm_dwordproc.v:12]
+INFO: [Synth 8-6157] synthesizing module 'bytestrm_dwordproc_e' [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/bytestrm_dwordproc_e.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 1'b1 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/bytestrm_dwordproc_e.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'bytestrm_dwordproc_e' (1#1) [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/bytestrm_dwordproc_e.v:10]
+INFO: [Synth 8-6157] synthesizing module 'Block_proc' [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/Block_proc.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 1'b1 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/Block_proc.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'Block_proc' (2#1) [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/Block_proc.v:10]
+INFO: [Synth 8-6157] synthesizing module 'strm_bytes2words' [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/strm_bytes2words.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 2'b01 
+	Parameter ap_ST_fsm_state2 bound to: 2'b10 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/strm_bytes2words.v:56]
+INFO: [Synth 8-6155] done synthesizing module 'strm_bytes2words' (3#1) [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/strm_bytes2words.v:10]
+INFO: [Synth 8-6157] synthesizing module 'decimate_strm' [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/decimate_strm.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 3'b001 
+	Parameter ap_ST_fsm_pp0_stage0 bound to: 3'b010 
+	Parameter ap_ST_fsm_state6 bound to: 3'b100 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/decimate_strm.v:53]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/decimate_strm.v:358]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/decimate_strm.v:404]
+INFO: [Synth 8-6155] done synthesizing module 'decimate_strm' (4#1) [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/decimate_strm.v:10]
+INFO: [Synth 8-6157] synthesizing module 'strm_words2bytes' [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/strm_words2bytes.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 3'b001 
+	Parameter ap_ST_fsm_state2 bound to: 3'b010 
+	Parameter ap_ST_fsm_state3 bound to: 3'b100 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/strm_words2bytes.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'strm_words2bytes' (5#1) [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/strm_words2bytes.v:10]
+INFO: [Synth 8-6157] synthesizing module 'fifo_w16_d2_A' [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/fifo_w16_d2_A.v:45]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2'b10 
+INFO: [Synth 8-6157] synthesizing module 'fifo_w16_d2_A_shiftReg' [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/fifo_w16_d2_A.v:11]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w16_d2_A_shiftReg' (6#1) [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/fifo_w16_d2_A.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w16_d2_A' (7#1) [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/fifo_w16_d2_A.v:45]
+INFO: [Synth 8-6157] synthesizing module 'fifo_w14_d3_A' [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/fifo_w14_d3_A.v:45]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 14 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3'b011 
+INFO: [Synth 8-6157] synthesizing module 'fifo_w14_d3_A_shiftReg' [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/fifo_w14_d3_A.v:11]
+	Parameter DATA_WIDTH bound to: 14 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3'b011 
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w14_d3_A_shiftReg' (8#1) [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/fifo_w14_d3_A.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w14_d3_A' (9#1) [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/fifo_w14_d3_A.v:45]
+INFO: [Synth 8-6157] synthesizing module 'fifo_w14_d2_A' [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/fifo_w14_d2_A.v:45]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 14 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2'b10 
+INFO: [Synth 8-6157] synthesizing module 'fifo_w14_d2_A_shiftReg' [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/fifo_w14_d2_A.v:11]
+	Parameter DATA_WIDTH bound to: 14 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w14_d2_A_shiftReg' (10#1) [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/fifo_w14_d2_A.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w14_d2_A' (11#1) [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/fifo_w14_d2_A.v:45]
+INFO: [Synth 8-6157] synthesizing module 'fifo_w32_d4_A' [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/fifo_w32_d4_A.v:45]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3'b100 
+INFO: [Synth 8-6157] synthesizing module 'fifo_w32_d4_A_shiftReg' [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/fifo_w32_d4_A.v:11]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3'b100 
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w32_d4_A_shiftReg' (12#1) [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/fifo_w32_d4_A.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w32_d4_A' (13#1) [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/fifo_w32_d4_A.v:45]
+INFO: [Synth 8-6157] synthesizing module 'fifo_w32_d2_A' [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/fifo_w32_d2_A.v:45]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2'b10 
+INFO: [Synth 8-6157] synthesizing module 'fifo_w32_d2_A_shiftReg' [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/fifo_w32_d2_A.v:11]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w32_d2_A_shiftReg' (14#1) [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/fifo_w32_d2_A.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w32_d2_A' (15#1) [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/fifo_w32_d2_A.v:45]
+INFO: [Synth 8-6157] synthesizing module 'start_for_Block_proc_U0' [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/start_for_Block_proc_U0.v:45]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2'b10 
+INFO: [Synth 8-6157] synthesizing module 'start_for_Block_proc_U0_shiftReg' [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/start_for_Block_proc_U0.v:11]
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'start_for_Block_proc_U0_shiftReg' (16#1) [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/start_for_Block_proc_U0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'start_for_Block_proc_U0' (17#1) [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/start_for_Block_proc_U0.v:45]
+INFO: [Synth 8-6157] synthesizing module 'start_for_strm_words2bytes_U0' [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/start_for_strm_words2bytes_U0.v:45]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3'b011 
+INFO: [Synth 8-6157] synthesizing module 'start_for_strm_words2bytes_U0_shiftReg' [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/start_for_strm_words2bytes_U0.v:11]
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3'b011 
+INFO: [Synth 8-6155] done synthesizing module 'start_for_strm_words2bytes_U0_shiftReg' (18#1) [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/start_for_strm_words2bytes_U0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'start_for_strm_words2bytes_U0' (19#1) [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/start_for_strm_words2bytes_U0.v:45]
+WARNING: [Synth 8-6014] Unused sequential element bytestrm_dwordproc_e_U0_ap_ready_count_reg was removed.  [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/bytestrm_dwordproc.v:368]
+WARNING: [Synth 8-6014] Unused sequential element strm_bytes2words_U0_ap_ready_count_reg was removed.  [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/bytestrm_dwordproc.v:376]
+INFO: [Synth 8-6155] done synthesizing module 'bytestrm_dwordproc' (20#1) [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/bytestrm_dwordproc.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0_hls_inst_0' (21#1) [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/synth/bd_0_hls_inst_0.v:58]
+WARNING: [Synth 8-3331] design decimate_strm has unconnected port strm_len[1]
+WARNING: [Synth 8-3331] design decimate_strm has unconnected port strm_len[0]
+WARNING: [Synth 8-3331] design Block_proc has unconnected port strm_len_dout[1]
+WARNING: [Synth 8-3331] design Block_proc has unconnected port strm_len_dout[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1455.723 ; gain = 61.617 ; free physical = 58091 ; free virtual = 62662
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1455.723 ; gain = 61.617 ; free physical = 58092 ; free virtual = 62662
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1455.723 ; gain = 61.617 ; free physical = 58092 ; free virtual = 62662
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/constraints/bytestrm_dwordproc_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/constraints/bytestrm_dwordproc_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1838.746 ; gain = 0.000 ; free physical = 57770 ; free virtual = 62382
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1838.746 ; gain = 0.000 ; free physical = 57770 ; free virtual = 62382
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1838.746 ; gain = 0.000 ; free physical = 57769 ; free virtual = 62382
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1838.746 ; gain = 444.641 ; free physical = 57852 ; free virtual = 62465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1838.746 ; gain = 444.641 ; free physical = 57852 ; free virtual = 62465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  /home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1838.746 ; gain = 444.641 ; free physical = 57852 ; free virtual = 62465
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5544] ROM "tmp_1_i_fu_151_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5544] ROM "tmp_3_i3_fu_181_p2" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_5_i_fu_212_p2" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5544] ROM "tmp_2_i_i_fu_155_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_full_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_full_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_full_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1838.746 ; gain = 444.641 ; free physical = 57844 ; free virtual = 62457
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     34 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 4     
+	   2 Input      2 Bit       Adders := 5     
++---XORs : 
+	   2 Input      1 Bit         XORs := 3     
++---Registers : 
+	               34 Bit    Registers := 2     
+	               32 Bit    Registers := 3     
+	               24 Bit    Registers := 2     
+	               16 Bit    Registers := 7     
+	               14 Bit    Registers := 4     
+	               12 Bit    Registers := 1     
+	                8 Bit    Registers := 4     
+	                3 Bit    Registers := 8     
+	                2 Bit    Registers := 9     
+	                1 Bit    Registers := 41    
++---Muxes : 
+	   2 Input     34 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input     14 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 7     
+	   4 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 59    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module bytestrm_dwordproc_e 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module Block_proc 
+Detailed RTL Component Info : 
++---Registers : 
+	               14 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     14 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 3     
+Module strm_bytes2words 
+Detailed RTL Component Info : 
++---Registers : 
+	               24 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module decimate_strm 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     34 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               34 Bit    Registers := 2     
+	               32 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   2 Input     34 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+Module strm_words2bytes 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
++---Registers : 
+	               24 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	               14 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module fifo_w16_d2_A_shiftReg 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+Module fifo_w16_d2_A 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 4     
+Module fifo_w14_d3_A 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module fifo_w14_d2_A_shiftReg 
+Detailed RTL Component Info : 
++---Registers : 
+	               14 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     14 Bit        Muxes := 1     
+Module fifo_w14_d2_A 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 4     
+Module fifo_w32_d4_A 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module fifo_w32_d2_A_shiftReg 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module fifo_w32_d2_A 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 4     
+Module start_for_Block_proc_U0_shiftReg 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module start_for_Block_proc_U0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 4     
+Module start_for_strm_words2bytes_U0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module bytestrm_dwordproc 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 3     
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-4471] merging register 'Block_proc_U0/ap_CS_fsm_reg[0:0]' into 'bytestrm_dwordproc_e_U0/ap_CS_fsm_reg[0:0]' [/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/43e3/hdl/verilog/Block_proc.v:80]
+INFO: [Synth 8-5544] ROM "decimate_strm_U0/tmp_5_i_fu_212_p2" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "strm_words2bytes_U0/tmp_2_i_i_fu_155_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-3886] merging instance 'inst/decimate_strm_U0/tmp_8_reg_234_reg[0]' (FD) to 'inst/strm_words2bytes_U0/tmp_cast_i_i_reg_187_reg[16]'
+INFO: [Synth 8-3886] merging instance 'inst/decimate_strm_U0/tmp_8_reg_234_reg[1]' (FD) to 'inst/strm_words2bytes_U0/tmp_cast_i_i_reg_187_reg[16]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\decimate_strm_U0/ap_done_reg_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\strm_bytes2words_U0/ap_done_reg_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\bytestrm_dwordproc_e_U0/ap_CS_fsm_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\bytestrm_dwordproc_e_U0/ap_done_reg_reg )
+INFO: [Synth 8-3886] merging instance 'inst/strm_words2bytes_U0/tmp_cast_i_i_reg_187_reg[14]' (FD) to 'inst/strm_words2bytes_U0/tmp_cast_i_i_reg_187_reg[16]'
+INFO: [Synth 8-3886] merging instance 'inst/strm_words2bytes_U0/tmp_cast_i_i_reg_187_reg[15]' (FD) to 'inst/strm_words2bytes_U0/tmp_cast_i_i_reg_187_reg[16]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\strm_words2bytes_U0/tmp_cast_i_i_reg_187_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\strm_words2bytes_U0/ap_done_reg_reg )
+INFO: [Synth 8-3886] merging instance 'inst/strm_len_c_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[0][4]' (FDE) to 'inst/strm_len_c2_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[0][4]'
+INFO: [Synth 8-3886] merging instance 'inst/strm_len_c_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[1][4]' (FDE) to 'inst/strm_len_c2_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[1][4]'
+INFO: [Synth 8-3886] merging instance 'inst/strm_len_c_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[0][6]' (FDE) to 'inst/strm_len_c2_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[0][6]'
+INFO: [Synth 8-3886] merging instance 'inst/strm_len_c_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[1][6]' (FDE) to 'inst/strm_len_c2_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[1][6]'
+INFO: [Synth 8-3886] merging instance 'inst/strm_len_c_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[0][7]' (FDE) to 'inst/strm_len_c2_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[0][7]'
+INFO: [Synth 8-3886] merging instance 'inst/strm_len_c_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[1][7]' (FDE) to 'inst/strm_len_c2_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[1][7]'
+INFO: [Synth 8-3886] merging instance 'inst/strm_len_c_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[0][5]' (FDE) to 'inst/strm_len_c2_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[0][5]'
+INFO: [Synth 8-3886] merging instance 'inst/strm_len_c_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[1][5]' (FDE) to 'inst/strm_len_c2_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[1][5]'
+INFO: [Synth 8-3886] merging instance 'inst/strm_len_c_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[0][9]' (FDE) to 'inst/strm_len_c2_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[0][9]'
+INFO: [Synth 8-3886] merging instance 'inst/strm_len_c_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[1][9]' (FDE) to 'inst/strm_len_c2_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[1][9]'
+INFO: [Synth 8-3886] merging instance 'inst/strm_len_c_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[0][10]' (FDE) to 'inst/strm_len_c2_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[0][10]'
+INFO: [Synth 8-3886] merging instance 'inst/strm_len_c_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[1][10]' (FDE) to 'inst/strm_len_c2_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[1][10]'
+INFO: [Synth 8-3886] merging instance 'inst/strm_len_c_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[0][8]' (FDE) to 'inst/strm_len_c2_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[0][8]'
+INFO: [Synth 8-3886] merging instance 'inst/strm_len_c_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[1][8]' (FDE) to 'inst/strm_len_c2_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[1][8]'
+INFO: [Synth 8-3886] merging instance 'inst/strm_len_c_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[0][12]' (FDE) to 'inst/strm_len_c2_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[0][12]'
+INFO: [Synth 8-3886] merging instance 'inst/strm_len_c_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[1][12]' (FDE) to 'inst/strm_len_c2_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[1][12]'
+INFO: [Synth 8-3886] merging instance 'inst/strm_len_c_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[0][13]' (FDE) to 'inst/strm_len_c2_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[0][13]'
+INFO: [Synth 8-3886] merging instance 'inst/strm_len_c_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[1][13]' (FDE) to 'inst/strm_len_c2_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[1][13]'
+INFO: [Synth 8-3886] merging instance 'inst/strm_len_c_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[0][11]' (FDE) to 'inst/strm_len_c2_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[0][11]'
+INFO: [Synth 8-3886] merging instance 'inst/strm_len_c_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[1][11]' (FDE) to 'inst/strm_len_c2_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[1][11]'
+INFO: [Synth 8-3886] merging instance 'inst/strm_len_c_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[0][15]' (FDE) to 'inst/strm_len_c2_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[0][15]'
+INFO: [Synth 8-3886] merging instance 'inst/strm_len_c_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[1][15]' (FDE) to 'inst/strm_len_c2_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[1][15]'
+INFO: [Synth 8-3886] merging instance 'inst/strm_len_c_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[0][14]' (FDE) to 'inst/strm_len_c2_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[0][14]'
+INFO: [Synth 8-3886] merging instance 'inst/strm_len_c_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[1][14]' (FDE) to 'inst/strm_len_c2_U/U_fifo_w16_d2_A_ram/SRL_SIG_reg[1][14]'
+INFO: [Synth 8-3886] merging instance 'inst/strm_words2bytes_U0/tmp_cast_i_i_reg_187_reg[0]' (FDE) to 'inst/strm_words2bytes_U0/tmp_cast_i_i_reg_187_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\strm_words2bytes_U0/tmp_cast_i_i_reg_187_reg[1] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1838.746 ; gain = 444.641 ; free physical = 57820 ; free virtual = 62437
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1838.746 ; gain = 444.641 ; free physical = 57684 ; free virtual = 62309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1838.746 ; gain = 444.641 ; free physical = 57669 ; free virtual = 62294
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1838.746 ; gain = 444.641 ; free physical = 57670 ; free virtual = 62294
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1838.746 ; gain = 444.641 ; free physical = 57670 ; free virtual = 62295
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1838.746 ; gain = 444.641 ; free physical = 57670 ; free virtual = 62295
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1838.746 ; gain = 444.641 ; free physical = 57670 ; free virtual = 62295
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1838.746 ; gain = 444.641 ; free physical = 57670 ; free virtual = 62295
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1838.746 ; gain = 444.641 ; free physical = 57670 ; free virtual = 62295
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1838.746 ; gain = 444.641 ; free physical = 57670 ; free virtual = 62295
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Dynamic Shift Register Report:
++------------+----------------+--------+------------+--------+---------+--------+--------+--------+
+|Module Name | RTL Name       | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
++------------+----------------+--------+------------+--------+---------+--------+--------+--------+
+|dsrl        | SRL_SIG_reg[2] | 14     | 14         | 14     | 0       | 0      | 0      | 0      | 
+|dsrl__1     | SRL_SIG_reg[3] | 32     | 32         | 32     | 0       | 0      | 0      | 0      | 
+|dsrl__2     | SRL_SIG_reg[2] | 1      | 1          | 1      | 0       | 0      | 0      | 0      | 
+|dsrl__3     | SRL_SIG_reg[3] | 32     | 32         | 32     | 0       | 0      | 0      | 0      | 
++------------+----------------+--------+------------+--------+---------+--------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |    27|
+|2     |LUT1   |     5|
+|3     |LUT2   |    15|
+|4     |LUT3   |    42|
+|5     |LUT4   |    61|
+|6     |LUT5   |    59|
+|7     |LUT6   |   119|
+|8     |SRL16E |    44|
+|9     |FDRE   |   462|
+|10    |FDSE   |    22|
++------+-------+------+
+
+Report Instance Areas: 
++------+------------------------------------+------------------------------+------+
+|      |Instance                            |Module                        |Cells |
++------+------------------------------------+------------------------------+------+
+|1     |top                                 |                              |   856|
+|2     |  inst                              |bytestrm_dwordproc            |   856|
+|3     |    Block_proc_U0                   |Block_proc                    |    17|
+|4     |    bytes_out_len_loc_c_U           |fifo_w14_d3_A                 |    25|
+|5     |      U_fifo_w14_d3_A_ram           |fifo_w14_d3_A_shiftReg        |    14|
+|6     |    bytestrm_dwordproc_e_U0         |bytestrm_dwordproc_e          |     3|
+|7     |    decimate_strm_U0                |decimate_strm                 |   238|
+|8     |    dwords_in_len_cast_l_U          |fifo_w14_d2_A                 |    47|
+|9     |      U_fifo_w14_d2_A_ram           |fifo_w14_d2_A_shiftReg        |    37|
+|10    |    dwordstrm_in_V_U                |fifo_w32_d4_A                 |    45|
+|11    |      U_fifo_w32_d4_A_ram           |fifo_w32_d4_A_shiftReg        |    34|
+|12    |    dwordstrm_out_V_U               |fifo_w32_d2_A                 |   104|
+|13    |      U_fifo_w32_d2_A_ram           |fifo_w32_d2_A_shiftReg        |    96|
+|14    |    start_for_Block_proc_U0_U       |start_for_Block_proc_U0       |    14|
+|15    |    start_for_strm_words2bytes_U0_U |start_for_strm_words2bytes_U0 |    12|
+|16    |    strm_bytes2words_U0             |strm_bytes2words              |   121|
+|17    |    strm_len_c2_U                   |fifo_w16_d2_A                 |    80|
+|18    |      U_fifo_w16_d2_A_ram           |fifo_w16_d2_A_shiftReg        |    72|
+|19    |    strm_len_c_U                    |fifo_w16_d2_A_0               |    11|
+|20    |    strm_words2bytes_U0             |strm_words2bytes              |   137|
++------+------------------------------------+------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1838.746 ; gain = 444.641 ; free physical = 57670 ; free virtual = 62295
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1838.746 ; gain = 61.617 ; free physical = 57729 ; free virtual = 62354
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1838.746 ; gain = 444.641 ; free physical = 57729 ; free virtual = 62354
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 27 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1849.754 ; gain = 0.000 ; free physical = 57668 ; free virtual = 62293
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+117 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1849.754 ; gain = 455.781 ; free physical = 57724 ; free virtual = 62350
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1849.754 ; gain = 0.000 ; free physical = 57724 ; free virtual = 62350
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP bd_0_hls_inst_0, cache-ID = cff031eae4d78661
+INFO: [Coretcl 2-1174] Renamed 19 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1873.766 ; gain = 0.000 ; free physical = 57711 ; free virtual = 62338
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/amiri/Documents/Snippets/HLS/hls_stream/proj_hls_stream/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file bd_0_hls_inst_0_utilization_synth.rpt -pb bd_0_hls_inst_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Jun  5 12:06:09 2019...

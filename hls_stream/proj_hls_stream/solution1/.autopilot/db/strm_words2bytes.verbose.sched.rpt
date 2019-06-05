@@ -1,0 +1,161 @@
+
+
+================================================================
+== Vivado HLS Report for 'strm_words2bytes'
+================================================================
+* Date:           Wed Jun  5 12:04:34 2019
+
+* Version:        2018.3.1 (Build 2489210 on Tue Mar 26 04:40:43 MDT 2019)
+* Project:        proj_hls_stream
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|     3.957|        0.62|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    1|  745|    1|  745|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+-----+-----+----------+-----------+-----------+---------+----------+
+        |                    |  Latency  | Iteration|  Initiation Interval  |   Trip  |          |
+        |      Loop Name     | min | max |  Latency |  achieved |   target  |  Count  | Pipelined|
+        +--------------------+-----+-----+----------+-----------+-----------+---------+----------+
+        |- WORDS2BYTES_LOOP  |    0|  744|         2|          -|          -| 0 ~ 372 |    no    |
+        +--------------------+-----+-----+----------+-----------+-----------+---------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond_i_i)
+3 --> 
+	2  / true
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.18>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%p_0_i_i = alloca i24"   --->   Operation 4 'alloca' 'p_0_i_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %words_in_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str15, i32 0, i32 0, [1 x i8]* @p_str16, [1 x i8]* @p_str17, [1 x i8]* @p_str18, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str19, [1 x i8]* @p_str20)"   --->   Operation 5 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %bytes_out_V, [5 x i8]* @p_str, i32 1, i32 1, [5 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind"   --->   Operation 6 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i14* %bytes_out_len_loc, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str75, i32 0, i32 0, [1 x i8]* @p_str76, [1 x i8]* @p_str77, [1 x i8]* @p_str78, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str79, [11 x i8]* @ScalarProp_str)"   --->   Operation 7 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (2.18ns)   --->   "%bytes_out_len_loc_re = call i14 @_ssdm_op_Read.ap_fifo.i14P(i14* %bytes_out_len_loc)"   --->   Operation 8 'read' 'bytes_out_len_loc_re' <Predicate = true> <Delay = 2.18> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %bytes_out_V, [5 x i8]* @p_str, i32 1, i32 1, [5 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind"   --->   Operation 9 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%tmp_cast_i_i = zext i14 %bytes_out_len_loc_re to i17" [./bytestrm_util.h:143->bytestrm_dwordproc.cpp:129]   --->   Operation 10 'zext' 'tmp_cast_i_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (1.76ns)   --->   "br label %0" [./bytestrm_util.h:143->bytestrm_dwordproc.cpp:129]   --->   Operation 11 'br' <Predicate = true> <Delay = 1.76>
+
+State 2 <SV = 1> <Delay = 3.95>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%i_i_i = phi i16 [ 0, %entry ], [ %i, %_ZrSILi32ELb0EER11ap_int_baseIXT_EXT0_EES2_i.exit.i.i ]"   --->   Operation 12 'phi' 'i_i_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%p_0_i_i_load = load i24* %p_0_i_i" [./bytestrm_util.h:143->bytestrm_dwordproc.cpp:129]   --->   Operation 13 'load' 'p_0_i_i_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%p_0_cast_i_i = zext i24 %p_0_i_i_load to i32" [./bytestrm_util.h:143->bytestrm_dwordproc.cpp:129]   --->   Operation 14 'zext' 'p_0_cast_i_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%tmp = trunc i16 %i_i_i to i2" [./bytestrm_util.h:143->bytestrm_dwordproc.cpp:129]   --->   Operation 15 'trunc' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%i_cast_i_i = zext i16 %i_i_i to i17" [./bytestrm_util.h:143->bytestrm_dwordproc.cpp:129]   --->   Operation 16 'zext' 'i_cast_i_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (2.42ns)   --->   "%exitcond_i_i = icmp eq i17 %i_cast_i_i, %tmp_cast_i_i" [./bytestrm_util.h:143->bytestrm_dwordproc.cpp:129]   --->   Operation 17 'icmp' 'exitcond_i_i' <Predicate = true> <Delay = 2.42> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 18 [1/1] (2.07ns)   --->   "%i = add i16 1, %i_i_i" [./bytestrm_util.h:143->bytestrm_dwordproc.cpp:129]   --->   Operation 18 'add' 'i' <Predicate = true> <Delay = 2.07> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "br i1 %exitcond_i_i, label %.exit, label %1" [./bytestrm_util.h:143->bytestrm_dwordproc.cpp:129]   --->   Operation 19 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([17 x i8]* @p_str3) nounwind" [./bytestrm_util.h:143->bytestrm_dwordproc.cpp:129]   --->   Operation 20 'specloopname' <Predicate = (!exitcond_i_i)> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%tmp_5_i_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([17 x i8]* @p_str3)" [./bytestrm_util.h:143->bytestrm_dwordproc.cpp:129]   --->   Operation 21 'specregionbegin' 'tmp_5_i_i' <Predicate = (!exitcond_i_i)> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i32 0, i32 372, i32 186, [1 x i8]* @p_str2) nounwind" [./bytestrm_util.h:144->bytestrm_dwordproc.cpp:129]   --->   Operation 22 'speclooptripcount' <Predicate = (!exitcond_i_i)> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.95ns)   --->   "%tmp_2_i_i = icmp eq i2 %tmp, 0" [./bytestrm_util.h:145->bytestrm_dwordproc.cpp:129]   --->   Operation 23 'icmp' 'tmp_2_i_i' <Predicate = (!exitcond_i_i)> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 24 [1/1] (1.76ns)   --->   "br i1 %tmp_2_i_i, label %2, label %_ZrSILi32ELb0EER11ap_int_baseIXT_EXT0_EES2_i.exit.i.i" [./bytestrm_util.h:145->bytestrm_dwordproc.cpp:129]   --->   Operation 24 'br' <Predicate = (!exitcond_i_i)> <Delay = 1.76>
+ST_2 : Operation 25 [1/1] (2.18ns)   --->   "%tmp_4 = call i32 @_ssdm_op_Read.ap_fifo.volatile.i32P(i32* %words_in_V)" [./bytestrm_util.h:146->bytestrm_dwordproc.cpp:129]   --->   Operation 25 'read' 'tmp_4' <Predicate = (!exitcond_i_i & tmp_2_i_i)> <Delay = 2.18> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_2 : Operation 26 [1/1] (1.76ns)   --->   "br label %_ZrSILi32ELb0EER11ap_int_baseIXT_EXT0_EES2_i.exit.i.i" [./bytestrm_util.h:148->bytestrm_dwordproc.cpp:129]   --->   Operation 26 'br' <Predicate = (!exitcond_i_i & tmp_2_i_i)> <Delay = 1.76>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%p_0_1_i_i = phi i32 [ %tmp_4, %2 ], [ %p_0_cast_i_i, %1 ]"   --->   Operation 27 'phi' 'p_0_1_i_i' <Predicate = (!exitcond_i_i)> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%tmpbyte = trunc i32 %p_0_1_i_i to i8" [./bytestrm_util.h:150->bytestrm_dwordproc.cpp:129]   --->   Operation 28 'trunc' 'tmpbyte' <Predicate = (!exitcond_i_i)> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%tmpword_V_1_cast_i_i = call i24 @_ssdm_op_PartSelect.i24.i32.i32.i32(i32 %p_0_1_i_i, i32 8, i32 31)" [./bytestrm_util.h:151->bytestrm_dwordproc.cpp:129]   --->   Operation 29 'partselect' 'tmpword_V_1_cast_i_i' <Predicate = (!exitcond_i_i)> <Delay = 0.00>
+ST_2 : Operation 30 [2/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i8P(i8* %bytes_out_V, i8 %tmpbyte)" [./bytestrm_util.h:156->bytestrm_dwordproc.cpp:129]   --->   Operation 30 'write' <Predicate = (!exitcond_i_i)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "store i24 %tmpword_V_1_cast_i_i, i24* %p_0_i_i" [./bytestrm_util.h:151->bytestrm_dwordproc.cpp:129]   --->   Operation 31 'store' <Predicate = (!exitcond_i_i)> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "ret void"   --->   Operation 32 'ret' <Predicate = (exitcond_i_i)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 33 [1/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i8P(i8* %bytes_out_V, i8 %tmpbyte)" [./bytestrm_util.h:156->bytestrm_dwordproc.cpp:129]   --->   Operation 33 'write' <Predicate = true> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([17 x i8]* @p_str3, i32 %tmp_5_i_i)" [./bytestrm_util.h:157->bytestrm_dwordproc.cpp:129]   --->   Operation 34 'specregionend' 'empty' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 35 [1/1] (0.00ns)   --->   "br label %0" [./bytestrm_util.h:143->bytestrm_dwordproc.cpp:129]   --->   Operation 35 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 0.625ns.
+
+ <State 1>: 2.19ns
+The critical path consists of the following:
+	fifo read on port 'bytes_out_len_loc' [8]  (2.19 ns)
+
+ <State 2>: 3.96ns
+The critical path consists of the following:
+	fifo read on port 'words_in_V' (./bytestrm_util.h:146->bytestrm_dwordproc.cpp:129) [28]  (2.19 ns)
+	multiplexor before 'phi' operation ('inval') with incoming values : ('p_0_cast_i_i', ./bytestrm_util.h:143->bytestrm_dwordproc.cpp:129) ('tmp', ./bytestrm_util.h:146->bytestrm_dwordproc.cpp:129) [31]  (1.77 ns)
+	'phi' operation ('inval') with incoming values : ('p_0_cast_i_i', ./bytestrm_util.h:143->bytestrm_dwordproc.cpp:129) ('tmp', ./bytestrm_util.h:146->bytestrm_dwordproc.cpp:129) [31]  (0 ns)
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

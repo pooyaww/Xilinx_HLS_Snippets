@@ -1,0 +1,364 @@
+==============================================================
+File generated on Wed May 22 14:56:40 CEST 2019
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+File generated on Wed May 22 14:57:39 CEST 2019
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'bytestrm_dwordproc.cpp' ... 
+WARNING: [HLS 214-111] Streams will behave like static variables inside a dataflow region: bytestrm_dwordproc.cpp:113:20
+WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file bytestrm_dwordproc.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 451.094 ; gain = 6.273 ; free physical = 2332 ; free virtual = 57806
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 451.094 ; gain = 6.273 ; free physical = 2332 ; free virtual = 57806
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 451.094 ; gain = 6.273 ; free physical = 2328 ; free virtual = 57802
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 451.094 ; gain = 6.273 ; free physical = 2326 ; free virtual = 57801
+INFO: [XFORM 203-712] Applying dataflow to function 'bytestrm_dwordproc', detected/extracted 5 process function(s): 
+	 'bytestrm_dwordproc.entry23'
+	 'Block__proc'
+	 'strm_bytes2words<int, (unsigned char)4, false>'
+	 'decimate_strm'
+	 'strm_words2bytes<int, (unsigned char)4, false>'.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 578.965 ; gain = 134.145 ; free physical = 2304 ; free virtual = 57779
+INFO: [XFORM 203-541] Flattening a loop nest 'STREAM_LOOP' (bytestrm_dwordproc.cpp:143:40) in function 'decimate_strm'.
+WARNING: [XFORM 203-631] Renaming function 'strm_words2bytes<int, (unsigned char)4, false>' to 'strm_words2bytes' (./bytestrm_util.h:143:43)
+WARNING: [XFORM 203-631] Renaming function 'strm_bytes2words<int, (unsigned char)4, false>' to 'strm_bytes2words' (./bytestrm_util.h:116:43)
+WARNING: [XFORM 203-631] Renaming function 'bytestrm_dwordproc.entry23' to 'bytestrm_dwordproc.e' 
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 578.965 ; gain = 134.145 ; free physical = 2268 ; free virtual = 57744
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'bytestrm_dwordproc' ...
+WARNING: [SYN 201-103] Legalizing function name 'bytestrm_dwordproc.e' to 'bytestrm_dwordproc_e'.
+WARNING: [SYN 201-103] Legalizing function name 'Block__proc' to 'Block_proc'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bytestrm_dwordproc_e' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 12.12 seconds; current allocated memory: 118.372 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0 seconds; current allocated memory: 118.441 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 118.505 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0 seconds; current allocated memory: 118.577 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'strm_bytes2words' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 118.681 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 1 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 118.822 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'decimate_strm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'STREAM_LOOP_DECIMATE_LOOP'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 118.956 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 119.131 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'strm_words2bytes' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 119.234 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 119.388 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bytestrm_dwordproc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 119.488 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 119.720 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bytestrm_dwordproc_e' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bytestrm_dwordproc_e'.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 119.886 MB.
+==============================================================
+File generated on Wed May 22 15:01:05 CEST 2019
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'bytestrm_dwordproc.cpp' ... 
+WARNING: [HLS 214-111] Streams will behave like static variables inside a dataflow region: bytestrm_dwordproc.cpp:113:20
+WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file bytestrm_dwordproc.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 451.086 ; gain = 6.273 ; free physical = 2212 ; free virtual = 57687
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 451.086 ; gain = 6.273 ; free physical = 2212 ; free virtual = 57687
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 451.086 ; gain = 6.273 ; free physical = 2209 ; free virtual = 57684
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 451.086 ; gain = 6.273 ; free physical = 2207 ; free virtual = 57682
+INFO: [XFORM 203-712] Applying dataflow to function 'bytestrm_dwordproc', detected/extracted 5 process function(s): 
+	 'bytestrm_dwordproc.entry23'
+	 'Block__proc'
+	 'strm_bytes2words<int, (unsigned char)4, false>'
+	 'decimate_strm'
+	 'strm_words2bytes<int, (unsigned char)4, false>'.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 578.957 ; gain = 134.145 ; free physical = 2181 ; free virtual = 57657
+INFO: [XFORM 203-541] Flattening a loop nest 'STREAM_LOOP' (bytestrm_dwordproc.cpp:143:40) in function 'decimate_strm'.
+WARNING: [XFORM 203-631] Renaming function 'strm_words2bytes<int, (unsigned char)4, false>' to 'strm_words2bytes' (./bytestrm_util.h:143:43)
+WARNING: [XFORM 203-631] Renaming function 'strm_bytes2words<int, (unsigned char)4, false>' to 'strm_bytes2words' (./bytestrm_util.h:116:43)
+WARNING: [XFORM 203-631] Renaming function 'bytestrm_dwordproc.entry23' to 'bytestrm_dwordproc.e' 
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 578.957 ; gain = 134.145 ; free physical = 2143 ; free virtual = 57619
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'bytestrm_dwordproc' ...
+WARNING: [SYN 201-103] Legalizing function name 'bytestrm_dwordproc.e' to 'bytestrm_dwordproc_e'.
+WARNING: [SYN 201-103] Legalizing function name 'Block__proc' to 'Block_proc'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bytestrm_dwordproc_e' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 12.01 seconds; current allocated memory: 118.421 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0 seconds; current allocated memory: 118.487 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 118.537 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 118.611 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'strm_bytes2words' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 118.715 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 1 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 118.856 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'decimate_strm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'STREAM_LOOP_DECIMATE_LOOP'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 119.007 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 119.181 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'strm_words2bytes' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 119.287 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 119.441 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bytestrm_dwordproc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 119.524 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 119.756 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bytestrm_dwordproc_e' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bytestrm_dwordproc_e'.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 119.923 MB.
+==============================================================
+File generated on Wed Jun 05 12:04:22 CEST 2019
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3.1 (64-bit)
+SW Build 2489853 on Tue Mar 26 04:18:30 MDT 2019
+IP Build 2486929 on Tue Mar 26 06:44:21 MDT 2019
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'bytestrm_dwordproc.cpp' ... 
+WARNING: [HLS 214-111] Streams will behave like static variables inside a dataflow region: bytestrm_dwordproc.cpp:113:20
+WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file bytestrm_dwordproc.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 451.094 ; gain = 6.277 ; free physical = 59533 ; free virtual = 63454
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 451.094 ; gain = 6.277 ; free physical = 59533 ; free virtual = 63454
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 451.094 ; gain = 6.277 ; free physical = 59530 ; free virtual = 63450
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 451.094 ; gain = 6.277 ; free physical = 59528 ; free virtual = 63449
+INFO: [XFORM 203-712] Applying dataflow to function 'bytestrm_dwordproc', detected/extracted 5 process function(s): 
+	 'bytestrm_dwordproc.entry23'
+	 'Block__proc'
+	 'strm_bytes2words<int, (unsigned char)4, false>'
+	 'decimate_strm'
+	 'strm_words2bytes<int, (unsigned char)4, false>'.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 578.961 ; gain = 134.145 ; free physical = 59506 ; free virtual = 63427
+INFO: [XFORM 203-541] Flattening a loop nest 'STREAM_LOOP' (bytestrm_dwordproc.cpp:143:40) in function 'decimate_strm'.
+WARNING: [XFORM 203-631] Renaming function 'strm_words2bytes<int, (unsigned char)4, false>' to 'strm_words2bytes' (./bytestrm_util.h:143:43)
+WARNING: [XFORM 203-631] Renaming function 'strm_bytes2words<int, (unsigned char)4, false>' to 'strm_bytes2words' (./bytestrm_util.h:116:43)
+WARNING: [XFORM 203-631] Renaming function 'bytestrm_dwordproc.entry23' to 'bytestrm_dwordproc.e' 
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 578.961 ; gain = 134.145 ; free physical = 59470 ; free virtual = 63392
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'bytestrm_dwordproc' ...
+WARNING: [SYN 201-103] Legalizing function name 'bytestrm_dwordproc.e' to 'bytestrm_dwordproc_e'.
+WARNING: [SYN 201-103] Legalizing function name 'Block__proc' to 'Block_proc'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bytestrm_dwordproc_e' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 12.14 seconds; current allocated memory: 118.432 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0 seconds; current allocated memory: 118.498 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 118.547 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0 seconds; current allocated memory: 118.620 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'strm_bytes2words' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 118.728 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 1 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0 seconds; current allocated memory: 118.869 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'decimate_strm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'STREAM_LOOP_DECIMATE_LOOP'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 119.006 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 119.179 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'strm_words2bytes' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 119.283 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 119.437 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bytestrm_dwordproc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 119.536 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 119.769 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bytestrm_dwordproc_e' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bytestrm_dwordproc_e'.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 119.922 MB.

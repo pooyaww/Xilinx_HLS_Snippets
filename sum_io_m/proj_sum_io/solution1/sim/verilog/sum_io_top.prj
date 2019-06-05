@@ -1,0 +1,4 @@
+sv work "glbl.v"
+sv xil_defaultlib "sum_io_top.v"
+sv xil_defaultlib "sum_io_top.autotb.v"
+

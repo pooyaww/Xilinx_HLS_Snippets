@@ -1,0 +1,8 @@
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'amiri' on host 'rocky.samba.cg.uni-saarland.de' (Linux_x86_64 version 4.18.0-21-generic) on Wed Jun 05 14:23:52 CEST 2019
+INFO: [HLS 200-10] On os Ubuntu 18.04.2 LTS
+INFO: [HLS 200-10] In directory '/home/amiri/Documents/Snippets/HLS/sum_io_m/proj_sum_io/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_amiri/458221559737433012835
+INFO: [APCC 202-1] APCC is done.

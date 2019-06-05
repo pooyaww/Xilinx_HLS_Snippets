@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"sum_io_top": {
+			"proto_instances": {
+			}
+		}
+	}
+}

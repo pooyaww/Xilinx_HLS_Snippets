@@ -1,0 +1,65 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "sum_io",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "ap_hs",
+                "value": "",
+                "positionalBoolean": "mode"
+              },
+              {
+                "name": "port",
+                "value": "in1",
+                "positionalBoolean": "4"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "sum_io",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "ap_vld",
+                "value": "",
+                "positionalBoolean": "mode"
+              },
+              {
+                "name": "port",
+                "value": "in2",
+                "positionalBoolean": "4"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "sum_io",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "ap_hs",
+                "value": "",
+                "positionalBoolean": "mode"
+              },
+              {
+                "name": "port",
+                "value": "sum",
+                "positionalBoolean": "4"
+              }
+            ]
+          }
+        }
+      ]
+    }]}

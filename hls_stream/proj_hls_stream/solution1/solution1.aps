@@ -1,0 +1,34 @@
+<AutoPilot:solution xmlns:AutoPilot="com.autoesl.autopilot.solution">
+    <name>
+        <value string="solution1"/>
+    </name>
+    <project>
+        <value string="proj_hls_stream"/>
+    </project>
+    <targetInfo>
+        <TargetInfo value="xc7z020:clg484:-1"/>
+    </targetInfo>
+    <libraryList>
+        <library value="xilinx/zynq/zynq" name="DefaultPlatform"/>
+        <library value="xilinx/zynq/zynq_fpv6" name="DefaultPlatform"/>
+    </libraryList>
+    <clockList>
+        <clock name="default" period="5" default="false"/>
+    </clockList>
+    <config>
+        <config_compile blackbox=""/>
+        <schedule model="bytestrm_dwordproc"/>
+        <config_export format="ip_catalog"/>
+    </config>
+    <Simulation argv="">
+        <SimFlow name="cosim" setup="false" dumpTrace="none" optimizeCompile="false" ldflags="" mflags="" compiledLibrary="" reduce_diskspace="false" toolName="auto">
+            <Rtl name="systemc" active="false"/>
+            <Rtl name="verilog" active="true"/>
+            <Rtl name="vhdl" active="false"/>
+        </SimFlow>
+    </Simulation>
+    <ExportDesign askAgain="true" evaluate="true" rtl="vlog" formatName="ip_catalog">
+        <Format formatName="ip_catalog" description="" vendor="" library="" ipname="" version="1.0" driver_input_dir="" display_name="" taxonomy=""/>
+    </ExportDesign>
+</AutoPilot:solution>
+

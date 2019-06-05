@@ -1,0 +1,8 @@
+
+****** Vivado v2018.3.1 (64-bit)
+  **** SW Build 2489853 on Tue Mar 26 04:18:30 MDT 2019
+  **** IP Build 2486929 on Tue Mar 26 06:44:21 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [Common 17-206] Exiting Vivado at Wed Jun  5 14:24:11 2019...

@@ -1,0 +1,35 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x77E411757EC378FA",
+      "device": "xc7z020clg484-1",
+      "name": "hls_bd_0",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2018.3.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "hls_ip_0": ""
+    },
+    "interface_ports": {
+      "ap_ctrl": {
+        "mode": "Slave",
+        "vlnv": "xilinx.com:interface:acc_handshake_rtl:1.0"
+      }
+    },
+    "components": {
+      "hls_ip_0": {
+        "vlnv": "xilinx.com:hls:sum_io_top:1.0",
+        "xci_name": "hls_bd_0_hls_ip_0_0"
+      }
+    },
+    "interface_nets": {
+      "ap_ctrl_1": {
+        "interface_ports": [
+          "ap_ctrl",
+          "hls_ip_0/ap_ctrl"
+        ]
+      }
+    }
+  }
+}

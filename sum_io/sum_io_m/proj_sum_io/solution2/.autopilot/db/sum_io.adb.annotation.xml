@@ -1,0 +1,6 @@
+<annotationInfo>
+<item  id="12" filename="sum_io.c" linenumber="98" name="temp" contextFuncName="sum_io" moduleName="sum_io" rtlName="temp_fu_45_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="/home/amiri/Documents/Snippets/HLS/sum_io"&gt;&lt;\/item&gt;
+<item  id="13" filename="sum_io.c" linenumber="98" name="tmp_1" contextFuncName="sum_io" moduleName="sum_io" rtlName="sum_o" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="/home/amiri/Documents/Snippets/HLS/sum_io"&gt;&lt;\/item&gt;
+<item  id="15" filename="sum_io.c" linenumber="98" name="temp" contextFuncName="sum_io" moduleName="sum_io" rtlName="temp_fu_55_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="/home/amiri/Documents/Snippets/HLS/sum_io"><\/item>
+<item  id="16" filename="sum_io.c" linenumber="98" name="tmp_1" contextFuncName="sum_io" moduleName="sum_io" rtlName="tmp_1_fu_61_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="/home/amiri/Documents/Snippets/HLS/sum_io"><\/item>
+</annotationInfo>

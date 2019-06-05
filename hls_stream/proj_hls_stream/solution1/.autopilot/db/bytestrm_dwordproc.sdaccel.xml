@@ -1,0 +1,153 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'bytestrm_dwordproc'" level="0">
+<item name = "Date">Wed Jun  5 12:04:34 2019
+</item>
+<item name = "Version">2018.3.1 (Build 2489210 on Tue Mar 26 04:40:43 MDT 2019)</item>
+<item name = "Project">proj_hls_stream</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Target clock period (ns)">5.00</item>
+<item name = "Clock uncertainty (ns)">0.62</item>
+<item name = "Estimated clock period (ns)">4.375</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">6, 1490, 3, 1490, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="decimate_strm_U0">decimate_strm, 2, 376, 2, 376, none</column>
+<column name="strm_words2bytes_U0">strm_words2bytes, 1, 745, 1, 745, none</column>
+<column name="strm_bytes2words_U0">strm_bytes2words, 1, 1489, 1, 1489, none</column>
+<column name="Block_proc_U0">Block_proc, 0, 0, 0, 0, none</column>
+<column name="bytestrm_dwordproc_e_U0">bytestrm_dwordproc_e, 0, 0, 0, 0, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, 0, 32</column>
+<column name="FIFO">0, -, 30, 196</column>
+<column name="Instance">0, -, 399, 709</column>
+<column name="Memory">-, -, -, -</column>
+<column name="Multiplexer">-, -, -, 36</column>
+<column name="Register">-, -, 6, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, 1</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="Block_proc_U0">Block_proc, 0, 0, 17, 47</column>
+<column name="bytestrm_dwordproc_e_U0">bytestrm_dwordproc_e, 0, 0, 3, 38</column>
+<column name="decimate_strm_U0">decimate_strm, 0, 0, 206, 295</column>
+<column name="strm_bytes2words_U0">strm_bytes2words, 0, 0, 79, 155</column>
+<column name="strm_words2bytes_U0">strm_words2bytes, 0, 0, 94, 174</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+<column name="bytes_out_len_loc_c_U">0, 5, 26, 3, 14, 42</column>
+<column name="dwords_in_len_cast_l_U">0, 5, 26, 2, 14, 28</column>
+<column name="dwordstrm_in_V_U">0, 5, 44, 4, 32, 128</column>
+<column name="dwordstrm_out_V_U">0, 5, 44, 2, 32, 64</column>
+<column name="strm_len_c2_U">0, 5, 28, 2, 16, 32</column>
+<column name="strm_len_c_U">0, 5, 28, 2, 16, 32</column>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="bytestrm_dwordproc_e_U0_ap_ready_count">+, 0, 0, 10, 2, 1</column>
+<column name="strm_bytes2words_U0_ap_ready_count">+, 0, 0, 10, 2, 1</column>
+<column name="ap_idle">and, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_ready">and, 0, 0, 2, 1, 1</column>
+<column name="bytestrm_dwordproc_e_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="strm_bytes2words_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_bytestrm_dwordproc_e_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_strm_bytes2words_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_sync_reg_bytestrm_dwordproc_e_U0_ap_ready">9, 2, 1, 2</column>
+<column name="ap_sync_reg_strm_bytes2words_U0_ap_ready">9, 2, 1, 2</column>
+<column name="bytestrm_dwordproc_e_U0_ap_ready_count">9, 2, 2, 4</column>
+<column name="strm_bytes2words_U0_ap_ready_count">9, 2, 2, 4</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_sync_reg_bytestrm_dwordproc_e_U0_ap_ready">1, 0, 1, 0</column>
+<column name="ap_sync_reg_strm_bytes2words_U0_ap_ready">1, 0, 1, 0</column>
+<column name="bytestrm_dwordproc_e_U0_ap_ready_count">2, 0, 2, 0</column>
+<column name="strm_bytes2words_U0_ap_ready_count">2, 0, 2, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="strm_out_V_TDATA">out, 8, axis, strm_out_V, pointer</column>
+<column name="strm_out_V_TVALID">out, 1, axis, strm_out_V, pointer</column>
+<column name="strm_out_V_TREADY">in, 1, axis, strm_out_V, pointer</column>
+<column name="strm_in_V_TDATA">in, 8, axis, strm_in_V, pointer</column>
+<column name="strm_in_V_TVALID">in, 1, axis, strm_in_V, pointer</column>
+<column name="strm_in_V_TREADY">out, 1, axis, strm_in_V, pointer</column>
+<column name="strm_len">in, 16, ap_none, strm_len, scalar</column>
+<column name="ap_clk">in, 1, ap_ctrl_hs, bytestrm_dwordproc, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_hs, bytestrm_dwordproc, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, bytestrm_dwordproc, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, bytestrm_dwordproc, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, bytestrm_dwordproc, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, bytestrm_dwordproc, return value</column>
+</table>
+</item>
+</section>
+
+<section name = "Critical Path" level="0">
+<item name = "Max Delay">2.19</item>
+<item name = "Critical Path Table"><table name="Critical Path Table" hasTotal="0">
+<keys size="15">Name, Operator, Delay, Accumulated Delay, Store Source, Resource, Core, Interface, Type, Port, Array, Scope, Pointer, Callee, Phi Node</keys>
+<column name="'strm_len'">read, 0.00, 0.00, -, -, -, wire, read, &apos;strm_len&apos;, -, -, -, -, -</column>
+<column name="bytestrm_dwordproc.cpp:120">call, 2.19, 2.19, -, -, -, -, -, -, -, -, -, bytestrm_dwordproc.e, -</column>
+</table>
+</item>
+</section>
+</profile>

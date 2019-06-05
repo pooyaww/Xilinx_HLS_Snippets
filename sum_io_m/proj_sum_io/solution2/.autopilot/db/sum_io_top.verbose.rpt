@@ -1,0 +1,367 @@
+
+
+================================================================
+== Vivado HLS Report for 'sum_io_top'
+================================================================
+* Date:           Wed Jun  5 14:24:19 2019
+
+* Version:        2018.3.1 (Build 2489210 on Tue Mar 26 04:40:43 MDT 2019)
+* Project:        proj_sum_io
+* Solution:       solution2
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   4.00|     2.552|        0.50|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    1|    1|    1|    1|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------+--------+-----+-----+-----+-----+---------+
+        |                         |        |  Latency  |  Interval | Pipeline|
+        |         Instance        | Module | min | max | min | max |   Type  |
+        +-------------------------+--------+-----+-----+-----+-----+---------+
+        |StgValue_6_sum_io_fu_14  |sum_io  |    0|    0|    0|    0|   none  |
+        +-------------------------+--------+-----+-----+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       -|      -|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       1|     59|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|     24|
+|Register         |        -|      -|      34|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|      35|     83|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +-------------------------+--------+---------+-------+---+----+
+    |         Instance        | Module | BRAM_18K| DSP48E| FF| LUT|
+    +-------------------------+--------+---------+-------+---+----+
+    |StgValue_6_sum_io_fu_14  |sum_io  |        0|      0|  1|  59|
+    +-------------------------+--------+---------+-------+---+----+
+    |Total                    |        |        0|      0|  1|  59|
+    +-------------------------+--------+---------+-------+---+----+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    +-----------+----+-----------+-----+-----------+
+    |    Name   | LUT| Input Size| Bits| Total Bits|
+    +-----------+----+-----------+-----+-----------+
+    |ap_NS_fsm  |  15|          3|    1|          3|
+    |sum_fu_10  |   9|          2|   32|         64|
+    +-----------+----+-----------+-----+-----------+
+    |Total      |  24|          5|   33|         67|
+    +-----------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------+----+----+-----+-----------+
+    |    Name   | FF | LUT| Bits| Const Bits|
+    +-----------+----+----+-----+-----------+
+    |ap_CS_fsm  |   2|   0|    2|          0|
+    |sum_fu_10  |  32|   0|   32|          0|
+    +-----------+----+----+-----+-----------+
+    |Total      |  34|   0|   34|          0|
+    +-----------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------+-----+-----+------------+--------------+--------------+
+| RTL Ports| Dir | Bits|  Protocol  | Source Object|    C Type    |
++----------+-----+-----+------------+--------------+--------------+
+|ap_clk    |  in |    1| ap_ctrl_hs |  sum_io_top  | return value |
+|ap_rst    |  in |    1| ap_ctrl_hs |  sum_io_top  | return value |
+|ap_start  |  in |    1| ap_ctrl_hs |  sum_io_top  | return value |
+|ap_done   | out |    1| ap_ctrl_hs |  sum_io_top  | return value |
+|ap_idle   | out |    1| ap_ctrl_hs |  sum_io_top  | return value |
+|ap_ready  | out |    1| ap_ctrl_hs |  sum_io_top  | return value |
++----------+-----+-----+------------+--------------+--------------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 2
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%sum = alloca i32, align 4" [sum_io_top.c:6]   --->   Operation 3 'alloca' 'sum' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "store i32 30, i32* %sum, align 4" [sum_io_top.c:12]   --->   Operation 4 'store' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 2.55>
+ST_2 : Operation 5 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([11 x i8]* @sum_io_top_str) nounwind"   --->   Operation 5 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 6 [1/1] (2.55ns)   --->   "call fastcc void @sum_io(i32* %sum)" [sum_io_top.c:14]   --->   Operation 6 'call' <Predicate = true> <Delay = 2.55> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 7 [1/1] (0.00ns)   --->   "ret void" [sum_io_top.c:18]   --->   Operation 7 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 1
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+sum        (alloca       ) [ 011]
+StgValue_4 (store        ) [ 000]
+StgValue_5 (spectopmodule) [ 000]
+StgValue_6 (call         ) [ 000]
+StgValue_7 (ret          ) [ 000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1001" name="const_0">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1001" name="const_2">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1001" name="const_4">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecTopModule"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1001" name="const_6">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="sum_io_top_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1001" name="const_8">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="sum_io"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1004" name="sum_fu_10">
+<pin_list>
+<pin id="11" dir="0" index="0" bw="1" slack="0"/>
+<pin id="12" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="sum/1 "/>
+</bind>
+</comp>
+
+<comp id="14" class="1004" name="StgValue_6_sum_io_fu_14">
+<pin_list>
+<pin id="15" dir="0" index="0" bw="0" slack="0"/>
+<pin id="16" dir="0" index="1" bw="32" slack="1"/>
+<pin id="17" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="StgValue_6/2 "/>
+</bind>
+</comp>
+
+<comp id="19" class="1004" name="StgValue_4_store_fu_19">
+<pin_list>
+<pin id="20" dir="0" index="0" bw="6" slack="0"/>
+<pin id="21" dir="0" index="1" bw="32" slack="0"/>
+<pin id="22" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="StgValue_4/1 "/>
+</bind>
+</comp>
+
+<comp id="24" class="1005" name="sum_reg_24">
+<pin_list>
+<pin id="25" dir="0" index="0" bw="32" slack="0"/>
+<pin id="26" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opset="sum "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="13"><net_src comp="0" pin="0"/><net_sink comp="10" pin=0"/></net>
+
+<net id="18"><net_src comp="8" pin="0"/><net_sink comp="14" pin=0"/></net>
+
+<net id="23"><net_src comp="2" pin="0"/><net_sink comp="19" pin=0"/></net>
+
+<net id="27"><net_src comp="10" pin="1"/><net_sink comp="24" pin=0"/></net>
+
+<net id="28"><net_src comp="24" pin="1"/><net_sink comp="19" pin=1"/></net>
+
+<net id="29"><net_src comp="24" pin="1"/><net_sink comp="14" pin=1"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+		StgValue_4 : 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|-------------------------|---------|---------|
+| Operation|     Functional Unit     |    FF   |   LUT   |
+|----------|-------------------------|---------|---------|
+|   call   | StgValue_6_sum_io_fu_14 |    0    |    39   |
+|----------|-------------------------|---------|---------|
+|   Total  |                         |    0    |    39   |
+|----------|-------------------------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
++----------+--------+
+|          |   FF   |
++----------+--------+
+|sum_reg_24|   32   |
++----------+--------+
+|   Total  |   32   |
++----------+--------+
+
+* Multiplexer (MUX) list: 
+|--------|------|------|------|--------|
+|  Comp  |  Pin | Size |  BW  | S x BW |
+|--------|------|------|------|--------|
+|  Total |      |      |      |    0   |
+|--------|------|------|------|--------|
+
+
+
+* Summary:
++-----------+--------+--------+
+|           |   FF   |   LUT  |
++-----------+--------+--------+
+|  Function |    0   |   39   |
+|   Memory  |    -   |    -   |
+|Multiplexer|    -   |    -   |
+|  Register |   32   |    -   |
++-----------+--------+--------+
+|   Total   |   32   |   39   |
++-----------+--------+--------+
