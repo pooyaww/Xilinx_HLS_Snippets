@@ -1,8 +1,0 @@
-INFO: [SIM 2] *************** CSIM start ***************
-INFO: [SIM 4] CSIM will launch CLANG as the compiler.
-   Compiling ../../../../bytestrm_dwordproc_test.cpp in debug mode
-   Compiling ../../../../bytestrm_dwordproc.cpp in debug mode
-   Generating csim.exe
-*** Test Passes ***
-INFO: [SIM 1] CSim done with 0 errors.
-INFO: [SIM 3] *************** CSIM finish ***************

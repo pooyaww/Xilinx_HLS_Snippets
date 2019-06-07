@@ -11,8 +11,11 @@ void sum_io_top () {
     inB    = 20;
     sum    = 30;
 
-    if (sum_io(inA, inB, &sum));
-        goto next;
+    //    if (sum_io(inA, inB, &sum));
+    //        goto next;
+
+    sum_io(inA, inB, &sum);
+    goto next;
 
 next: result = sum_io_2(inA, inB, &sum);
 }

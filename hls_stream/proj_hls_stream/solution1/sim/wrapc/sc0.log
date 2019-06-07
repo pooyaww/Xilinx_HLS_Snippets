@@ -1,5 +1,0 @@
-   Build using "/opt/Xilinx/Vivado/2018.3/tps/lnx64/gcc-6.2.0/bin/g++"
-   Compiling apatb_bytestrm_dwordproc.cpp
-   Compiling bytestrm_dwordproc.cpp_pre.cpp.tb.cpp
-   Compiling bytestrm_dwordproc_test.cpp_pre.cpp.tb.cpp
-   Generating cosim.tv.exe

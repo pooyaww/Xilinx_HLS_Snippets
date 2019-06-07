@@ -1,4 +1,0 @@
-<annotationInfo>
-<item  id="6" filename="sum_io.c" linenumber="7" name="sum_assign" contextFuncName="sum_io" moduleName="sum_io" rtlName="sum_o" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="/home/amiri/Documents/Snippets/HLS/sum_io_m"&gt;&lt;\/item&gt;
-<item  id="4" filename="sum_io_top.c" linenumber="14" name="" contextFuncName="sum_io_top" moduleName="sum_io_top" rtlName="StgValue_6_sum_io_fu_14" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/amiri/Documents/Snippets/HLS/sum_io_m"><\/item>
-</annotationInfo>

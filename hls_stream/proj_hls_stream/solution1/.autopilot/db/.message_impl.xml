@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Messages>
-	<Message severity="WARNING" prefix="[HLS 200-483]" key="HLS 200-483" tag="" content="The &apos;export_design -evaluate verilog&apos; command is deprecated and will be removed in a future release. Use &apos;export_design -flow impl -rtl verilog&apos; as its replacement."/>
-	<Message severity="INFO" prefix="[IMPL 213-8]" key="IMPL_8_1776" tag="" content="Exporting RTL as a Vivado IP."/>
-	<Message severity="INFO" prefix="[IMPL 213-8]" key="IMPL_8_1773" tag="" content="Starting RTL evaluation using Vivado ..."/>
-	<Message severity="INFO" prefix="[HLS 200-112]" key="HLS_112_964" tag="" content="Total elapsed time: 190.14 seconds; peak allocated memory: 123.253 MB."/>
-	<Message severity="INFO" prefix="[Common 17-206]" key="Common 17-206" tag="" content="Exiting vivado_hls at Wed Jun  5 12:07:32 2019..."/>
-</Messages>

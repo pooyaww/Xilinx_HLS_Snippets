@@ -1,7 +1,0 @@
-Running: xsim.dir/sum_io_top/xsimk -simmode gui -wdb sum_io_top.wdb -simrunnum 0 -socket 38559
-Design successfully loaded
-Design Loading Memory Usage: 43628 KB (Peak: 43748 KB)
-Design Loading CPU Usage: 0 ms
-Simulation completed
-Simulation Memory Usage: 137920 KB (Peak: 190900 KB)
-Simulation CPU Usage: 0 ms

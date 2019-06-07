@@ -6,14 +6,14 @@
 
 source /opt/Xilinx/Vivado/2018.3/scripts/vivado_hls/hls.tcl -notrace
 INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/vivado_hls'
-INFO: [HLS 200-10] For user 'amiri' on host 'rocky.samba.cg.uni-saarland.de' (Linux_x86_64 version 4.18.0-21-generic) on Wed Jun 05 14:23:14 CEST 2019
+INFO: [HLS 200-10] For user 'amiri' on host 'rocky.samba.cg.uni-saarland.de' (Linux_x86_64 version 4.18.0-21-generic) on Wed Jun 05 17:35:07 CEST 2019
 INFO: [HLS 200-10] On os Ubuntu 18.04.2 LTS
 INFO: [HLS 200-10] In directory '/home/amiri/Documents/Snippets/HLS/sum_io_m'
-INFO: [HLS 200-10] Creating and opening project '/home/amiri/Documents/Snippets/HLS/sum_io_m/proj_sum_io'.
+INFO: [HLS 200-10] Opening and resetting project '/home/amiri/Documents/Snippets/HLS/sum_io_m/proj_sum_io'.
 INFO: [HLS 200-10] Adding design file 'sum_io.c' to the project
 INFO: [HLS 200-10] Adding design file 'sum_io_top.c' to the project
 INFO: [HLS 200-10] Adding test bench file 'dummy_tb.c' to the project
-INFO: [HLS 200-10] Creating and opening solution '/home/amiri/Documents/Snippets/HLS/sum_io_m/proj_sum_io/solution1'.
+INFO: [HLS 200-10] Opening and resetting solution '/home/amiri/Documents/Snippets/HLS/sum_io_m/proj_sum_io/solution1'.
 INFO: [HLS 200-10] Cleaning up the solution database.
 INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 4ns.
@@ -21,24 +21,24 @@ INFO: [SIM 211-2] *************** CSIM start ***************
 INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
    Compiling(apcc) ../../../../dummy_tb.c in debug mode
 INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
-INFO: [HLS 200-10] For user 'amiri' on host 'rocky.samba.cg.uni-saarland.de' (Linux_x86_64 version 4.18.0-21-generic) on Wed Jun 05 14:23:15 CEST 2019
+INFO: [HLS 200-10] For user 'amiri' on host 'rocky.samba.cg.uni-saarland.de' (Linux_x86_64 version 4.18.0-21-generic) on Wed Jun 05 17:35:09 CEST 2019
 INFO: [HLS 200-10] On os Ubuntu 18.04.2 LTS
 INFO: [HLS 200-10] In directory '/home/amiri/Documents/Snippets/HLS/sum_io_m/proj_sum_io/solution1/csim/build'
-INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_amiri/451891559737395622287
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_amiri/516231559748909233118
 INFO: [APCC 202-1] APCC is done.
    Compiling(apcc) ../../../../sum_io.c in debug mode
 INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
-INFO: [HLS 200-10] For user 'amiri' on host 'rocky.samba.cg.uni-saarland.de' (Linux_x86_64 version 4.18.0-21-generic) on Wed Jun 05 14:23:20 CEST 2019
+INFO: [HLS 200-10] For user 'amiri' on host 'rocky.samba.cg.uni-saarland.de' (Linux_x86_64 version 4.18.0-21-generic) on Wed Jun 05 17:35:14 CEST 2019
 INFO: [HLS 200-10] On os Ubuntu 18.04.2 LTS
 INFO: [HLS 200-10] In directory '/home/amiri/Documents/Snippets/HLS/sum_io_m/proj_sum_io/solution1/csim/build'
-INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_amiri/452531559737400577820
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_amiri/516871559748914188351
 INFO: [APCC 202-1] APCC is done.
    Compiling(apcc) ../../../../sum_io_top.c in debug mode
 INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
-INFO: [HLS 200-10] For user 'amiri' on host 'rocky.samba.cg.uni-saarland.de' (Linux_x86_64 version 4.18.0-21-generic) on Wed Jun 05 14:23:25 CEST 2019
+INFO: [HLS 200-10] For user 'amiri' on host 'rocky.samba.cg.uni-saarland.de' (Linux_x86_64 version 4.18.0-21-generic) on Wed Jun 05 17:35:19 CEST 2019
 INFO: [HLS 200-10] On os Ubuntu 18.04.2 LTS
 INFO: [HLS 200-10] In directory '/home/amiri/Documents/Snippets/HLS/sum_io_m/proj_sum_io/solution1/csim/build'
-INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_amiri/453171559737405563470
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_amiri/517511559748919172294
 INFO: [APCC 202-1] APCC is done.
    Generating csim.exe
 INFO: [SIM 211-1] CSim done with 0 errors.
@@ -46,18 +46,18 @@ INFO: [SIM 211-3] *************** CSIM finish ***************
 INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
 INFO: [HLS 200-10] Analyzing design file 'sum_io.c' ... 
 INFO: [HLS 200-10] Analyzing design file 'sum_io_top.c' ... 
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 451.094 ; gain = 6.277 ; free physical = 57897 ; free virtual = 62999
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 451.094 ; gain = 6.277 ; free physical = 57897 ; free virtual = 62999
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 451.090 ; gain = 6.277 ; free physical = 57280 ; free virtual = 62608
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 451.090 ; gain = 6.277 ; free physical = 57280 ; free virtual = 62608
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 451.094 ; gain = 6.277 ; free physical = 57897 ; free virtual = 62999
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 451.090 ; gain = 6.277 ; free physical = 57280 ; free virtual = 62608
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [XFORM 203-602] Inlining function 'sum_io' into 'sum_io_top' (sum_io_top.c:14) automatically.
-INFO: [XFORM 203-602] Inlining function 'sum_io_2' into 'sum_io_top' (sum_io_top.c:17) automatically.
+INFO: [XFORM 203-602] Inlining function 'sum_io' into 'sum_io_top' (sum_io_top.c:17) automatically.
+INFO: [XFORM 203-602] Inlining function 'sum_io_2' into 'sum_io_top' (sum_io_top.c:20) automatically.
 WARNING: [SYNCHK 200-77] The top function 'sum_io_top' (sum_io_top.c:3) has no outputs. Possible cause(s) are: (1) Output parameters are passed by value; (2) intended outputs (parameters or global variables) are never written; (3) there are infinite loops.
 INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 451.094 ; gain = 6.277 ; free physical = 57897 ; free virtual = 62999
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 578.961 ; gain = 134.145 ; free physical = 57878 ; free virtual = 62981
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 578.961 ; gain = 134.145 ; free physical = 57885 ; free virtual = 62988
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 451.090 ; gain = 6.277 ; free physical = 57280 ; free virtual = 62608
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 578.957 ; gain = 134.145 ; free physical = 57261 ; free virtual = 62590
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 578.957 ; gain = 134.145 ; free physical = 57268 ; free virtual = 62596
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'sum_io_top' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -65,20 +65,20 @@ INFO: [HLS 200-42] -- Implementing module 'sum_io_top'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 23.66 seconds; current allocated memory: 60.507 MB.
+INFO: [HLS 200-111]  Elapsed time: 23.61 seconds; current allocated memory: 60.562 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 60.537 MB.
+INFO: [HLS 200-111]  Elapsed time: 0 seconds; current allocated memory: 60.592 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'sum_io_top' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-500] Setting interface mode on function 'sum_io_top' to 'ap_ctrl_hs'.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'sum_io_top'.
-INFO: [HLS 200-111]  Elapsed time: 0 seconds; current allocated memory: 60.572 MB.
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 578.961 ; gain = 134.145 ; free physical = 57880 ; free virtual = 62983
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 60.658 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 578.957 ; gain = 134.145 ; free physical = 57264 ; free virtual = 62592
 INFO: [SYSC 207-301] Generating SystemC RTL for sum_io_top.
 INFO: [VHDL 208-304] Generating VHDL RTL for sum_io_top.
 INFO: [VLOG 209-307] Generating Verilog RTL for sum_io_top.
@@ -88,30 +88,30 @@ INFO: [COSIM 212-14] Instrumenting C test bench ...
    Compiling apatb_sum_io_top.cpp
    Compiling (apcc) sum_io.c_pre.c.tb.c
 INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
-INFO: [HLS 200-10] For user 'amiri' on host 'rocky.samba.cg.uni-saarland.de' (Linux_x86_64 version 4.18.0-21-generic) on Wed Jun 05 14:23:45 CEST 2019
+INFO: [HLS 200-10] For user 'amiri' on host 'rocky.samba.cg.uni-saarland.de' (Linux_x86_64 version 4.18.0-21-generic) on Wed Jun 05 17:35:38 CEST 2019
 INFO: [HLS 200-10] On os Ubuntu 18.04.2 LTS
 INFO: [HLS 200-10] In directory '/home/amiri/Documents/Snippets/HLS/sum_io_m/proj_sum_io/solution1/sim/wrapc'
 clang: warning: argument unused during compilation: '-fno-builtin-isinf'
 clang: warning: argument unused during compilation: '-fno-builtin-isnan'
-INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_amiri/456981559737425211356
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_amiri/521311559748938722921
 INFO: [APCC 202-1] APCC is done.
    Compiling (apcc) dummy_tb.c_pre.c.tb.c
 INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
-INFO: [HLS 200-10] For user 'amiri' on host 'rocky.samba.cg.uni-saarland.de' (Linux_x86_64 version 4.18.0-21-generic) on Wed Jun 05 14:23:49 CEST 2019
+INFO: [HLS 200-10] For user 'amiri' on host 'rocky.samba.cg.uni-saarland.de' (Linux_x86_64 version 4.18.0-21-generic) on Wed Jun 05 17:35:42 CEST 2019
 INFO: [HLS 200-10] On os Ubuntu 18.04.2 LTS
 INFO: [HLS 200-10] In directory '/home/amiri/Documents/Snippets/HLS/sum_io_m/proj_sum_io/solution1/sim/wrapc'
 clang: warning: argument unused during compilation: '-fno-builtin-isinf'
 clang: warning: argument unused during compilation: '-fno-builtin-isnan'
-INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_amiri/457601559737429095509
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_amiri/521931559748942604714
 INFO: [APCC 202-1] APCC is done.
    Compiling (apcc) sum_io_top.c_pre.c.tb.c
 INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
-INFO: [HLS 200-10] For user 'amiri' on host 'rocky.samba.cg.uni-saarland.de' (Linux_x86_64 version 4.18.0-21-generic) on Wed Jun 05 14:23:52 CEST 2019
+INFO: [HLS 200-10] For user 'amiri' on host 'rocky.samba.cg.uni-saarland.de' (Linux_x86_64 version 4.18.0-21-generic) on Wed Jun 05 17:35:46 CEST 2019
 INFO: [HLS 200-10] On os Ubuntu 18.04.2 LTS
 INFO: [HLS 200-10] In directory '/home/amiri/Documents/Snippets/HLS/sum_io_m/proj_sum_io/solution1/sim/wrapc'
 clang: warning: argument unused during compilation: '-fno-builtin-isinf'
 clang: warning: argument unused during compilation: '-fno-builtin-isnan'
-INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_amiri/458221559737433012835
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_amiri/522551559748946452197
 INFO: [APCC 202-1] APCC is done.
    Generating cosim.tv.exe
 INFO: [COSIM 212-302] Starting C TB testing ... 
@@ -148,7 +148,7 @@ Built simulation snapshot sum_io_top
     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
 source /home/amiri/Documents/Snippets/HLS/sum_io_m/proj_sum_io/solution1/sim/verilog/xsim.dir/sum_io_top/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Wed Jun  5 14:23:58 2019...
+INFO: [Common 17-206] Exiting Webtalk at Wed Jun  5 17:35:51 2019...
 
 ****** xsim v2018.3.1 (64-bit)
   **** SW Build 2489853 on Tue Mar 26 04:18:30 MDT 2019
@@ -190,7 +190,7 @@ WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of o
 ////////////////////////////////////////////////////////////////////////////////////
 $finish called at time : 134 ns : File "/home/amiri/Documents/Snippets/HLS/sum_io_m/proj_sum_io/solution1/sim/verilog/sum_io_top.autotb.v" Line 155
 ## quit
-INFO: [Common 17-206] Exiting xsim at Wed Jun  5 14:24:04 2019...
+INFO: [Common 17-206] Exiting xsim at Wed Jun  5 17:35:58 2019...
 INFO: [COSIM 212-316] Starting C post checking ...
 INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
 INFO: [COSIM 212-210] Design is translated to an combinational logic. II and Latency will be marked as all 0.
@@ -202,24 +202,24 @@ INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
 source run_ippack.tcl -notrace
-INFO: [Common 17-206] Exiting Vivado at Wed Jun  5 14:24:11 2019...
-INFO: [HLS 200-10] Creating and opening solution '/home/amiri/Documents/Snippets/HLS/sum_io_m/proj_sum_io/solution2'.
+INFO: [Common 17-206] Exiting Vivado at Wed Jun  5 17:36:04 2019...
+INFO: [HLS 200-10] Opening and resetting solution '/home/amiri/Documents/Snippets/HLS/sum_io_m/proj_sum_io/solution2'.
 INFO: [HLS 200-10] Cleaning up the solution database.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 4ns.
 INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
 INFO: [HLS 200-10] Analyzing design file 'sum_io.c' ... 
 INFO: [HLS 200-10] Analyzing design file 'sum_io_top.c' ... 
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:01:04 ; elapsed = 00:01:05 . Memory (MB): peak = 578.961 ; gain = 134.145 ; free physical = 57894 ; free virtual = 63000
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:01:04 ; elapsed = 00:01:05 . Memory (MB): peak = 578.961 ; gain = 134.145 ; free physical = 57894 ; free virtual = 63000
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:01:04 ; elapsed = 00:01:05 . Memory (MB): peak = 578.957 ; gain = 134.145 ; free physical = 57236 ; free virtual = 62561
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:01:04 ; elapsed = 00:01:05 . Memory (MB): peak = 578.957 ; gain = 134.145 ; free physical = 57236 ; free virtual = 62561
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:01:04 ; elapsed = 00:01:05 . Memory (MB): peak = 578.961 ; gain = 134.145 ; free physical = 57894 ; free virtual = 63000
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:01:04 ; elapsed = 00:01:05 . Memory (MB): peak = 578.957 ; gain = 134.145 ; free physical = 57235 ; free virtual = 62561
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [XFORM 203-602] Inlining function 'sum_io_2' into 'sum_io_top' (sum_io_top.c:17) automatically.
+INFO: [XFORM 203-602] Inlining function 'sum_io_2' into 'sum_io_top' (sum_io_top.c:20) automatically.
 WARNING: [SYNCHK 200-77] The top function 'sum_io_top' (sum_io_top.c:3) has no outputs. Possible cause(s) are: (1) Output parameters are passed by value; (2) intended outputs (parameters or global variables) are never written; (3) there are infinite loops.
 INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:01:04 ; elapsed = 00:01:05 . Memory (MB): peak = 578.961 ; gain = 134.145 ; free physical = 57894 ; free virtual = 63001
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:01:04 ; elapsed = 00:01:05 . Memory (MB): peak = 578.961 ; gain = 134.145 ; free physical = 57887 ; free virtual = 62994
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:04 ; elapsed = 00:01:05 . Memory (MB): peak = 578.961 ; gain = 134.145 ; free physical = 57887 ; free virtual = 62994
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:01:04 ; elapsed = 00:01:05 . Memory (MB): peak = 578.957 ; gain = 134.145 ; free physical = 57235 ; free virtual = 62561
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:01:04 ; elapsed = 00:01:05 . Memory (MB): peak = 578.957 ; gain = 134.145 ; free physical = 57228 ; free virtual = 62554
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:04 ; elapsed = 00:01:05 . Memory (MB): peak = 578.957 ; gain = 134.145 ; free physical = 57228 ; free virtual = 62554
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'sum_io_top' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -227,37 +227,37 @@ INFO: [HLS 200-42] -- Implementing module 'sum_io'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 41.66 seconds; current allocated memory: 81.613 MB.
+INFO: [HLS 200-111]  Elapsed time: 41.62 seconds; current allocated memory: 81.669 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0 seconds; current allocated memory: 81.667 MB.
+INFO: [HLS 200-111]  Elapsed time: 0 seconds; current allocated memory: 81.723 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'sum_io_top' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 81.693 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 81.751 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0 seconds; current allocated memory: 81.729 MB.
+INFO: [HLS 200-111]  Elapsed time: 0 seconds; current allocated memory: 81.786 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'sum_io' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'sum_io'.
-INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 81.817 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 81.873 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'sum_io_top' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-500] Setting interface mode on function 'sum_io_top' to 'ap_ctrl_hs'.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'sum_io_top'.
-INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 81.997 MB.
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:05 ; elapsed = 00:01:06 . Memory (MB): peak = 578.961 ; gain = 134.145 ; free physical = 57883 ; free virtual = 62990
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 82.113 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:05 ; elapsed = 00:01:06 . Memory (MB): peak = 578.957 ; gain = 134.145 ; free physical = 57224 ; free virtual = 62551
 INFO: [SYSC 207-301] Generating SystemC RTL for sum_io_top.
 INFO: [VHDL 208-304] Generating VHDL RTL for sum_io_top.
 INFO: [VLOG 209-307] Generating Verilog RTL for sum_io_top.
@@ -267,30 +267,30 @@ INFO: [COSIM 212-14] Instrumenting C test bench ...
    Compiling apatb_sum_io_top.cpp
    Compiling (apcc) sum_io.c_pre.c.tb.c
 INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
-INFO: [HLS 200-10] For user 'amiri' on host 'rocky.samba.cg.uni-saarland.de' (Linux_x86_64 version 4.18.0-21-generic) on Wed Jun 05 14:24:26 CEST 2019
+INFO: [HLS 200-10] For user 'amiri' on host 'rocky.samba.cg.uni-saarland.de' (Linux_x86_64 version 4.18.0-21-generic) on Wed Jun 05 17:36:20 CEST 2019
 INFO: [HLS 200-10] On os Ubuntu 18.04.2 LTS
 INFO: [HLS 200-10] In directory '/home/amiri/Documents/Snippets/HLS/sum_io_m/proj_sum_io/solution2/sim/wrapc'
 clang: warning: argument unused during compilation: '-fno-builtin-isinf'
 clang: warning: argument unused during compilation: '-fno-builtin-isnan'
-INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_amiri/464671559737466884426
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_amiri/529011559748980467483
 INFO: [APCC 202-1] APCC is done.
    Compiling (apcc) dummy_tb.c_pre.c.tb.c
 INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
-INFO: [HLS 200-10] For user 'amiri' on host 'rocky.samba.cg.uni-saarland.de' (Linux_x86_64 version 4.18.0-21-generic) on Wed Jun 05 14:24:30 CEST 2019
+INFO: [HLS 200-10] For user 'amiri' on host 'rocky.samba.cg.uni-saarland.de' (Linux_x86_64 version 4.18.0-21-generic) on Wed Jun 05 17:36:24 CEST 2019
 INFO: [HLS 200-10] On os Ubuntu 18.04.2 LTS
 INFO: [HLS 200-10] In directory '/home/amiri/Documents/Snippets/HLS/sum_io_m/proj_sum_io/solution2/sim/wrapc'
 clang: warning: argument unused during compilation: '-fno-builtin-isinf'
 clang: warning: argument unused during compilation: '-fno-builtin-isnan'
-INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_amiri/465301559737470792187
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_amiri/529631559748984371959
 INFO: [APCC 202-1] APCC is done.
    Compiling (apcc) sum_io_top.c_pre.c.tb.c
 INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
-INFO: [HLS 200-10] For user 'amiri' on host 'rocky.samba.cg.uni-saarland.de' (Linux_x86_64 version 4.18.0-21-generic) on Wed Jun 05 14:24:34 CEST 2019
+INFO: [HLS 200-10] For user 'amiri' on host 'rocky.samba.cg.uni-saarland.de' (Linux_x86_64 version 4.18.0-21-generic) on Wed Jun 05 17:36:28 CEST 2019
 INFO: [HLS 200-10] On os Ubuntu 18.04.2 LTS
 INFO: [HLS 200-10] In directory '/home/amiri/Documents/Snippets/HLS/sum_io_m/proj_sum_io/solution2/sim/wrapc'
 clang: warning: argument unused during compilation: '-fno-builtin-isinf'
 clang: warning: argument unused during compilation: '-fno-builtin-isnan'
-INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_amiri/465921559737474679941
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_amiri/530251559748988263451
 INFO: [APCC 202-1] APCC is done.
    Generating cosim.tv.exe
 INFO: [COSIM 212-302] Starting C TB testing ... 
@@ -330,7 +330,7 @@ Built simulation snapshot sum_io_top
     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
 source /home/amiri/Documents/Snippets/HLS/sum_io_m/proj_sum_io/solution2/sim/verilog/xsim.dir/sum_io_top/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Wed Jun  5 14:24:39 2019...
+INFO: [Common 17-206] Exiting Webtalk at Wed Jun  5 17:36:33 2019...
 
 ****** xsim v2018.3.1 (64-bit)
   **** SW Build 2489853 on Tue Mar 26 04:18:30 MDT 2019
@@ -374,7 +374,7 @@ WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of o
 ////////////////////////////////////////////////////////////////////////////////////
 $finish called at time : 138 ns : File "/home/amiri/Documents/Snippets/HLS/sum_io_m/proj_sum_io/solution2/sim/verilog/sum_io_top.autotb.v" Line 163
 ## quit
-INFO: [Common 17-206] Exiting xsim at Wed Jun  5 14:24:46 2019...
+INFO: [Common 17-206] Exiting xsim at Wed Jun  5 17:36:39 2019...
 INFO: [COSIM 212-316] Starting C post checking ...
 INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
 INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
@@ -386,6 +386,6 @@ INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
 source run_ippack.tcl -notrace
-INFO: [Common 17-206] Exiting Vivado at Wed Jun  5 14:24:52 2019...
-INFO: [HLS 200-112] Total elapsed time: 98.72 seconds; peak allocated memory: 81.997 MB.
-INFO: [Common 17-206] Exiting vivado_hls at Wed Jun  5 14:24:52 2019...
+INFO: [Common 17-206] Exiting Vivado at Wed Jun  5 17:36:46 2019...
+INFO: [HLS 200-112] Total elapsed time: 98.75 seconds; peak allocated memory: 82.113 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Wed Jun  5 17:36:46 2019...
