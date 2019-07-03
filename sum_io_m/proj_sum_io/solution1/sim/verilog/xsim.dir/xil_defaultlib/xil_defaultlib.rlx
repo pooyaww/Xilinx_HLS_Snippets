@@ -1,0 +1,8 @@
+0.6
+2018.3
+Mar 26 2019
+04:21:55
+/home/amiri/Documents/Snippets/HLS/sum_io_m/proj_sum_io/solution1/sim/verilog/AESL_axi_slave_AXILiteS.v,1559917031,systemVerilog,,,,AESL_axi_slave_AXILiteS,/opt/Xilinx/Vivado/2018.3/data/xsim/ip/xsim_ip.ini,axi_protocol_checker_v1_1_12;axi_protocol_checker_v1_1_13;axis_protocol_checker_v1_1_11;axis_protocol_checker_v1_1_12;ieee_proposed=./ieee_proposed;smartconnect_v1_0;unisims_ver;xil_defaultlib;xpm,,,,,,
+/home/amiri/Documents/Snippets/HLS/sum_io_m/proj_sum_io/solution1/sim/verilog/sum_io_top.autotb.v,1559917031,systemVerilog,,,,apatb_sum_io_top_top,/opt/Xilinx/Vivado/2018.3/data/xsim/ip/xsim_ip.ini,axi_protocol_checker_v1_1_12;axi_protocol_checker_v1_1_13;axis_protocol_checker_v1_1_11;axis_protocol_checker_v1_1_12;ieee_proposed=./ieee_proposed;smartconnect_v1_0;unisims_ver;xil_defaultlib;xpm,,,,,,
+/home/amiri/Documents/Snippets/HLS/sum_io_m/proj_sum_io/solution1/sim/verilog/sum_io_top.v,1559917013,systemVerilog,,,,sum_io_top,/opt/Xilinx/Vivado/2018.3/data/xsim/ip/xsim_ip.ini,axi_protocol_checker_v1_1_12;axi_protocol_checker_v1_1_13;axis_protocol_checker_v1_1_11;axis_protocol_checker_v1_1_12;ieee_proposed=./ieee_proposed;smartconnect_v1_0;unisims_ver;xil_defaultlib;xpm,,,,,,
+/home/amiri/Documents/Snippets/HLS/sum_io_m/proj_sum_io/solution1/sim/verilog/sum_io_top_AXILiteS_s_axi.v,1559917013,systemVerilog,,,,sum_io_top_AXILiteS_s_axi,/opt/Xilinx/Vivado/2018.3/data/xsim/ip/xsim_ip.ini,axi_protocol_checker_v1_1_12;axi_protocol_checker_v1_1_13;axis_protocol_checker_v1_1_11;axis_protocol_checker_v1_1_12;ieee_proposed=./ieee_proposed;smartconnect_v1_0;unisims_ver;xil_defaultlib;xpm,,,,,,

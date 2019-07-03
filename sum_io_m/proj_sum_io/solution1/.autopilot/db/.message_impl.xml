@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[IMPL 213-8]" key="IMPL_8_1776" tag="" content="Exporting RTL as a Vivado IP."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1368" tag="" content="Opening and resetting solution &apos;/home/amiri/Documents/Snippets/HLS/sum_io_m/proj_sum_io/solution2&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1372" tag="" content="Cleaning up the solution database."/>
+	<Message severity="INFO" prefix="[SYN 201-201]" key="ASSGN_CLOCK_INFO_459" tag="" content="Setting up clock &apos;default&apos; with a period of 4ns."/>
+</Messages>

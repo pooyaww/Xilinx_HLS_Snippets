@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2018.3.1 (64-bit)
+# SW Build 2489853 on Tue Mar 26 04:18:30 MDT 2019
+# IP Build 2486929 on Tue Mar 26 06:44:21 MDT 2019
+# Start of session at: Fri Jun  7 16:06:16 2019
+# Process ID: 15758
+# Current directory: /home/amiri/Documents/Snippets/HLS/sum_io_m
+# Command line: vivado
+# Log file: /home/amiri/Documents/Snippets/HLS/sum_io_m/vivado.log
+# Journal file: /home/amiri/Documents/Snippets/HLS/sum_io_m/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project project_1 /home/amiri/Documents/Snippets/HLS/sum_io_m/project_1 -part xczu7ev-ffvc1156-2-e
+set_property board_part xilinx.com:zcu106:part0:2.3 [current_project]

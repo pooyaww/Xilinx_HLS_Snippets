@@ -1,0 +1,43 @@
+#pragma line 1 "/home/amiri/Documents/Snippets/HLS/sum_io_m/dummy_tb.c"
+#pragma line 1 "/home/amiri/Documents/Snippets/HLS/sum_io_m/dummy_tb.c" 1
+#pragma line 1 "<built-in>" 1
+#pragma line 1 "<built-in>" 3
+#pragma line 149 "<built-in>" 3
+#pragma line 1 "<command line>" 1
+#pragma line 1 "<built-in>" 2
+#pragma line 1 "/home/amiri/Documents/Snippets/HLS/sum_io_m/dummy_tb.c" 2
+
+#ifndef HLS_FASTSIM
+#pragma line 1 "/home/amiri/Documents/Snippets/HLS/sum_io_m/dummy_tb.c"
+
+#ifndef HLS_FASTSIM
+#include "apatb_sum_io_top.h"
+#endif
+
+#pragma line 1 "/home/amiri/Documents/Snippets/HLS/sum_io_m/dummy_tb.c"
+int main() {
+int r_a;
+int r_b;
+    
+#ifndef HLS_FASTSIM
+#define sum_io_top AESL_WRAP_sum_io_top
+#endif
+
+#pragma line 4 "/home/amiri/Documents/Snippets/HLS/sum_io_m/dummy_tb.c"
+
+#ifndef HLS_FASTSIM
+#define sum_io_top AESL_WRAP_sum_io_top
+#endif
+
+#pragma line 4 "/home/amiri/Documents/Snippets/HLS/sum_io_m/dummy_tb.c"
+sum_io_top
+#undef sum_io_top
+#pragma line 4 "/home/amiri/Documents/Snippets/HLS/sum_io_m/dummy_tb.c"
+
+#undef sum_io_top
+#pragma line 4 "/home/amiri/Documents/Snippets/HLS/sum_io_m/dummy_tb.c"
+(r_a,r_b);
+    return 0;
+}
+#endif
+#pragma line 6 "/home/amiri/Documents/Snippets/HLS/sum_io_m/dummy_tb.c"

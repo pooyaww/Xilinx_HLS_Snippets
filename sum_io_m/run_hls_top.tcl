@@ -14,7 +14,8 @@ set_top sum_io_top
 # Create a solution
 open_solution -reset solution1
 # Define technology and clock rate
-set_part  {xc7z020clg484-1}
+#set_part  {xc7z020clg484-1}
+set_part {xczu7ev-ffvc1156-2-e}
 create_clock -period 4
 
 # Source x_hls.tcl to determine which steps to execute
@@ -48,7 +49,8 @@ if {$hls_exec == 1} {
 # Create a solution
 open_solution -reset solution2
 # Define technology and clock rate
-set_part  {xc7z020clg484-1}
+#set_part  {xc7z020clg484-1}
+set_part {xczu7ev-ffvc1156-2-e}
 create_clock -period 4
 
 # Source x_hls.tcl to determine which steps to execute

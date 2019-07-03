@@ -1,6 +1,8 @@
 #include "sum_io.h"
 
-void sum_io_top () {
+void sum_io_top (int r_a, int r_b) {
+#pragma HLS interface s_axilite port=r_a
+#pragma HLS interface s_axilite port=r_b
 
     din_t inA, inB;
     dio_t sum;

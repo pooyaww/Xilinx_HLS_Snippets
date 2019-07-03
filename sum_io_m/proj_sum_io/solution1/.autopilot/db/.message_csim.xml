@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[SIM 211-2]" key="SIM_2_1569" tag="" content="*************** CSIM start ***************"/>
+	<Message severity="INFO" prefix="[SIM 211-4]" key="SIM_4_1574" tag="" content="CSIM will launch CLANG as the compiler."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;/opt/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;amiri&apos; on host &apos;rocky.samba.cg.uni-saarland.de&apos; (Linux_x86_64 version 4.18.0-21-generic) on Fri Jun 07 16:16:30 CEST 2019"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1429" tag="" content="On os Ubuntu 18.04.2 LTS"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;/home/amiri/Documents/Snippets/HLS/sum_io_m/proj_sum_io/solution1/csim/build&apos;"/>
+	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is /tmp/apcc_db_amiri/186671559916990833475"/>
+	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;/opt/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;amiri&apos; on host &apos;rocky.samba.cg.uni-saarland.de&apos; (Linux_x86_64 version 4.18.0-21-generic) on Fri Jun 07 16:16:35 CEST 2019"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1429" tag="" content="On os Ubuntu 18.04.2 LTS"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;/home/amiri/Documents/Snippets/HLS/sum_io_m/proj_sum_io/solution1/csim/build&apos;"/>
+	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is /tmp/apcc_db_amiri/187311559916995781106"/>
+	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;/opt/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;amiri&apos; on host &apos;rocky.samba.cg.uni-saarland.de&apos; (Linux_x86_64 version 4.18.0-21-generic) on Fri Jun 07 16:16:40 CEST 2019"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1429" tag="" content="On os Ubuntu 18.04.2 LTS"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;/home/amiri/Documents/Snippets/HLS/sum_io_m/proj_sum_io/solution1/csim/build&apos;"/>
+	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is /tmp/apcc_db_amiri/187951559917000745082"/>
+	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done."/>
+	<Message severity="INFO" prefix="[SIM 211-1]" key="SIM_1_1586" tag="" content="CSim done with 0 errors."/>
+	<Message severity="INFO" prefix="[SIM 211-3]" key="SIM_3_1588" tag="" content="*************** CSIM finish ***************"/>
+</Messages>
