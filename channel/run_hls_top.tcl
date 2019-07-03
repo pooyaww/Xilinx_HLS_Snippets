@@ -2,12 +2,13 @@
 open_project -reset proj_channel
 
 # Add design files
-add_files channel.cpp
+add_files "channel.cpp hls_top.cpp"
 # Add test bench & files
 add_files -tb dummy_tb.cpp
 
 # Set the top-level function
-set_top hls_top
+#set_top hls_top
+set_top AnyHLS
 
 # ########################################################
 # Create a solution

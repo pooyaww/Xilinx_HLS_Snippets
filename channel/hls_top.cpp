@@ -1,3 +1,4 @@
+#include "channel.h"
 
 void hls_top(char hls_top_8673[16], char hls_top_8674[16]) {
 #pragma HLS DATAFLOW
@@ -14,4 +15,3 @@ void hls_top(char hls_top_8673[16], char hls_top_8674[16]) {
         lambda_7726(hls_top_8674, _8682);
 }
 
-}
