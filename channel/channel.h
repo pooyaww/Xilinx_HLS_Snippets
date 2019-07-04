@@ -2,9 +2,9 @@
 #include "hls_stream.h"
 #include "hls_math.h"
 
-/*typedef struct {*/
-/*    int e0;*/
-/*}struct_channel_i32_4355;*/
+//typedef struct {
+//    int e0;
+//}struct_channel_i32_4355;
 
 typedef int32_t struct_channel_i32_4355;
 
