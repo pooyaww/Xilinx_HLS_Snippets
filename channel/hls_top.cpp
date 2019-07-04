@@ -2,7 +2,7 @@
 
 void hls_top(char hls_top_8673[16], char hls_top_8674[16]) {
 #pragma HLS DATAFLOW
-#pragma HLS top name=AnyHLS
+#pragma HLS top name=hls_top
 #pragma HLS INTERFACE ap_ctrl_none port=return
 #pragma HLS INTERFACE axis port= hls_top_8673
 #pragma HLS INTERFACE axis port= hls_top_8674

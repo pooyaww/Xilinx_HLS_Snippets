@@ -1,3 +1,4 @@
+#include "/opt/Xilinx/Vivado/2019.1/include/gmp.h"
 #include "hls_stream.h"
 #include "hls_math.h"
 

@@ -8,7 +8,7 @@ add_files -tb dummy_tb.cpp
 
 # Set the top-level function
 #set_top hls_top
-set_top AnyHLS
+set_top hls_top
 
 # ########################################################
 # Create a solution
