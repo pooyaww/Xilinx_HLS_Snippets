@@ -8,8 +8,9 @@
 6. Due to a bug in vivado HLS and some ubuntu versions gmph library has to be included directly into the heade file ``` #include "/opt/Xilinx/Vivado/2019.1/include/gmp.h"```
 7. Pragmas for interface synthesis should be added via C-backend modifications
 8. A dummy testbench or an auto generated testbench should be added
+9. In case of using a channel in READ mode, the corresponding variable should be initialized(tried using \*.read() HLS method)
 
 ------
 ###### Major required implementation
-9. Kernel ordering
-10. caling hls_top from llvm for *host <-> C-simulation* interface
+10. Kernel ordering
+11. caling hls_top from llvm for *host <-> C-simulation* interface
