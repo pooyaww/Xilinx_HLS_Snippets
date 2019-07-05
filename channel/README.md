@@ -10,7 +10,12 @@
 8. A dummy testbench or an auto generated testbench should be added
 9. In case of using a channel in READ mode, the corresponding variable should be initialized(tested via \*.read() HLS method)
 
-------
+******
 ###### Major required implementation
 10. Kernel ordering
 11. caling hls_top from llvm for *host <-> C-simulation* interface
+
+******
+- An approach similar to graph topological sort can be used
+    - The result is not unique but in any case DATAFLOW pragma will try to find the optimum solution
+- we shoudl have a DAG so feedbacks between kernels are not allowed (Also DATAFLOW optimisation does not work when there are feedbacks between kernels) so in case there is a need for feedback it should be imlemented inside the same kernel.
