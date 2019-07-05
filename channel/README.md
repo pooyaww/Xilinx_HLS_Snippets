@@ -7,7 +7,7 @@
 5. extern "C" {} should be removed from generated HLS codes
 6. Due to a bug in vivado HLS and some ubuntu versions gmph library has to be included directly into the heade file ``` #include "/opt/Xilinx/Vivado/2019.1/include/gmp.h"```
 7. Pragmas for interface synthesis should be added via C-backend modifications
-8. A dummy testbench or an auti generated testbench should be added
+8. A dummy testbench or an auto generated testbench should be added
 
 ------
 ###### Major required implementation
