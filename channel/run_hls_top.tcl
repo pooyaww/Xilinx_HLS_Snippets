@@ -7,7 +7,6 @@ add_files "channel.cpp hls_top.cpp"
 add_files -tb dummy_tb.cpp
 
 # Set the top-level function
-#set_top hls_top
 set_top hls_top
 
 # ########################################################
@@ -34,8 +33,9 @@ if {$hls_exec >= 2} {
 }
 if {$hls_exec >= 3} {
 	# Run Synthesis, RTL Simulation, RTL implementation
-   #export_design -format ip_catalog -version "1.00a" -library "hls" -vendor "xilinx.com" -description "A streaming IP created w/ Vivado HLS" -evaluate verilog
-   export_design -format ip_catalog -evaluate verilog
+   export_design -format ip_catalog -version "1.00a" -library "AnyHLS" -vendor "DFKI" -description "A streaming IP created with AnyHLS" \
+   -flow impl -rtl verilog -display_name "AnyHLS" -ipname "AnyHLS"
+   #export_design -format ip_catalog -evaluate verilog
 }
 
 exit

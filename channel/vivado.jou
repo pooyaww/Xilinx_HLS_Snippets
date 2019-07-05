@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2019.1.1 (64-bit)
+# SW Build 2580384 on Sat Jun 29 08:04:45 MDT 2019
+# IP Build 2579722 on Sat Jun 29 11:35:40 MDT 2019
+# Start of session at: Fri Jul  5 14:33:43 2019
+# Process ID: 33047
+# Current directory: /home/amiri/Documents/Snippets/HLS/channel
+# Command line: vivado
+# Log file: /home/amiri/Documents/Snippets/HLS/channel/vivado.log
+# Journal file: /home/amiri/Documents/Snippets/HLS/channel/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/amiri/Documents/Snippets/HLS/channel/proj_channel/solution1/impl/ip/example/project/project.xpr
+update_compile_order -fileset sources_1
+help
+help pwd
+help export_design
+help export_bd_synth
