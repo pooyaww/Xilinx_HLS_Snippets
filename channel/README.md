@@ -13,10 +13,11 @@
 ******
 ###### Major required implementation
 10. Kernel ordering
-11. caling hls_top from llvm for *host <-> C-simulation* interface
+    - An approach similar to graph topological sort can be used
+        - The result is not unique but in any case DATAFLOW pragma will try to find the optimum solution
+    - we should have a DAG so feedbacks between kernels are not allowed (Also DATAFLOW optimisation does not work when there are
+    feedbacks between kernels) so in case there is a need for feedback it should be implemented inside the same kernel, or using
+    AXI-Streaming interface between HW modules (IPs). It is possoble either by generic HDL codding or by TCL coding between IPs.
 
-******
-- An approach similar to graph topological sort can be used
-    - The result is not unique but in any case DATAFLOW pragma will try to find the optimum solution
-- we should have a DAG so feedbacks between kernels are not allowed (Also DATAFLOW optimisation does not work when there are feedbacks between kernels) so in case there is a need for feedback it should be implemented inside the same kernel, or using AXI-Streaming interface between HW modules (IPs). It is possoble either by generic HDL codding or by TCL coding between IPs.
+11. caling hls_top from llvm for *host <-> C-simulation* interface
 
