@@ -1,5 +1,17 @@
 
 #include "channel.h"
+template <class T>
+void write_channel(hls::stream<T>* stream, T value) {
+    *stream << value;
+}
+
+template <class T>
+T read_channel(hls::stream<T>* stream) {
+    T value;
+    *stream >> value;
+    return value;
+}
+
 extern "C" {
 
 void lambda_7700(char lambda_7700_8640[16], hls::stream<struct_channel_i32_4355>* lambda_7700_8641) {
@@ -11,18 +23,18 @@ void lambda_7700(char lambda_7700_8640[16], hls::stream<struct_channel_i32_4355>
     _8650 = *_8649;
     int _8654;
     _8654 = _8650;
-    //write_channel(lambda_7700_8641, _8654);
-    *lambda_7700_8641 << _8654;
+    write_channel(lambda_7700_8641, _8654);
+    //*lambda_7700_8641 << _8654;
     l8767: ;
         return ;
 }
 
 void lambda_7726(char lambda_7726_8658[16], hls::stream<struct_channel_i32_4355>* lambda_7726_8659) {
-    int  read_channel_8666=0;
+    int  read_channel_8666;
     int pread_channel_8666;
-    //read_channel_8666 = read_channel(lambda_7726_8659);
+    read_channel_8666 = read_channel(lambda_7726_8659);
     //lambda_7726_8659 >> read_channel_8666;
-    read_channel_8666 += lambda_7726_8659->read();
+    //read_channel_8666 += lambda_7726_8659->read();
     pread_channel_8666 = read_channel_8666;
     l8664: ;
         read_channel_8666 = pread_channel_8666;
