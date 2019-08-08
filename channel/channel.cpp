@@ -1,6 +1,6 @@
 
 #include "channel.h"
-//extern "C" {
+extern "C" {
 
 void lambda_7700(char lambda_7700_8640[16], hls::stream<struct_channel_i32_4355>* lambda_7700_8641) {
     int* ptr_8647;
@@ -34,4 +34,4 @@ void lambda_7726(char lambda_7726_8658[16], hls::stream<struct_channel_i32_4355>
         return ;
 }
 
-//}
+}
