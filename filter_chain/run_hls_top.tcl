@@ -15,7 +15,7 @@ open_solution -reset solution1
 # Define technology and clock rate
 #set_part  {xc7k160tfbg484-1}
 set_part  {xc7z020clg484-1}
-create_clock -period 5
+create_clock -period 10
 
 # Source x_hls.tcl to determine which steps to execute
 source x_hls.tcl
