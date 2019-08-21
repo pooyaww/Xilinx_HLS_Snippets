@@ -1,5 +1,5 @@
 # Create a project
-open_project -reset proj_channel
+open_project -reset proj_FilterChain
 
 # Add design files
 add_files "filter_chain.cpp hls_top.cpp"
