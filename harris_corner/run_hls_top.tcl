@@ -1,5 +1,5 @@
 # Create a project
-open_project -reset proj_channel
+open_project -reset proj_harris_corner
 
 # Add design files
 add_files "harris_corner.cpp hls_top.cpp"
