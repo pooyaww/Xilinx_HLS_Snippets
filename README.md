@@ -4,7 +4,7 @@
 
 - Top modules test:
 ``` vivado_hls -f run_hls_top.tcl ```
-
+******
 #### AnyHLS required code modifications
 1. - [ ] spliting file into kernels, headers, top function and testbench
     - Solution: modifications in build organization (CMAKE)
