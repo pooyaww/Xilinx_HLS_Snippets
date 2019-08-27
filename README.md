@@ -33,3 +33,5 @@
 13. - [ ] Adding OpenCL backend for Xilinx FPGA
     - hls -> intel or xilinx
     - opencl -> intel or xilinx,the required [code for Xilinx](https://github.com/Xilinx/SDSoC_Examples/tree/master/ocl/getting_started) is similar to Intel Fpga OpenCL but with different pragmas. 
+    -SDaccel for applications via PCIe (accelerators) similar to aocl(Alveo u200 board via xilinx_u200_xdma_201830_1 as the platform)
+    - for zynq board we can use SDSoC to generate IPs based .cl code ( Not sure about host RT on ARM )
