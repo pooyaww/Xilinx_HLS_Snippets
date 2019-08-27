@@ -3,6 +3,7 @@
 extern "C" {
 
 void lambda_656991(hls::stream<channel_i32_307617>* lambda_656991_696293, hls::stream<channel_i32_307617>* lambda_656991_696294) {
+#pragma HLS INLINE off
     int*  lbuf_696304;
     int* plbuf_696304;
     int*  lbuf_696309;
@@ -824,12 +825,13 @@ void lambda_656054(hls::stream<channel_i32_307617>* lambda_656054_695864, hls::s
         *lambda_656054_695866 << _695891;
     l695892: ;
         goto l695894;
-        
+
     l699672: ;
         return ;
 }
 
 void lambda_655722(hls::stream<channel_i32_307617>* lambda_655722_694867, hls::stream<channel_i32_307617>* lambda_655722_694868) {
+#pragma HLS INLINE off
     int*  lbuf_694883;
     int* plbuf_694883;
     int*  lbuf_694888;
@@ -962,7 +964,7 @@ void lambda_655722(hls::stream<channel_i32_307617>* lambda_655722_694867, hls::s
         *col_ridx_694918 = 0;
         #line 1 "/home/amiri/anydsl/runtime/platforms/intrinsics_thorin.impala"
         for (i694892 = 0; i694892 < 1049601; i694892++) {
-            #pragma HLS PIPELINE
+        #pragma HLS PIPELINE
             plambda_694923 = i694892;
             goto l694921;
         l695153: continue;
@@ -1618,12 +1620,13 @@ void lambda_656114(hls::stream<channel_i32_307617>* lambda_656114_695188, hls::s
         *lambda_656114_695190 << _695215;
     l695216: ;
         goto l695218;
-        
+
     l699676: ;
         return ;
 }
 
 void lambda_655381(hls::stream<channel_i32_307617>* lambda_655381_695554, hls::stream<channel_i32_307617>* lambda_655381_695555) {
+#pragma HLS INLINE off
     int*  lbuf_695565;
     int* plbuf_695565;
     int*  lbuf_695570;
@@ -2369,6 +2372,7 @@ void lambda_655381(hls::stream<channel_i32_307617>* lambda_655381_695554, hls::s
 }
 
 void lambda_656168(hls::stream<channel_i32_307617>* lambda_656168_695902, hls::stream<channel_i32_307617>* lambda_656168_695903) {
+#pragma HLS INLINE off
     int i695904;
     int  lambda_695914;
     int plambda_695914;
@@ -2396,12 +2400,13 @@ void lambda_656168(hls::stream<channel_i32_307617>* lambda_656168_695902, hls::s
         *lambda_656168_695903 << _695918;
     l695919: ;
         goto l695921;
-        
+
     l699680: ;
         return ;
 }
 
 void lambda_656211(hls::stream<channel_i32_307617>* lambda_656211_694783, hls::stream<channel_i32_307617>* lambda_656211_694784) {
+#pragma HLS INLINE off
     int i694785;
     int  lambda_694797;
     int plambda_694797;
@@ -2485,13 +2490,14 @@ void lambda_656254(hls::stream<channel_i32_307617>* lambda_656254_696253, hls::s
         *lambda_656254_696255 << _696282;
     l696283: ;
         goto l696285;
-        
+
     l699684: ;
         return ;
 }
 
 
 void lambda_657337(int lambda_657337_696617[1048576], hls::stream<channel_i32_307617>* lambda_657337_696618, hls::stream<channel_i32_307617>* lambda_657337_696619, hls::stream<channel_i32_307617>* lambda_657337_696620) {
+#pragma HLS INLINE off
     int i696621;
     int  lambda_696638;
     int plambda_696638;
@@ -2586,12 +2592,13 @@ void lambda_657337(int lambda_657337_696617[1048576], hls::stream<channel_i32_30
         #line 34 "/home/amiri/anydsl/stincilla/mapping_fpga_img_hls.impala"
         *_696657 = _696668;
         goto l696650;
-        
+
     l699688: ;
         return ;
 }
 
 void lambda_656651(hls::stream<channel_i32_307617>* lambda_656651_695228, hls::stream<channel_i32_307617>* lambda_656651_695229) {
+#pragma HLS INLINE off
     int*  lbuf_695239;
     int* plbuf_695239;
     int*  lbuf_695244;
@@ -3415,12 +3422,13 @@ void lambda_655317(int lambda_655317_694824[1048576], hls::stream<channel_i32_30
         *lambda_655317_694826 << _694854;
     l694855: ;
         goto l694857;
-        
+
     l699692: ;
         return ;
 }
 
 void lambda_656309(hls::stream<channel_i32_307617>* lambda_656309_695929, hls::stream<channel_i32_307617>* lambda_656309_695930) {
+#pragma HLS INLINE off
     int*  lbuf_695940;
     int* plbuf_695940;
     int*  lbuf_695945;
