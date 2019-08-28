@@ -3,20 +3,19 @@
 #include "hls_math.h"
 extern "C" {
 
-typedef int channel_i32_307617;
+typedef int channel_i32_299216;
 
-void lambda_656991(hls::stream<channel_i32_307617>*, hls::stream<channel_i32_307617>*);
-void lambda_656054(hls::stream<channel_i32_307617>*, hls::stream<channel_i32_307617>*, hls::stream<channel_i32_307617>*);
-void lambda_655722(hls::stream<channel_i32_307617>*, hls::stream<channel_i32_307617>*);
-void lambda_656114(hls::stream<channel_i32_307617>*, hls::stream<channel_i32_307617>*, hls::stream<channel_i32_307617>*);
-void lambda_655381(hls::stream<channel_i32_307617>*, hls::stream<channel_i32_307617>*);
-void lambda_656168(hls::stream<channel_i32_307617>*, hls::stream<channel_i32_307617>*);
-void lambda_656211(hls::stream<channel_i32_307617>*, hls::stream<channel_i32_307617>*);
-void lambda_656254(hls::stream<channel_i32_307617>*, hls::stream<channel_i32_307617>*, hls::stream<channel_i32_307617>*);
+void lambda_641199(hls::stream<channel_i32_299216>*, hls::stream<channel_i32_299216>*, hls::stream<channel_i32_299216>*);
+void lambda_641581(hls::stream<channel_i32_299216>*, hls::stream<channel_i32_299216>*);
+void lambda_641906(hls::stream<channel_i32_299216>*, hls::stream<channel_i32_299216>*);
+void lambda_641254(hls::stream<channel_i32_299216>*, hls::stream<channel_i32_299216>*);
+void lambda_640999(hls::stream<channel_i32_299216>*, hls::stream<channel_i32_299216>*, hls::stream<channel_i32_299216>*);
+void lambda_640682(hls::stream<channel_i32_299216>*, hls::stream<channel_i32_299216>*);
+void lambda_640356(hls::stream<channel_i32_299216>*, hls::stream<channel_i32_299216>*);
+void lambda_641113(hls::stream<channel_i32_299216>*, hls::stream<channel_i32_299216>*);
+void lambda_641059(hls::stream<channel_i32_299216>*, hls::stream<channel_i32_299216>*, hls::stream<channel_i32_299216>*);
 void hls_top(int[1048576], int[1048576]);
-void lambda_657337(int[1048576], hls::stream<channel_i32_307617>*, hls::stream<channel_i32_307617>*, hls::stream<channel_i32_307617>*);
-void lambda_656651(hls::stream<channel_i32_307617>*, hls::stream<channel_i32_307617>*);
-void lambda_655317(int[1048576], hls::stream<channel_i32_307617>*, hls::stream<channel_i32_307617>*);
-void lambda_656309(hls::stream<channel_i32_307617>*, hls::stream<channel_i32_307617>*);
-
+void lambda_640292(int[1048576], hls::stream<channel_i32_299216>*, hls::stream<channel_i32_299216>*);
+void lambda_642237(int[1048576], hls::stream<channel_i32_299216>*, hls::stream<channel_i32_299216>*, hls::stream<channel_i32_299216>*);
+void lambda_641156(hls::stream<channel_i32_299216>*, hls::stream<channel_i32_299216>*);
 }

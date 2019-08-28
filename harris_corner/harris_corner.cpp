@@ -2,4208 +2,4053 @@
 
 extern "C" {
 
-void lambda_656991(hls::stream<channel_i32_307617>* lambda_656991_696293, hls::stream<channel_i32_307617>* lambda_656991_696294) {
+
+void lambda_641199(hls::stream<channel_i32_299216>* lambda_641199_678514, hls::stream<channel_i32_299216>* lambda_641199_678515, hls::stream<channel_i32_299216>* lambda_641199_678516) {
 #pragma HLS INLINE off
-    int*  lbuf_696304;
-    int* plbuf_696304;
-    int*  lbuf_696309;
-    int* plbuf_696309;
-    int*  lbuf_696312;
-    int* plbuf_696312;
-    int i696313;
-    int  lambda_696343;
-    int plambda_696343;
-    int  read_channel_696348;
-    int pread_channel_696348;
-    int  lower_696353;
-    int plower_696353;
-    int  lower_696389;
-    int plower_696389;
-    int  lower_696425;
-    int plower_696425;
-    int  lower_696461;
-    int plower_696461;
-    int  lower_696484;
-    int plower_696484;
-    int  lower_696507;
-    int plower_696507;
-    int  _696435;
-    int p_696435;
-    int  _696399;
-    int p_696399;
-    int  _696363;
-    int p_696363;
+    int i678517;
+    int  lambda_678532;
+    int plambda_678532;
+    int  read_channel_678535;
+    int pread_channel_678535;
+    int  read_channel_678539;
+    int pread_channel_678539;
     #line 122 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
     
-    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_696325_slot;
-    int* value_696325;
-    value_696325 = &value_696325_slot;
-    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_696327_slot;
-    int* value_696327;
-    value_696327 = &value_696327_slot;
-    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_696335_slot;
-    int* value_696335;
-    value_696335 = &value_696335_slot;
     #line 331 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-    int value_696298_slot;
-    int* value_696298;
-    value_696298 = &value_696298_slot;
-    #line 174 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_696300_slot;
-    int* value_696300;
-    value_696300 = &value_696300_slot;
-    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_696323_slot;
-    int* value_696323;
-    value_696323 = &value_696323_slot;
-    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_696333_slot;
-    int* value_696333;
-    value_696333 = &value_696333_slot;
-    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_696337_slot;
-    int* value_696337;
-    value_696337 = &value_696337_slot;
-    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_696329_slot;
-    int* value_696329;
-    value_696329 = &value_696329_slot;
-    #line 782 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int col_ridx_696339_slot;
-    int* col_ridx_696339;
-    col_ridx_696339 = &col_ridx_696339_slot;
-    #line 174 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_696305_slot;
-    int* value_696305;
-    value_696305 = &value_696305_slot;
-    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_696321_slot;
-    int* value_696321;
-    value_696321 = &value_696321_slot;
-    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_696331_slot;
-    int* value_696331;
-    value_696331 = &value_696331_slot;
+    int value_678528_slot;
+    int* value_678528;
+    value_678528 = &value_678528_slot;
     #line 331 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-    *value_696298 = 0;
-    #line 174 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    *value_696300 = 0;
-    #line 175 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int reserver_lbuf_696304[1024];
-    plbuf_696304 = reserver_lbuf_696304;
-    #pragma HLS dependence variable=reserver_lbuf_696304 inter false
-    #pragma HLS data_pack  variable=reserver_lbuf_696304
-    l696302: ;
-        lbuf_696304 = plbuf_696304;
-        #line 174 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_696305 = 0;
-        #line 175 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int reserver_lbuf_696309[1024];
-        plbuf_696309 = reserver_lbuf_696309;
-        #pragma HLS dependence variable=reserver_lbuf_696309 inter false
-        #pragma HLS data_pack  variable=reserver_lbuf_696309
-    l696307: ;
-        lbuf_696309 = plbuf_696309;
-        #line 175 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int reserver_lbuf_696312[1024];
-        plbuf_696312 = reserver_lbuf_696312;
-        #pragma HLS dependence variable=reserver_lbuf_696312 inter false
-        #pragma HLS data_pack  variable=reserver_lbuf_696312
-    l696310: ;
-        lbuf_696312 = plbuf_696312;
-        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_696321 = 0;
-        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_696323 = 0;
-        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_696325 = 0;
-        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_696327 = 0;
-        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_696329 = 0;
-        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_696331 = 0;
-        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_696333 = 0;
-        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_696335 = 0;
-        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_696337 = 0;
-        #line 782 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *col_ridx_696339 = 0;
-        #line 1 "/home/amiri/anydsl/runtime/platforms/intrinsics_thorin.impala"
-        for (i696313 = 0; i696313 < 1049601; i696313++) {
-            #pragma HLS PIPELINE
-            plambda_696343 = i696313;
-            goto l696341;
-        l696582: continue;
-        }
-        goto l699670;
-    l696341: ;
-        lambda_696343 = plambda_696343;
-        #line 872 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _696344;
-        _696344 = lambda_696343 < 1048576;
-        #line 872 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_696344) goto l696345; else goto l696611;
-    l696611: ;
-        #line 872 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        goto l696349;
-    l696345: ;
+    *value_678528 = 0;
+    #line 1 "/home/amiri/anydsl/runtime/platforms/intrinsics_thorin.impala"
+    for (i678517 = 0; i678517 < 1048576; i678517++) {
+        #pragma HLS PIPELINE
+        plambda_678532 = i678517;
+        goto l678530;
+    l678546: continue;
+    }
+    goto l682995;
+    l678530: ;
+        lambda_678532 = plambda_678532;
         #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
-        *lambda_656991_696293 >> read_channel_696348;
-        pread_channel_696348 = read_channel_696348;
-    l696346: ;
-        read_channel_696348 = pread_channel_696348;
+        *lambda_641199_678514 >> read_channel_678535;
+        pread_channel_678535 = read_channel_678535;
+    l678533: ;
+        read_channel_678535 = pread_channel_678535;
         #line 332 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-        *value_696298 = read_channel_696348;
-        #line 872 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        goto l696349;
-    l696349: ;
-        #line 785 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696590;
-        _696590 = *col_ridx_696339;
-        #line 785 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696592;
-        _696592 = _696590;
-        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int* _696608;
-        _696608 = lbuf_696312 + _696592;
-        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int* _696602;
-        _696602 = lbuf_696309 + _696592;
-        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int* _696593;
-        _696593 = lbuf_696304 + _696592;
-        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696594;
-        _696594 = *_696593;
-        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696596;
-        _696596 = _696594;
-        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_696300 = _696596;
+        *value_678528 = read_channel_678535;
+        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
+        *lambda_641199_678515 >> read_channel_678539;
+        pread_channel_678539 = read_channel_678539;
+    l678537: ;
+        read_channel_678539 = pread_channel_678539;
         #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-        int _696598;
-        _696598 = *value_696298;
+        int _678540;
+        _678540 = *value_678528;
         #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-        int _696600;
-        _696600 = _696598;
-        #line 180 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *_696593 = _696600;
-        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696603;
-        _696603 = *_696602;
-        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696605;
-        _696605 = _696603;
-        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_696305 = _696605;
-        #line 180 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *_696602 = _696596;
-        #line 180 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *_696608 = _696605;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_696353 = 0;
-        goto l696351;
-    l696351: ;
-        lower_696353 = plower_696353;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        bool _696354;
-        _696354 = lower_696353 < 2;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        if (_696354) goto l696355; else goto l696386;
-    l696386: ;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_696389 = 0;
-        goto l696387;
-    l696387: ;
-        lower_696389 = plower_696389;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        bool _696390;
-        _696390 = lower_696389 < 2;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        if (_696390) goto l696391; else goto l696422;
-    l696422: ;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_696425 = 0;
-        goto l696423;
-    l696423: ;
-        lower_696425 = plower_696425;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        bool _696426;
-        _696426 = lower_696425 < 2;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        if (_696426) goto l696427; else goto l696458;
-    l696458: ;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_696461 = 0;
-        goto l696459;
-    l696459: ;
-        lower_696461 = plower_696461;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        bool _696462;
-        _696462 = lower_696461 < 1;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        if (_696462) goto l696463; else goto l696481;
-    l696481: ;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_696484 = 0;
-        goto l696482;
-    l696482: ;
-        lower_696484 = plower_696484;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        bool _696485;
-        _696485 = lower_696484 < 1;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        if (_696485) goto l696486; else goto l696504;
-    l696504: ;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_696507 = 0;
-        goto l696505;
-    l696505: ;
-        lower_696507 = plower_696507;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        bool _696508;
-        _696508 = lower_696507 < 1;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        if (_696508) goto l696509; else goto l696527;
-    l696527: ;
-        #line 881 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _696528;
-        _696528 = 1024 < lambda_696343;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696530;
-        _696530 = *value_696321;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696532;
-        _696532 = *value_696323;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696534;
-        _696534 = *value_696325;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696536;
-        _696536 = *value_696327;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696538;
-        _696538 = *value_696329;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696540;
-        _696540 = *value_696331;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696542;
-        _696542 = *value_696333;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696544;
-        _696544 = *value_696335;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696546;
-        _696546 = *value_696337;
-        #line 881 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_696528) goto l696529; else goto l696589;
-    l696589: ;
-        #line 881 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        goto l696573;
-    l696529: ;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696565;
-        _696565 = _696544;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696552;
-        _696552 = _696534;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696560;
-        _696560 = _696540;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696568;
-        _696568 = _696546;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696548;
-        _696548 = _696530;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _696561;
-        _696561 = 2 * _696560;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696554;
-        _696554 = _696536;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _696566;
-        _696566 = 2 * _696565;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696549;
-        _696549 = _696532;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696557;
-        _696557 = _696538;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696563;
-        _696563 = _696542;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _696555;
-        _696555 = 2 * _696554;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _696550;
-        _696550 = 2 * _696549;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _696558;
-        _696558 = 4 * _696557;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _696551;
-        _696551 = _696548 + _696550;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _696553;
-        _696553 = _696551 + _696552;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _696556;
-        _696556 = _696553 + _696555;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _696559;
-        _696559 = _696556 + _696558;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _696562;
-        _696562 = _696559 + _696561;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _696564;
-        _696564 = _696562 + _696563;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _696567;
-        _696567 = _696564 + _696566;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _696569;
-        _696569 = _696567 + _696568;
-        #line 57 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _696570;
-        _696570 = _696569 / 16;
-        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
-        *lambda_656991_696294 << _696570;
-    l696571: ;
-        #line 881 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        goto l696573;
-    l696573: ;
-        #line 788 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696575;
-        _696575 = *col_ridx_696339;
-        #line 788 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696576;
-        _696576 = _696575;
-        #line 788 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696577;
-        _696577 = 1 + _696576;
-        #line 789 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _696578;
-        _696578 = _696577 == 1024;
-        #line 788 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *col_ridx_696339 = _696577;
-        #line 789 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_696578) goto l696579; else goto l696588;
-    l696588: ;
-        goto l696580;
-    l696579: ;
-        #line 789 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *col_ridx_696339 = 0;
-        goto l696580;
-    l696580: ;
-        goto l696582;
-        
-    l699670: ;
-        return ;
-    l696509: ;
-        #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-        int _696519;
-        _696519 = *value_696298;
-        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696510;
-        _696510 = 3 + lower_696507;
-        #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-        int _696521;
-        _696521 = _696519;
-        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696511;
-        _696511 = _696510 - 1;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _696512;
-        _696512 = 1 <= _696511;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_696512) goto l696513; else goto l696525;
-    l696525: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_696333 = _696521;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l696516;
-    l696513: ;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _696514;
-        _696514 = 2 <= _696511;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_696514) goto l696515; else goto l696523;
-    l696523: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_696335 = _696521;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l696516;
-    l696515: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_696337 = _696521;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l696516;
-    l696516: ;
-        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        int _696518;
-        _696518 = 1 + lower_696507;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_696507 = _696518;
-        goto l696505;
-    l696486: ;
-        #line 177 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696496;
-        _696496 = *value_696300;
-        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696487;
-        _696487 = 3 + lower_696484;
-        #line 177 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696498;
-        _696498 = _696496;
-        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696488;
-        _696488 = _696487 - 1;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _696489;
-        _696489 = 1 <= _696488;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_696489) goto l696490; else goto l696502;
-    l696502: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_696327 = _696498;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l696493;
-    l696490: ;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _696491;
-        _696491 = 2 <= _696488;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_696491) goto l696492; else goto l696500;
-    l696500: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_696329 = _696498;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l696493;
-    l696492: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_696331 = _696498;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l696493;
-    l696493: ;
-        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        int _696495;
-        _696495 = 1 + lower_696484;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_696484 = _696495;
-        goto l696482;
-    l696463: ;
-        #line 177 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696473;
-        _696473 = *value_696305;
-        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696464;
-        _696464 = 3 + lower_696461;
-        #line 177 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696475;
-        _696475 = _696473;
-        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696465;
-        _696465 = _696464 - 1;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _696466;
-        _696466 = 1 <= _696465;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_696466) goto l696467; else goto l696479;
-    l696479: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_696321 = _696475;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l696470;
-    l696467: ;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _696468;
-        _696468 = 2 <= _696465;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_696468) goto l696469; else goto l696477;
-    l696477: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_696323 = _696475;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l696470;
-    l696469: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_696325 = _696475;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l696470;
-    l696470: ;
-        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        int _696472;
-        _696472 = 1 + lower_696461;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_696461 = _696472;
-        goto l696459;
-    l696427: ;
-        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        int _696428;
-        _696428 = 1 + lower_696425;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _696429;
-        _696429 = 1 <= _696428;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_696429) goto l696430; else goto l696454;
-    l696454: ;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696455;
-        _696455 = *value_696333;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696457;
-        _696457 = _696455;
-        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_696435 = _696457;
-        goto l696433;
-    l696430: ;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _696431;
-        _696431 = 2 <= _696428;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_696431) goto l696432; else goto l696450;
-    l696450: ;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696451;
-        _696451 = *value_696335;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696453;
-        _696453 = _696451;
-        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_696435 = _696453;
-        goto l696433;
-    l696432: ;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696447;
-        _696447 = *value_696337;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696449;
-        _696449 = _696447;
-        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_696435 = _696449;
-        goto l696433;
-    l696433: ;
-        _696435 = p_696435;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _696436;
-        _696436 = 1 <= lower_696425;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_696436) goto l696437; else goto l696445;
-    l696445: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_696333 = _696435;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l696440;
-    l696437: ;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _696438;
-        _696438 = 2 <= lower_696425;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_696438) goto l696439; else goto l696443;
-    l696443: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_696335 = _696435;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l696440;
-    l696439: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_696337 = _696435;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l696440;
-    l696440: ;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_696425 = _696428;
-        goto l696423;
-    l696391: ;
-        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        int _696392;
-        _696392 = 1 + lower_696389;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _696393;
-        _696393 = 1 <= _696392;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_696393) goto l696394; else goto l696418;
-    l696418: ;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696419;
-        _696419 = *value_696327;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696421;
-        _696421 = _696419;
-        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_696399 = _696421;
-        goto l696397;
-    l696394: ;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _696395;
-        _696395 = 2 <= _696392;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_696395) goto l696396; else goto l696414;
-    l696414: ;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696415;
-        _696415 = *value_696329;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696417;
-        _696417 = _696415;
-        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_696399 = _696417;
-        goto l696397;
-    l696396: ;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696411;
-        _696411 = *value_696331;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696413;
-        _696413 = _696411;
-        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_696399 = _696413;
-        goto l696397;
-    l696397: ;
-        _696399 = p_696399;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _696400;
-        _696400 = 1 <= lower_696389;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_696400) goto l696401; else goto l696409;
-    l696409: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_696327 = _696399;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l696404;
-    l696401: ;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _696402;
-        _696402 = 2 <= lower_696389;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_696402) goto l696403; else goto l696407;
-    l696407: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_696329 = _696399;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l696404;
-    l696403: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_696331 = _696399;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l696404;
-    l696404: ;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_696389 = _696392;
-        goto l696387;
-    l696355: ;
-        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        int _696356;
-        _696356 = 1 + lower_696353;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _696357;
-        _696357 = 1 <= _696356;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_696357) goto l696358; else goto l696382;
-    l696382: ;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696383;
-        _696383 = *value_696321;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696385;
-        _696385 = _696383;
-        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_696363 = _696385;
-        goto l696361;
-    l696358: ;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _696359;
-        _696359 = 2 <= _696356;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_696359) goto l696360; else goto l696378;
-    l696378: ;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696379;
-        _696379 = *value_696323;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696381;
-        _696381 = _696379;
-        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_696363 = _696381;
-        goto l696361;
-    l696360: ;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696375;
-        _696375 = *value_696325;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696377;
-        _696377 = _696375;
-        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_696363 = _696377;
-        goto l696361;
-    l696361: ;
-        _696363 = p_696363;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _696364;
-        _696364 = 1 <= lower_696353;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_696364) goto l696365; else goto l696373;
-    l696373: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_696321 = _696363;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l696368;
-    l696365: ;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _696366;
-        _696366 = 2 <= lower_696353;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_696366) goto l696367; else goto l696371;
-    l696371: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_696323 = _696363;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l696368;
-    l696367: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_696325 = _696363;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l696368;
-    l696368: ;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_696353 = _696356;
-        goto l696351;
-}
-
-void lambda_656054(hls::stream<channel_i32_307617>* lambda_656054_695864, hls::stream<channel_i32_307617>* lambda_656054_695865, hls::stream<channel_i32_307617>* lambda_656054_695866) {
-    int i695867;
-    int  lambda_695882;
-    int plambda_695882;
-    int  read_channel_695885;
-    int pread_channel_695885;
-    #line 122 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
-    
-    #line 278 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-    int value_695878_slot;
-    int* value_695878;
-    value_695878 = &value_695878_slot;
-    #line 278 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-    *value_695878 = 0;
-    #line 1 "/home/amiri/anydsl/runtime/platforms/intrinsics_thorin.impala"
-    for (i695867 = 0; i695867 < 1048576; i695867++) {
-        #pragma HLS PIPELINE
-        plambda_695882 = i695867;
-        goto l695880;
-    l695894: continue;
-    }
-    goto l699672;
-    l695880: ;
-        lambda_695882 = plambda_695882;
-        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
-        *lambda_656054_695864 >> read_channel_695885;
-        pread_channel_695885 = read_channel_695885;
-    l695883: ;
-        read_channel_695885 = pread_channel_695885;
-        #line 281 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-        *value_695878 = read_channel_695885;
-        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
-        *lambda_656054_695865 << read_channel_695885;
-    l695887: ;
-        #line 279 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-        int _695889;
-        _695889 = *value_695878;
-        #line 279 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-        int _695891;
-        _695891 = _695889;
-        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
-        *lambda_656054_695866 << _695891;
-    l695892: ;
-        goto l695894;
-
-    l699672: ;
-        return ;
-}
-
-void lambda_655722(hls::stream<channel_i32_307617>* lambda_655722_694867, hls::stream<channel_i32_307617>* lambda_655722_694868) {
-#pragma HLS INLINE off
-    int*  lbuf_694883;
-    int* plbuf_694883;
-    int*  lbuf_694888;
-    int* plbuf_694888;
-    int*  lbuf_694891;
-    int* plbuf_694891;
-    int i694892;
-    int  lambda_694923;
-    int plambda_694923;
-    int  read_channel_694928;
-    int pread_channel_694928;
-    int  lower_694933;
-    int plower_694933;
-    int  lower_694971;
-    int plower_694971;
-    int  lower_695007;
-    int plower_695007;
-    int  lower_695043;
-    int plower_695043;
-    int  lower_695067;
-    int plower_695067;
-    int  lower_695090;
-    int plower_695090;
-    int  _695017;
-    int p_695017;
-    int  _694981;
-    int p_694981;
-    int  _694945;
-    int p_694945;
-    #line 122 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
-    
-    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_694910_slot;
-    int* value_694910;
-    value_694910 = &value_694910_slot;
-    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_694908_slot;
-    int* value_694908;
-    value_694908 = &value_694908_slot;
-    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_694916_slot;
-    int* value_694916;
-    value_694916 = &value_694916_slot;
-    #line 174 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_694884_slot;
-    int* value_694884;
-    value_694884 = &value_694884_slot;
-    #line 782 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int col_ridx_694918_slot;
-    int* col_ridx_694918;
-    col_ridx_694918 = &col_ridx_694918_slot;
-    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_694906_slot;
-    int* value_694906;
-    value_694906 = &value_694906_slot;
-    #line 331 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-    int value_694876_slot;
-    int* value_694876;
-    value_694876 = &value_694876_slot;
-    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_694912_slot;
-    int* value_694912;
-    value_694912 = &value_694912_slot;
-    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_694900_slot;
-    int* value_694900;
-    value_694900 = &value_694900_slot;
-    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_694902_slot;
-    int* value_694902;
-    value_694902 = &value_694902_slot;
-    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_694904_slot;
-    int* value_694904;
-    value_694904 = &value_694904_slot;
-    #line 174 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_694878_slot;
-    int* value_694878;
-    value_694878 = &value_694878_slot;
-    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_694914_slot;
-    int* value_694914;
-    value_694914 = &value_694914_slot;
-    #line 331 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-    *value_694876 = 0;
-    #line 174 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    *value_694878 = 0;
-    #line 175 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int reserver_lbuf_694883[1024];
-    plbuf_694883 = reserver_lbuf_694883;
-    #pragma HLS dependence variable=reserver_lbuf_694883 inter false
-    #pragma HLS data_pack  variable=reserver_lbuf_694883
-    l694881: ;
-        lbuf_694883 = plbuf_694883;
-        #line 174 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_694884 = 0;
-        #line 175 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int reserver_lbuf_694888[1024];
-        plbuf_694888 = reserver_lbuf_694888;
-        #pragma HLS dependence variable=reserver_lbuf_694888 inter false
-        #pragma HLS data_pack  variable=reserver_lbuf_694888
-    l694886: ;
-        lbuf_694888 = plbuf_694888;
-        #line 175 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int reserver_lbuf_694891[1024];
-        plbuf_694891 = reserver_lbuf_694891;
-        #pragma HLS dependence variable=reserver_lbuf_694891 inter false
-        #pragma HLS data_pack  variable=reserver_lbuf_694891
-    l694889: ;
-        lbuf_694891 = plbuf_694891;
-        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_694900 = 0;
-        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_694902 = 0;
-        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_694904 = 0;
-        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_694906 = 0;
-        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_694908 = 0;
-        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_694910 = 0;
-        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_694912 = 0;
-        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_694914 = 0;
-        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_694916 = 0;
-        #line 782 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *col_ridx_694918 = 0;
-        #line 1 "/home/amiri/anydsl/runtime/platforms/intrinsics_thorin.impala"
-        for (i694892 = 0; i694892 < 1049601; i694892++) {
-        #pragma HLS PIPELINE
-            plambda_694923 = i694892;
-            goto l694921;
-        l695153: continue;
-        }
-        goto l699674;
-    l694921: ;
-        lambda_694923 = plambda_694923;
-        #line 872 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _694924;
-        _694924 = lambda_694923 < 1048576;
-        #line 872 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_694924) goto l694925; else goto l695182;
-    l695182: ;
-        #line 872 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        goto l694929;
-    l694925: ;
-        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
-        *lambda_655722_694867 >> read_channel_694928;
-        pread_channel_694928 = read_channel_694928;
-    l694926: ;
-        read_channel_694928 = pread_channel_694928;
-        #line 332 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-        *value_694876 = read_channel_694928;
-        #line 872 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        goto l694929;
-    l694929: ;
-        #line 785 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695161;
-        _695161 = *col_ridx_694918;
-        #line 785 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695163;
-        _695163 = _695161;
-        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int* _695179;
-        _695179 = lbuf_694891 + _695163;
-        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int* _695173;
-        _695173 = lbuf_694888 + _695163;
-        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int* _695164;
-        _695164 = lbuf_694883 + _695163;
-        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695165;
-        _695165 = *_695164;
-        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695167;
-        _695167 = _695165;
-        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_694878 = _695167;
-        #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-        int _695169;
-        _695169 = *value_694876;
-        #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-        int _695171;
-        _695171 = _695169;
-        #line 180 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *_695164 = _695171;
-        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695174;
-        _695174 = *_695173;
-        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695176;
-        _695176 = _695174;
-        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_694884 = _695176;
-        #line 180 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *_695173 = _695167;
-        #line 180 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *_695179 = _695176;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_694933 = 0;
-        goto l694931;
-    l694931: ;
-        lower_694933 = plower_694933;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        bool _694935;
-        _694935 = lower_694933 < 2;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        if (_694935) goto l694936; else goto l694968;
-    l694968: ;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_694971 = 0;
-        goto l694969;
-    l694969: ;
-        lower_694971 = plower_694971;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        bool _694972;
-        _694972 = lower_694971 < 2;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        if (_694972) goto l694973; else goto l695004;
-    l695004: ;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_695007 = 0;
-        goto l695005;
-    l695005: ;
-        lower_695007 = plower_695007;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        bool _695008;
-        _695008 = lower_695007 < 2;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        if (_695008) goto l695009; else goto l695040;
-    l695040: ;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_695043 = 0;
-        goto l695041;
-    l695041: ;
-        lower_695043 = plower_695043;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        bool _695044;
-        _695044 = lower_695043 < 1;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        if (_695044) goto l695045; else goto l695064;
-    l695064: ;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_695067 = 0;
-        goto l695065;
-    l695065: ;
-        lower_695067 = plower_695067;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        bool _695068;
-        _695068 = lower_695067 < 1;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        if (_695068) goto l695069; else goto l695087;
-    l695087: ;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_695090 = 0;
-        goto l695088;
-    l695088: ;
-        lower_695090 = plower_695090;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        bool _695091;
-        _695091 = lower_695090 < 1;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        if (_695091) goto l695092; else goto l695110;
-    l695110: ;
-        #line 881 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695111;
-        _695111 = 1024 < lambda_694923;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695113;
-        _695113 = *value_694900;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695115;
-        _695115 = *value_694904;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695117;
-        _695117 = *value_694906;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695119;
-        _695119 = *value_694910;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695121;
-        _695121 = *value_694912;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695123;
-        _695123 = *value_694916;
-        #line 881 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695111) goto l695112; else goto l695160;
-    l695160: ;
-        #line 881 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        goto l695144;
-    l695112: ;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695126;
-        _695126 = _695113;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695137;
-        _695137 = _695121;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _695138;
-        _695138 = -1 * _695137;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695128;
-        _695128 = _695115;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695134;
-        _695134 = _695119;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _695135;
-        _695135 = 2 * _695134;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _695127;
-        _695127 = -1 * _695126;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695140;
-        _695140 = _695123;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695131;
-        _695131 = _695117;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _695129;
-        _695129 = _695127 + _695128;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _695132;
-        _695132 = -2 * _695131;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _695133;
-        _695133 = _695129 + _695132;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _695136;
-        _695136 = _695133 + _695135;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _695139;
-        _695139 = _695136 + _695138;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _695141;
-        _695141 = _695139 + _695140;
-        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
-        *lambda_655722_694868 << _695141;
-    l695142: ;
-        #line 881 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        goto l695144;
-    l695144: ;
-        #line 788 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695146;
-        _695146 = *col_ridx_694918;
-        #line 788 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695147;
-        _695147 = _695146;
-        #line 788 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695148;
-        _695148 = 1 + _695147;
-        #line 788 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *col_ridx_694918 = _695148;
-        #line 789 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695149;
-        _695149 = _695148 == 1024;
-        #line 789 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695149) goto l695150; else goto l695159;
-    l695159: ;
-        goto l695151;
-    l695150: ;
-        #line 789 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *col_ridx_694918 = 0;
-        goto l695151;
-    l695151: ;
-        goto l695153;
-        
-    l699674: ;
-        return ;
-    l695092: ;
-        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695093;
-        _695093 = 3 + lower_695090;
-        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695094;
-        _695094 = _695093 - 1;
-        #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-        int _695102;
-        _695102 = *value_694876;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695095;
-        _695095 = 1 <= _695094;
-        #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-        int _695104;
-        _695104 = _695102;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695095) goto l695096; else goto l695108;
-    l695108: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_694912 = _695104;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695099;
-    l695096: ;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695097;
-        _695097 = 2 <= _695094;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695097) goto l695098; else goto l695106;
-    l695106: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_694914 = _695104;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695099;
-    l695098: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_694916 = _695104;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695099;
-    l695099: ;
-        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        int _695101;
-        _695101 = 1 + lower_695090;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_695090 = _695101;
-        goto l695088;
-    l695069: ;
-        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695070;
-        _695070 = 3 + lower_695067;
-        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695071;
-        _695071 = _695070 - 1;
-        #line 177 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695079;
-        _695079 = *value_694878;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695072;
-        _695072 = 1 <= _695071;
-        #line 177 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695081;
-        _695081 = _695079;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695072) goto l695073; else goto l695085;
-    l695085: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_694906 = _695081;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695076;
-    l695073: ;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695074;
-        _695074 = 2 <= _695071;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695074) goto l695075; else goto l695083;
-    l695083: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_694908 = _695081;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695076;
-    l695075: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_694910 = _695081;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695076;
-    l695076: ;
-        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        int _695078;
-        _695078 = 1 + lower_695067;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_695067 = _695078;
-        goto l695065;
-    l695045: ;
-        #line 177 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695056;
-        _695056 = *value_694884;
-        #line 177 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695058;
-        _695058 = _695056;
-        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695047;
-        _695047 = 3 + lower_695043;
-        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695048;
-        _695048 = _695047 - 1;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695049;
-        _695049 = 1 <= _695048;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695049) goto l695050; else goto l695062;
-    l695062: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_694900 = _695058;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695053;
-    l695050: ;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695051;
-        _695051 = 2 <= _695048;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695051) goto l695052; else goto l695060;
-    l695060: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_694902 = _695058;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695053;
-    l695052: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_694904 = _695058;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695053;
-    l695053: ;
-        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        int _695055;
-        _695055 = 1 + lower_695043;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_695043 = _695055;
-        goto l695041;
-    l695009: ;
-        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        int _695010;
-        _695010 = 1 + lower_695007;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695011;
-        _695011 = 1 <= _695010;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695011) goto l695012; else goto l695036;
-    l695036: ;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695037;
-        _695037 = *value_694912;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695039;
-        _695039 = _695037;
-        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_695017 = _695039;
-        goto l695015;
-    l695012: ;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695013;
-        _695013 = 2 <= _695010;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695013) goto l695014; else goto l695032;
-    l695032: ;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695033;
-        _695033 = *value_694914;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695035;
-        _695035 = _695033;
-        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_695017 = _695035;
-        goto l695015;
-    l695014: ;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695029;
-        _695029 = *value_694916;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695031;
-        _695031 = _695029;
-        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_695017 = _695031;
-        goto l695015;
-    l695015: ;
-        _695017 = p_695017;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695018;
-        _695018 = 1 <= lower_695007;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695018) goto l695019; else goto l695027;
-    l695027: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_694912 = _695017;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695022;
-    l695019: ;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695020;
-        _695020 = 2 <= lower_695007;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695020) goto l695021; else goto l695025;
-    l695025: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_694914 = _695017;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695022;
-    l695021: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_694916 = _695017;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695022;
-    l695022: ;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_695007 = _695010;
-        goto l695005;
-    l694973: ;
-        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        int _694974;
-        _694974 = 1 + lower_694971;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _694975;
-        _694975 = 1 <= _694974;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_694975) goto l694976; else goto l695000;
-    l695000: ;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695001;
-        _695001 = *value_694906;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695003;
-        _695003 = _695001;
-        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_694981 = _695003;
-        goto l694979;
-    l694976: ;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _694977;
-        _694977 = 2 <= _694974;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_694977) goto l694978; else goto l694996;
-    l694996: ;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _694997;
-        _694997 = *value_694908;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _694999;
-        _694999 = _694997;
-        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_694981 = _694999;
-        goto l694979;
-    l694978: ;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _694993;
-        _694993 = *value_694910;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _694995;
-        _694995 = _694993;
-        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_694981 = _694995;
-        goto l694979;
-    l694979: ;
-        _694981 = p_694981;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _694982;
-        _694982 = 1 <= lower_694971;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_694982) goto l694983; else goto l694991;
-    l694991: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_694906 = _694981;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l694986;
-    l694983: ;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _694984;
-        _694984 = 2 <= lower_694971;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_694984) goto l694985; else goto l694989;
-    l694989: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_694908 = _694981;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l694986;
-    l694985: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_694910 = _694981;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l694986;
-    l694986: ;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_694971 = _694974;
-        goto l694969;
-    l694936: ;
-        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        int _694938;
-        _694938 = 1 + lower_694933;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _694939;
-        _694939 = 1 <= _694938;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_694939) goto l694940; else goto l694964;
-    l694964: ;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _694965;
-        _694965 = *value_694900;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _694967;
-        _694967 = _694965;
-        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_694945 = _694967;
-        goto l694943;
-    l694940: ;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _694941;
-        _694941 = 2 <= _694938;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_694941) goto l694942; else goto l694960;
-    l694960: ;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _694961;
-        _694961 = *value_694902;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _694963;
-        _694963 = _694961;
-        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_694945 = _694963;
-        goto l694943;
-    l694942: ;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _694957;
-        _694957 = *value_694904;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _694959;
-        _694959 = _694957;
-        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_694945 = _694959;
-        goto l694943;
-    l694943: ;
-        _694945 = p_694945;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _694946;
-        _694946 = 1 <= lower_694933;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_694946) goto l694947; else goto l694955;
-    l694955: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_694900 = _694945;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l694950;
-    l694947: ;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _694948;
-        _694948 = 2 <= lower_694933;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_694948) goto l694949; else goto l694953;
-    l694953: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_694902 = _694945;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l694950;
-    l694949: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_694904 = _694945;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l694950;
-    l694950: ;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_694933 = _694938;
-        goto l694931;
-}
-
-void lambda_656114(hls::stream<channel_i32_307617>* lambda_656114_695188, hls::stream<channel_i32_307617>* lambda_656114_695189, hls::stream<channel_i32_307617>* lambda_656114_695190) {
-    int i695191;
-    int  lambda_695206;
-    int plambda_695206;
-    int  read_channel_695209;
-    int pread_channel_695209;
-    #line 122 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
-    
-    #line 278 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-    int value_695202_slot;
-    int* value_695202;
-    value_695202 = &value_695202_slot;
-    #line 278 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-    *value_695202 = 0;
-    #line 1 "/home/amiri/anydsl/runtime/platforms/intrinsics_thorin.impala"
-    for (i695191 = 0; i695191 < 1048576; i695191++) {
-        #pragma HLS PIPELINE
-        plambda_695206 = i695191;
-        goto l695204;
-    l695218: continue;
-    }
-    goto l699676;
-    l695204: ;
-        lambda_695206 = plambda_695206;
-        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
-        *lambda_656114_695188 >> read_channel_695209;
-        pread_channel_695209 = read_channel_695209;
-    l695207: ;
-        read_channel_695209 = pread_channel_695209;
-        #line 281 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-        *value_695202 = read_channel_695209;
-        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
-        *lambda_656114_695189 << read_channel_695209;
-    l695211: ;
-        #line 279 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-        int _695213;
-        _695213 = *value_695202;
-        #line 279 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-        int _695215;
-        _695215 = _695213;
-        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
-        *lambda_656114_695190 << _695215;
-    l695216: ;
-        goto l695218;
-
-    l699676: ;
-        return ;
-}
-
-void lambda_655381(hls::stream<channel_i32_307617>* lambda_655381_695554, hls::stream<channel_i32_307617>* lambda_655381_695555) {
-#pragma HLS INLINE off
-    int*  lbuf_695565;
-    int* plbuf_695565;
-    int*  lbuf_695570;
-    int* plbuf_695570;
-    int*  lbuf_695573;
-    int* plbuf_695573;
-    int i695574;
-    int  lambda_695604;
-    int plambda_695604;
-    int  read_channel_695609;
-    int pread_channel_695609;
-    int  lower_695614;
-    int plower_695614;
-    int  lower_695650;
-    int plower_695650;
-    int  lower_695686;
-    int plower_695686;
-    int  lower_695722;
-    int plower_695722;
-    int  lower_695745;
-    int plower_695745;
-    int  lower_695768;
-    int plower_695768;
-    int  _695696;
-    int p_695696;
-    int  _695660;
-    int p_695660;
-    int  _695624;
-    int p_695624;
-    #line 122 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
-    
-    #line 174 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_695561_slot;
-    int* value_695561;
-    value_695561 = &value_695561_slot;
-    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_695584_slot;
-    int* value_695584;
-    value_695584 = &value_695584_slot;
-    #line 331 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-    int value_695559_slot;
-    int* value_695559;
-    value_695559 = &value_695559_slot;
-    #line 174 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_695566_slot;
-    int* value_695566;
-    value_695566 = &value_695566_slot;
-    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_695596_slot;
-    int* value_695596;
-    value_695596 = &value_695596_slot;
-    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_695592_slot;
-    int* value_695592;
-    value_695592 = &value_695592_slot;
-    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_695598_slot;
-    int* value_695598;
-    value_695598 = &value_695598_slot;
-    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_695588_slot;
-    int* value_695588;
-    value_695588 = &value_695588_slot;
-    #line 782 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int col_ridx_695600_slot;
-    int* col_ridx_695600;
-    col_ridx_695600 = &col_ridx_695600_slot;
-    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_695582_slot;
-    int* value_695582;
-    value_695582 = &value_695582_slot;
-    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_695590_slot;
-    int* value_695590;
-    value_695590 = &value_695590_slot;
-    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_695594_slot;
-    int* value_695594;
-    value_695594 = &value_695594_slot;
-    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_695586_slot;
-    int* value_695586;
-    value_695586 = &value_695586_slot;
-    #line 331 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-    *value_695559 = 0;
-    #line 174 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    *value_695561 = 0;
-    #line 175 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int reserver_lbuf_695565[1024];
-    plbuf_695565 = reserver_lbuf_695565;
-    #pragma HLS dependence variable=reserver_lbuf_695565 inter false
-    #pragma HLS data_pack  variable=reserver_lbuf_695565
-    l695563: ;
-        lbuf_695565 = plbuf_695565;
-        #line 174 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695566 = 0;
-        #line 175 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int reserver_lbuf_695570[1024];
-        plbuf_695570 = reserver_lbuf_695570;
-        #pragma HLS dependence variable=reserver_lbuf_695570 inter false
-        #pragma HLS data_pack  variable=reserver_lbuf_695570
-    l695568: ;
-        lbuf_695570 = plbuf_695570;
-        #line 175 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int reserver_lbuf_695573[1024];
-        plbuf_695573 = reserver_lbuf_695573;
-        #pragma HLS dependence variable=reserver_lbuf_695573 inter false
-        #pragma HLS data_pack  variable=reserver_lbuf_695573
-    l695571: ;
-        lbuf_695573 = plbuf_695573;
-        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695582 = 0;
-        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695584 = 0;
-        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695586 = 0;
-        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695588 = 0;
-        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695590 = 0;
-        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695592 = 0;
-        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695594 = 0;
-        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695596 = 0;
-        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695598 = 0;
-        #line 782 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *col_ridx_695600 = 0;
-        #line 1 "/home/amiri/anydsl/runtime/platforms/intrinsics_thorin.impala"
-        for (i695574 = 0; i695574 < 1049601; i695574++) {
-            #pragma HLS PIPELINE
-            plambda_695604 = i695574;
-            goto l695602;
-        l695829: continue;
-        }
-        goto l699678;
-    l695602: ;
-        lambda_695604 = plambda_695604;
-        #line 872 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695605;
-        _695605 = lambda_695604 < 1048576;
-        #line 872 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695605) goto l695606; else goto l695858;
-    l695858: ;
-        #line 872 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        goto l695610;
-    l695606: ;
-        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
-        *lambda_655381_695554 >> read_channel_695609;
-        pread_channel_695609 = read_channel_695609;
-    l695607: ;
-        read_channel_695609 = pread_channel_695609;
-        #line 332 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-        *value_695559 = read_channel_695609;
-        #line 872 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        goto l695610;
-    l695610: ;
-        #line 785 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695837;
-        _695837 = *col_ridx_695600;
-        #line 785 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695839;
-        _695839 = _695837;
-        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int* _695855;
-        _695855 = lbuf_695573 + _695839;
-        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int* _695849;
-        _695849 = lbuf_695570 + _695839;
-        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int* _695840;
-        _695840 = lbuf_695565 + _695839;
-        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695841;
-        _695841 = *_695840;
-        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695843;
-        _695843 = _695841;
-        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695561 = _695843;
-        #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-        int _695845;
-        _695845 = *value_695559;
-        #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-        int _695847;
-        _695847 = _695845;
-        #line 180 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *_695840 = _695847;
-        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695850;
-        _695850 = *_695849;
-        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695852;
-        _695852 = _695850;
-        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695566 = _695852;
-        #line 180 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *_695849 = _695843;
-        #line 180 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *_695855 = _695852;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_695614 = 0;
-        goto l695612;
-    l695612: ;
-        lower_695614 = plower_695614;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        bool _695615;
-        _695615 = lower_695614 < 2;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        if (_695615) goto l695616; else goto l695647;
-    l695647: ;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_695650 = 0;
-        goto l695648;
-    l695648: ;
-        lower_695650 = plower_695650;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        bool _695651;
-        _695651 = lower_695650 < 2;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        if (_695651) goto l695652; else goto l695683;
-    l695683: ;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_695686 = 0;
-        goto l695684;
-    l695684: ;
-        lower_695686 = plower_695686;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        bool _695687;
-        _695687 = lower_695686 < 2;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        if (_695687) goto l695688; else goto l695719;
-    l695719: ;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_695722 = 0;
-        goto l695720;
-    l695720: ;
-        lower_695722 = plower_695722;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        bool _695723;
-        _695723 = lower_695722 < 1;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        if (_695723) goto l695724; else goto l695742;
-    l695742: ;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_695745 = 0;
-        goto l695743;
-    l695743: ;
-        lower_695745 = plower_695745;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        bool _695746;
-        _695746 = lower_695745 < 1;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        if (_695746) goto l695747; else goto l695765;
-    l695765: ;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_695768 = 0;
-        goto l695766;
-    l695766: ;
-        lower_695768 = plower_695768;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        bool _695769;
-        _695769 = lower_695768 < 1;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        if (_695769) goto l695770; else goto l695788;
-    l695788: ;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695791;
-        _695791 = *value_695582;
-        #line 881 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695789;
-        _695789 = 1024 < lambda_695604;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695793;
-        _695793 = *value_695584;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695795;
-        _695795 = *value_695586;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695797;
-        _695797 = *value_695594;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695799;
-        _695799 = *value_695596;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695801;
-        _695801 = *value_695598;
-        #line 881 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695789) goto l695790; else goto l695836;
-    l695836: ;
-        #line 881 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        goto l695820;
-    l695790: ;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695816;
-        _695816 = _695801;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695813;
-        _695813 = _695799;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _695814;
-        _695814 = 2 * _695813;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695808;
-        _695808 = _695795;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695805;
-        _695805 = _695793;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695811;
-        _695811 = _695797;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695803;
-        _695803 = _695791;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _695809;
-        _695809 = -1 * _695808;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _695806;
-        _695806 = -2 * _695805;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _695804;
-        _695804 = -1 * _695803;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _695807;
-        _695807 = _695804 + _695806;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _695810;
-        _695810 = _695807 + _695809;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _695812;
-        _695812 = _695810 + _695811;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _695815;
-        _695815 = _695812 + _695814;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _695817;
-        _695817 = _695815 + _695816;
-        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
-        *lambda_655381_695555 << _695817;
-    l695818: ;
-        #line 881 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        goto l695820;
-    l695820: ;
-        #line 788 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695822;
-        _695822 = *col_ridx_695600;
-        #line 788 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695823;
-        _695823 = _695822;
-        #line 788 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695824;
-        _695824 = 1 + _695823;
-        #line 788 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *col_ridx_695600 = _695824;
-        #line 789 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695825;
-        _695825 = _695824 == 1024;
-        #line 789 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695825) goto l695826; else goto l695835;
-    l695835: ;
-        goto l695827;
-    l695826: ;
-        #line 789 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *col_ridx_695600 = 0;
-        goto l695827;
-    l695827: ;
-        goto l695829;
-        
-    l699678: ;
-        return ;
-    l695770: ;
-        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695771;
-        _695771 = 3 + lower_695768;
-        #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-        int _695780;
-        _695780 = *value_695559;
-        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695772;
-        _695772 = _695771 - 1;
-        #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-        int _695782;
-        _695782 = _695780;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695773;
-        _695773 = 1 <= _695772;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695773) goto l695774; else goto l695786;
-    l695786: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695594 = _695782;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695777;
-    l695774: ;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695775;
-        _695775 = 2 <= _695772;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695775) goto l695776; else goto l695784;
-    l695784: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695596 = _695782;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695777;
-    l695776: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695598 = _695782;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695777;
-    l695777: ;
-        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        int _695779;
-        _695779 = 1 + lower_695768;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_695768 = _695779;
-        goto l695766;
-    l695747: ;
-        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695748;
-        _695748 = 3 + lower_695745;
-        #line 177 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695757;
-        _695757 = *value_695561;
-        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695749;
-        _695749 = _695748 - 1;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695750;
-        _695750 = 1 <= _695749;
-        #line 177 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695759;
-        _695759 = _695757;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695750) goto l695751; else goto l695763;
-    l695763: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695588 = _695759;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695754;
-    l695751: ;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695752;
-        _695752 = 2 <= _695749;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695752) goto l695753; else goto l695761;
-    l695761: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695590 = _695759;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695754;
-    l695753: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695592 = _695759;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695754;
-    l695754: ;
-        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        int _695756;
-        _695756 = 1 + lower_695745;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_695745 = _695756;
-        goto l695743;
-    l695724: ;
-        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695725;
-        _695725 = 3 + lower_695722;
-        #line 177 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695734;
-        _695734 = *value_695566;
-        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695726;
-        _695726 = _695725 - 1;
-        #line 177 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695736;
-        _695736 = _695734;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695727;
-        _695727 = 1 <= _695726;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695727) goto l695728; else goto l695740;
-    l695740: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695582 = _695736;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695731;
-    l695728: ;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695729;
-        _695729 = 2 <= _695726;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695729) goto l695730; else goto l695738;
-    l695738: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695584 = _695736;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695731;
-    l695730: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695586 = _695736;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695731;
-    l695731: ;
-        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        int _695733;
-        _695733 = 1 + lower_695722;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_695722 = _695733;
-        goto l695720;
-    l695688: ;
-        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        int _695689;
-        _695689 = 1 + lower_695686;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695690;
-        _695690 = 1 <= _695689;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695690) goto l695691; else goto l695715;
-    l695715: ;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695716;
-        _695716 = *value_695594;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695718;
-        _695718 = _695716;
-        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_695696 = _695718;
-        goto l695694;
-    l695691: ;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695692;
-        _695692 = 2 <= _695689;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695692) goto l695693; else goto l695711;
-    l695711: ;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695712;
-        _695712 = *value_695596;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695714;
-        _695714 = _695712;
-        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_695696 = _695714;
-        goto l695694;
-    l695693: ;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695708;
-        _695708 = *value_695598;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695710;
-        _695710 = _695708;
-        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_695696 = _695710;
-        goto l695694;
-    l695694: ;
-        _695696 = p_695696;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695697;
-        _695697 = 1 <= lower_695686;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695697) goto l695698; else goto l695706;
-    l695706: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695594 = _695696;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695701;
-    l695698: ;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695699;
-        _695699 = 2 <= lower_695686;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695699) goto l695700; else goto l695704;
-    l695704: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695596 = _695696;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695701;
-    l695700: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695598 = _695696;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695701;
-    l695701: ;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_695686 = _695689;
-        goto l695684;
-    l695652: ;
-        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        int _695653;
-        _695653 = 1 + lower_695650;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695654;
-        _695654 = 1 <= _695653;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695654) goto l695655; else goto l695679;
-    l695679: ;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695680;
-        _695680 = *value_695588;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695682;
-        _695682 = _695680;
-        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_695660 = _695682;
-        goto l695658;
-    l695655: ;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695656;
-        _695656 = 2 <= _695653;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695656) goto l695657; else goto l695675;
-    l695675: ;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695676;
-        _695676 = *value_695590;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695678;
-        _695678 = _695676;
-        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_695660 = _695678;
-        goto l695658;
-    l695657: ;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695672;
-        _695672 = *value_695592;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695674;
-        _695674 = _695672;
-        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_695660 = _695674;
-        goto l695658;
-    l695658: ;
-        _695660 = p_695660;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695661;
-        _695661 = 1 <= lower_695650;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695661) goto l695662; else goto l695670;
-    l695670: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695588 = _695660;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695665;
-    l695662: ;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695663;
-        _695663 = 2 <= lower_695650;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695663) goto l695664; else goto l695668;
-    l695668: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695590 = _695660;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695665;
-    l695664: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695592 = _695660;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695665;
-    l695665: ;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_695650 = _695653;
-        goto l695648;
-    l695616: ;
-        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        int _695617;
-        _695617 = 1 + lower_695614;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695618;
-        _695618 = 1 <= _695617;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695618) goto l695619; else goto l695643;
-    l695643: ;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695644;
-        _695644 = *value_695582;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695646;
-        _695646 = _695644;
-        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_695624 = _695646;
-        goto l695622;
-    l695619: ;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695620;
-        _695620 = 2 <= _695617;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695620) goto l695621; else goto l695639;
-    l695639: ;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695640;
-        _695640 = *value_695584;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695642;
-        _695642 = _695640;
-        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_695624 = _695642;
-        goto l695622;
-    l695621: ;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695636;
-        _695636 = *value_695586;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695638;
-        _695638 = _695636;
-        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_695624 = _695638;
-        goto l695622;
-    l695622: ;
-        _695624 = p_695624;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695625;
-        _695625 = 1 <= lower_695614;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695625) goto l695626; else goto l695634;
-    l695634: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695582 = _695624;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695629;
-    l695626: ;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695627;
-        _695627 = 2 <= lower_695614;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695627) goto l695628; else goto l695632;
-    l695632: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695584 = _695624;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695629;
-    l695628: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695586 = _695624;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695629;
-    l695629: ;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_695614 = _695617;
-        goto l695612;
-}
-
-void lambda_656168(hls::stream<channel_i32_307617>* lambda_656168_695902, hls::stream<channel_i32_307617>* lambda_656168_695903) {
-#pragma HLS INLINE off
-    int i695904;
-    int  lambda_695914;
-    int plambda_695914;
-    int  read_channel_695917;
-    int pread_channel_695917;
-    #line 1 "/home/amiri/anydsl/runtime/platforms/intrinsics_thorin.impala"
-    for (i695904 = 0; i695904 < 1048576; i695904++) {
-        #pragma HLS PIPELINE
-        plambda_695914 = i695904;
-        goto l695912;
-    l695921: continue;
-    }
-    goto l699680;
-    l695912: ;
-        lambda_695914 = plambda_695914;
-        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
-        *lambda_656168_695902 >> read_channel_695917;
-        pread_channel_695917 = read_channel_695917;
-    l695915: ;
-        read_channel_695917 = pread_channel_695917;
-        #line 72 "/home/amiri/anydsl/stincilla/apps/harris_corner/harris_corner.impala"
-        int _695918;
-        _695918 = read_channel_695917 * read_channel_695917;
-        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
-        *lambda_656168_695903 << _695918;
-    l695919: ;
-        goto l695921;
-
-    l699680: ;
-        return ;
-}
-
-void lambda_656211(hls::stream<channel_i32_307617>* lambda_656211_694783, hls::stream<channel_i32_307617>* lambda_656211_694784) {
-#pragma HLS INLINE off
-    int i694785;
-    int  lambda_694797;
-    int plambda_694797;
-    int  read_channel_694804;
-    int pread_channel_694804;
-    #line 1 "/home/amiri/anydsl/runtime/platforms/intrinsics_thorin.impala"
-    for (i694785 = 0; i694785 < 1048576; i694785++) {
-        #pragma HLS PIPELINE
-        plambda_694797 = i694785;
-        goto l694795;
-    l694813: continue;
-    }
-    goto l699682;
-    l694795: ;
-        lambda_694797 = plambda_694797;
-        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
-        *lambda_656211_694783 >> read_channel_694804;
-        pread_channel_694804 = read_channel_694804;
-    l694802: ;
-        read_channel_694804 = pread_channel_694804;
-        #line 75 "/home/amiri/anydsl/stincilla/apps/harris_corner/harris_corner.impala"
-        int _694810;
-        _694810 = read_channel_694804 * read_channel_694804;
-        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
-        *lambda_656211_694784 << _694810;
-    l694811: ;
-        goto l694813;
-        
-    l699682: ;
-        return ;
-}
-
-void lambda_656254(hls::stream<channel_i32_307617>* lambda_656254_696253, hls::stream<channel_i32_307617>* lambda_656254_696254, hls::stream<channel_i32_307617>* lambda_656254_696255) {
-    int i696256;
-    int  lambda_696271;
-    int plambda_696271;
-    int  read_channel_696274;
-    int pread_channel_696274;
-    int  read_channel_696278;
-    int pread_channel_696278;
-    #line 122 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
-    
-    #line 331 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-    int value_696267_slot;
-    int* value_696267;
-    value_696267 = &value_696267_slot;
-    #line 331 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-    *value_696267 = 0;
-    #line 1 "/home/amiri/anydsl/runtime/platforms/intrinsics_thorin.impala"
-    for (i696256 = 0; i696256 < 1048576; i696256++) {
-        #pragma HLS PIPELINE
-        plambda_696271 = i696256;
-        goto l696269;
-    l696285: continue;
-    }
-    goto l699684;
-    l696269: ;
-        lambda_696271 = plambda_696271;
-        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
-        *lambda_656254_696253 >> read_channel_696274;
-        pread_channel_696274 = read_channel_696274;
-    l696272: ;
-        read_channel_696274 = pread_channel_696274;
-        #line 332 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-        *value_696267 = read_channel_696274;
-        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
-        *lambda_656254_696254 >> read_channel_696278;
-        pread_channel_696278 = read_channel_696278;
-    l696276: ;
-        read_channel_696278 = pread_channel_696278;
-        #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-        int _696279;
-        _696279 = *value_696267;
-        #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-        int _696281;
-        _696281 = _696279;
+        int _678542;
+        _678542 = _678540;
         #line 78 "/home/amiri/anydsl/stincilla/apps/harris_corner/harris_corner.impala"
-        int _696282;
-        _696282 = _696281 * read_channel_696278;
+        int _678543;
+        _678543 = _678542 * read_channel_678539;
         #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
-        *lambda_656254_696255 << _696282;
-    l696283: ;
-        goto l696285;
-
-    l699684: ;
-        return ;
-}
-
-
-void lambda_657337(int lambda_657337_696617[1048576], hls::stream<channel_i32_307617>* lambda_657337_696618, hls::stream<channel_i32_307617>* lambda_657337_696619, hls::stream<channel_i32_307617>* lambda_657337_696620) {
-#pragma HLS INLINE off
-    int i696621;
-    int  lambda_696638;
-    int plambda_696638;
-    int  read_channel_696641;
-    int pread_channel_696641;
-    int  read_channel_696645;
-    int pread_channel_696645;
-    int  read_channel_696649;
-    int pread_channel_696649;
-    #line 122 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
-    
-    #line 331 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-    int value_696634_slot;
-    int* value_696634;
-    value_696634 = &value_696634_slot;
-    #line 331 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-    int value_696632_slot;
-    int* value_696632;
-    value_696632 = &value_696632_slot;
-    #line 331 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-    *value_696632 = 0;
-    #line 331 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-    *value_696634 = 0;
-    #line 1 "/home/amiri/anydsl/runtime/platforms/intrinsics_thorin.impala"
-    for (i696621 = 0; i696621 < 1048576; i696621++) {
-        #pragma HLS PIPELINE
-        plambda_696638 = i696621;
-        goto l696636;
-    l696650: continue;
-    }
-    goto l699688;
-    l696636: ;
-        lambda_696638 = plambda_696638;
-        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
-        *lambda_657337_696618 >> read_channel_696641;
-        pread_channel_696641 = read_channel_696641;
-    l696639: ;
-        read_channel_696641 = pread_channel_696641;
-        #line 332 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-        *value_696632 = read_channel_696641;
-        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
-        *lambda_657337_696619 >> read_channel_696645;
-        pread_channel_696645 = read_channel_696645;
-    l696643: ;
-        read_channel_696645 = pread_channel_696645;
-        #line 332 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-        *value_696634 = read_channel_696645;
-        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
-        *lambda_657337_696620 >> read_channel_696649;
-        pread_channel_696649 = read_channel_696649;
-    l696647: ;
-        read_channel_696649 = pread_channel_696649;
-        #line 96 "/home/amiri/anydsl/stincilla/apps/harris_corner/harris_corner.impala"
-        int _696661;
-        _696661 = read_channel_696649 * read_channel_696649;
-        #line 34 "/home/amiri/anydsl/stincilla/mapping_fpga_img_hls.impala"
-        int* _696657;
-        _696657 = lambda_657337_696617 + lambda_696638;
-        #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-        int _696653;
-        _696653 = *value_696632;
-        #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-        int _696655;
-        _696655 = *value_696634;
-        #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-        int _696658;
-        _696658 = _696653;
-        #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-        int _696659;
-        _696659 = _696655;
-        #line 96 "/home/amiri/anydsl/stincilla/apps/harris_corner/harris_corner.impala"
-        int _696660;
-        _696660 = _696658 * _696659;
-        #line 97 "/home/amiri/anydsl/stincilla/apps/harris_corner/harris_corner.impala"
-        int trace_696663;
-        trace_696663 = _696658 + _696659;
-        #line 96 "/home/amiri/anydsl/stincilla/apps/harris_corner/harris_corner.impala"
-        int det_696662;
-        det_696662 = _696660 - _696661;
-        #line 98 "/home/amiri/anydsl/stincilla/apps/harris_corner/harris_corner.impala"
-        int _696664;
-        _696664 = trace_696663 * trace_696663;
-        #line 98 "/home/amiri/anydsl/stincilla/apps/harris_corner/harris_corner.impala"
-        int _696665;
-        _696665 = 4 * _696664;
-        #line 98 "/home/amiri/anydsl/stincilla/apps/harris_corner/harris_corner.impala"
-        int _696667;
-        _696667 = _696665 / 100;
-        #line 98 "/home/amiri/anydsl/stincilla/apps/harris_corner/harris_corner.impala"
-        int _696668;
-        _696668 = det_696662 - _696667;
-        #line 34 "/home/amiri/anydsl/stincilla/mapping_fpga_img_hls.impala"
-        *_696657 = _696668;
-        goto l696650;
-
-    l699688: ;
-        return ;
-}
-
-void lambda_656651(hls::stream<channel_i32_307617>* lambda_656651_695228, hls::stream<channel_i32_307617>* lambda_656651_695229) {
-#pragma HLS INLINE off
-    int*  lbuf_695239;
-    int* plbuf_695239;
-    int*  lbuf_695244;
-    int* plbuf_695244;
-    int*  lbuf_695247;
-    int* plbuf_695247;
-    int i695248;
-    int  lambda_695278;
-    int plambda_695278;
-    int  read_channel_695283;
-    int pread_channel_695283;
-    int  lower_695288;
-    int plower_695288;
-    int  lower_695324;
-    int plower_695324;
-    int  lower_695360;
-    int plower_695360;
-    int  lower_695396;
-    int plower_695396;
-    int  lower_695419;
-    int plower_695419;
-    int  lower_695442;
-    int plower_695442;
-    int  _695370;
-    int p_695370;
-    int  _695334;
-    int p_695334;
-    int  _695298;
-    int p_695298;
-    #line 122 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
-    
-    #line 174 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_695240_slot;
-    int* value_695240;
-    value_695240 = &value_695240_slot;
-    #line 174 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_695235_slot;
-    int* value_695235;
-    value_695235 = &value_695235_slot;
-    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_695270_slot;
-    int* value_695270;
-    value_695270 = &value_695270_slot;
-    #line 331 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-    int value_695233_slot;
-    int* value_695233;
-    value_695233 = &value_695233_slot;
-    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_695260_slot;
-    int* value_695260;
-    value_695260 = &value_695260_slot;
-    #line 331 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-    *value_695233 = 0;
-    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_695262_slot;
-    int* value_695262;
-    value_695262 = &value_695262_slot;
-    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_695256_slot;
-    int* value_695256;
-    value_695256 = &value_695256_slot;
-    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_695268_slot;
-    int* value_695268;
-    value_695268 = &value_695268_slot;
-    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_695258_slot;
-    int* value_695258;
-    value_695258 = &value_695258_slot;
-    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_695266_slot;
-    int* value_695266;
-    value_695266 = &value_695266_slot;
-    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_695272_slot;
-    int* value_695272;
-    value_695272 = &value_695272_slot;
-    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_695264_slot;
-    int* value_695264;
-    value_695264 = &value_695264_slot;
-    #line 782 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int col_ridx_695274_slot;
-    int* col_ridx_695274;
-    col_ridx_695274 = &col_ridx_695274_slot;
-    #line 174 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    *value_695235 = 0;
-    #line 175 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int reserver_lbuf_695239[1024];
-    plbuf_695239 = reserver_lbuf_695239;
-    #pragma HLS dependence variable=reserver_lbuf_695239 inter false
-    #pragma HLS data_pack  variable=reserver_lbuf_695239
-    l695237: ;
-        lbuf_695239 = plbuf_695239;
-        #line 174 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695240 = 0;
-        #line 175 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int reserver_lbuf_695244[1024];
-        plbuf_695244 = reserver_lbuf_695244;
-        #pragma HLS dependence variable=reserver_lbuf_695244 inter false
-        #pragma HLS data_pack  variable=reserver_lbuf_695244
-    l695242: ;
-        lbuf_695244 = plbuf_695244;
-        #line 175 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int reserver_lbuf_695247[1024];
-        plbuf_695247 = reserver_lbuf_695247;
-        #pragma HLS dependence variable=reserver_lbuf_695247 inter false
-        #pragma HLS data_pack  variable=reserver_lbuf_695247
-    l695245: ;
-        lbuf_695247 = plbuf_695247;
-        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695256 = 0;
-        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695258 = 0;
-        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695260 = 0;
-        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695262 = 0;
-        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695264 = 0;
-        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695266 = 0;
-        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695268 = 0;
-        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695270 = 0;
-        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695272 = 0;
-        #line 782 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *col_ridx_695274 = 0;
-        #line 1 "/home/amiri/anydsl/runtime/platforms/intrinsics_thorin.impala"
-        for (i695248 = 0; i695248 < 1049601; i695248++) {
-            #pragma HLS PIPELINE
-            plambda_695278 = i695248;
-            goto l695276;
-        l695519: continue;
-        }
-        goto l699690;
-    l695276: ;
-        lambda_695278 = plambda_695278;
-        #line 872 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695279;
-        _695279 = lambda_695278 < 1048576;
-        #line 872 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695279) goto l695280; else goto l695548;
-    l695548: ;
-        #line 872 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        goto l695284;
-    l695280: ;
-        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
-        *lambda_656651_695228 >> read_channel_695283;
-        pread_channel_695283 = read_channel_695283;
-    l695281: ;
-        read_channel_695283 = pread_channel_695283;
-        #line 332 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-        *value_695233 = read_channel_695283;
-        #line 872 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        goto l695284;
-    l695284: ;
-        #line 785 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695527;
-        _695527 = *col_ridx_695274;
-        #line 785 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695529;
-        _695529 = _695527;
-        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int* _695545;
-        _695545 = lbuf_695247 + _695529;
-        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int* _695539;
-        _695539 = lbuf_695244 + _695529;
-        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int* _695530;
-        _695530 = lbuf_695239 + _695529;
-        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695531;
-        _695531 = *_695530;
-        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695533;
-        _695533 = _695531;
-        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695235 = _695533;
-        #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-        int _695535;
-        _695535 = *value_695233;
-        #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-        int _695537;
-        _695537 = _695535;
-        #line 180 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *_695530 = _695537;
-        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695540;
-        _695540 = *_695539;
-        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695542;
-        _695542 = _695540;
-        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695240 = _695542;
-        #line 180 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *_695539 = _695533;
-        #line 180 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *_695545 = _695542;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_695288 = 0;
-        goto l695286;
-    l695286: ;
-        lower_695288 = plower_695288;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        bool _695289;
-        _695289 = lower_695288 < 2;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        if (_695289) goto l695290; else goto l695321;
-    l695321: ;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_695324 = 0;
-        goto l695322;
-    l695322: ;
-        lower_695324 = plower_695324;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        bool _695325;
-        _695325 = lower_695324 < 2;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        if (_695325) goto l695326; else goto l695357;
-    l695357: ;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_695360 = 0;
-        goto l695358;
-    l695358: ;
-        lower_695360 = plower_695360;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        bool _695361;
-        _695361 = lower_695360 < 2;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        if (_695361) goto l695362; else goto l695393;
-    l695393: ;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_695396 = 0;
-        goto l695394;
-    l695394: ;
-        lower_695396 = plower_695396;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        bool _695397;
-        _695397 = lower_695396 < 1;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        if (_695397) goto l695398; else goto l695416;
-    l695416: ;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_695419 = 0;
-        goto l695417;
-    l695417: ;
-        lower_695419 = plower_695419;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        bool _695420;
-        _695420 = lower_695419 < 1;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        if (_695420) goto l695421; else goto l695439;
-    l695439: ;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_695442 = 0;
-        goto l695440;
-    l695440: ;
-        lower_695442 = plower_695442;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        bool _695443;
-        _695443 = lower_695442 < 1;
-        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        if (_695443) goto l695444; else goto l695462;
-    l695462: ;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695465;
-        _695465 = *value_695256;
-        #line 881 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695463;
-        _695463 = 1024 < lambda_695278;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695467;
-        _695467 = *value_695258;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695469;
-        _695469 = *value_695260;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695471;
-        _695471 = *value_695262;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695473;
-        _695473 = *value_695264;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695475;
-        _695475 = *value_695266;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695477;
-        _695477 = *value_695268;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695479;
-        _695479 = *value_695270;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695481;
-        _695481 = *value_695272;
-        #line 881 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695463) goto l695464; else goto l695526;
-    l695526: ;
-        #line 881 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        goto l695510;
-    l695464: ;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695489;
-        _695489 = _695471;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695504;
-        _695504 = _695481;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695484;
-        _695484 = _695467;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695493;
-        _695493 = _695473;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695499;
-        _695499 = _695477;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695496;
-        _695496 = _695475;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _695485;
-        _695485 = 2 * _695484;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695487;
-        _695487 = _695469;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695501;
-        _695501 = _695479;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _695490;
-        _695490 = 2 * _695489;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _695497;
-        _695497 = 2 * _695496;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695483;
-        _695483 = _695465;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _695494;
-        _695494 = 4 * _695493;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _695486;
-        _695486 = _695483 + _695485;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _695488;
-        _695488 = _695486 + _695487;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _695502;
-        _695502 = 2 * _695501;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _695491;
-        _695491 = _695488 + _695490;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _695495;
-        _695495 = _695491 + _695494;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _695498;
-        _695498 = _695495 + _695497;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _695500;
-        _695500 = _695498 + _695499;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _695503;
-        _695503 = _695500 + _695502;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _695505;
-        _695505 = _695503 + _695504;
-        #line 57 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _695507;
-        _695507 = _695505 / 16;
-        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
-        *lambda_656651_695229 << _695507;
-    l695508: ;
-        #line 881 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        goto l695510;
-    l695510: ;
-        #line 788 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695512;
-        _695512 = *col_ridx_695274;
-        #line 788 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695513;
-        _695513 = _695512;
-        #line 788 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695514;
-        _695514 = 1 + _695513;
-        #line 788 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *col_ridx_695274 = _695514;
-        #line 789 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695515;
-        _695515 = _695514 == 1024;
-        #line 789 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695515) goto l695516; else goto l695525;
-    l695525: ;
-        goto l695517;
-    l695516: ;
-        #line 789 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *col_ridx_695274 = 0;
-        goto l695517;
-    l695517: ;
-        goto l695519;
+        *lambda_641199_678516 << _678543;
+    l678544: ;
+        goto l678546;
         
-    l699690: ;
+    l682995: ;
         return ;
-    l695444: ;
-        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695445;
-        _695445 = 3 + lower_695442;
-        #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-        int _695454;
-        _695454 = *value_695233;
-        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695446;
-        _695446 = _695445 - 1;
-        #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-        int _695456;
-        _695456 = _695454;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695447;
-        _695447 = 1 <= _695446;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695447) goto l695448; else goto l695460;
-    l695460: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695268 = _695456;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695451;
-    l695448: ;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695449;
-        _695449 = 2 <= _695446;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695449) goto l695450; else goto l695458;
-    l695458: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695270 = _695456;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695451;
-    l695450: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695272 = _695456;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695451;
-    l695451: ;
-        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        int _695453;
-        _695453 = 1 + lower_695442;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_695442 = _695453;
-        goto l695440;
-    l695421: ;
-        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695422;
-        _695422 = 3 + lower_695419;
-        #line 177 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695431;
-        _695431 = *value_695235;
-        #line 177 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695433;
-        _695433 = _695431;
-        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695423;
-        _695423 = _695422 - 1;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695424;
-        _695424 = 1 <= _695423;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695424) goto l695425; else goto l695437;
-    l695437: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695262 = _695433;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695428;
-    l695425: ;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695426;
-        _695426 = 2 <= _695423;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695426) goto l695427; else goto l695435;
-    l695435: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695264 = _695433;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695428;
-    l695427: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695266 = _695433;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695428;
-    l695428: ;
-        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        int _695430;
-        _695430 = 1 + lower_695419;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_695419 = _695430;
-        goto l695417;
-    l695398: ;
-        #line 177 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695408;
-        _695408 = *value_695240;
-        #line 177 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695410;
-        _695410 = _695408;
-        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695399;
-        _695399 = 3 + lower_695396;
-        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695400;
-        _695400 = _695399 - 1;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695401;
-        _695401 = 1 <= _695400;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695401) goto l695402; else goto l695414;
-    l695414: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695256 = _695410;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695405;
-    l695402: ;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695403;
-        _695403 = 2 <= _695400;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695403) goto l695404; else goto l695412;
-    l695412: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695258 = _695410;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695405;
-    l695404: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695260 = _695410;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695405;
-    l695405: ;
-        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        int _695407;
-        _695407 = 1 + lower_695396;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_695396 = _695407;
-        goto l695394;
-    l695362: ;
-        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        int _695363;
-        _695363 = 1 + lower_695360;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695364;
-        _695364 = 1 <= _695363;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695364) goto l695365; else goto l695389;
-    l695389: ;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695390;
-        _695390 = *value_695268;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695392;
-        _695392 = _695390;
-        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_695370 = _695392;
-        goto l695368;
-    l695365: ;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695366;
-        _695366 = 2 <= _695363;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695366) goto l695367; else goto l695385;
-    l695385: ;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695386;
-        _695386 = *value_695270;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695388;
-        _695388 = _695386;
-        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_695370 = _695388;
-        goto l695368;
-    l695367: ;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695382;
-        _695382 = *value_695272;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695384;
-        _695384 = _695382;
-        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_695370 = _695384;
-        goto l695368;
-    l695368: ;
-        _695370 = p_695370;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695371;
-        _695371 = 1 <= lower_695360;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695371) goto l695372; else goto l695380;
-    l695380: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695268 = _695370;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695375;
-    l695372: ;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695373;
-        _695373 = 2 <= lower_695360;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695373) goto l695374; else goto l695378;
-    l695378: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695270 = _695370;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695375;
-    l695374: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695272 = _695370;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695375;
-    l695375: ;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_695360 = _695363;
-        goto l695358;
-    l695326: ;
-        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        int _695327;
-        _695327 = 1 + lower_695324;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695328;
-        _695328 = 1 <= _695327;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695328) goto l695329; else goto l695353;
-    l695353: ;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695354;
-        _695354 = *value_695262;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695356;
-        _695356 = _695354;
-        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_695334 = _695356;
-        goto l695332;
-    l695329: ;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695330;
-        _695330 = 2 <= _695327;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695330) goto l695331; else goto l695349;
-    l695349: ;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695350;
-        _695350 = *value_695264;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695352;
-        _695352 = _695350;
-        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_695334 = _695352;
-        goto l695332;
-    l695331: ;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695346;
-        _695346 = *value_695266;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695348;
-        _695348 = _695346;
-        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_695334 = _695348;
-        goto l695332;
-    l695332: ;
-        _695334 = p_695334;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695335;
-        _695335 = 1 <= lower_695324;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695335) goto l695336; else goto l695344;
-    l695344: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695262 = _695334;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695339;
-    l695336: ;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695337;
-        _695337 = 2 <= lower_695324;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695337) goto l695338; else goto l695342;
-    l695342: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695264 = _695334;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695339;
-    l695338: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695266 = _695334;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695339;
-    l695339: ;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_695324 = _695327;
-        goto l695322;
-    l695290: ;
-        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        int _695291;
-        _695291 = 1 + lower_695288;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695292;
-        _695292 = 1 <= _695291;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695292) goto l695293; else goto l695317;
-    l695317: ;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695318;
-        _695318 = *value_695256;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695320;
-        _695320 = _695318;
-        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_695298 = _695320;
-        goto l695296;
-    l695293: ;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695294;
-        _695294 = 2 <= _695291;
-        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695294) goto l695295; else goto l695313;
-    l695313: ;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695314;
-        _695314 = *value_695258;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695316;
-        _695316 = _695314;
-        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_695298 = _695316;
-        goto l695296;
-    l695295: ;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695310;
-        _695310 = *value_695260;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _695312;
-        _695312 = _695310;
-        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_695298 = _695312;
-        goto l695296;
-    l695296: ;
-        _695298 = p_695298;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695299;
-        _695299 = 1 <= lower_695288;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695299) goto l695300; else goto l695308;
-    l695308: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695256 = _695298;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695303;
-    l695300: ;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695301;
-        _695301 = 2 <= lower_695288;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695301) goto l695302; else goto l695306;
-    l695306: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695258 = _695298;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695303;
-    l695302: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695260 = _695298;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l695303;
-    l695303: ;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_695288 = _695291;
-        goto l695286;
 }
 
-void lambda_655317(int lambda_655317_694824[1048576], hls::stream<channel_i32_307617>* lambda_655317_694825, hls::stream<channel_i32_307617>* lambda_655317_694826) {
-    int i694827;
-    int  lambda_694844;
-    int plambda_694844;
+void lambda_641581(hls::stream<channel_i32_299216>* lambda_641581_679267, hls::stream<channel_i32_299216>* lambda_641581_679268) {
+#pragma HLS INLINE off
+    int*  lbuf_679278;
+    int* plbuf_679278;
+    int*  lbuf_679283;
+    int* plbuf_679283;
+    int*  lbuf_679286;
+    int* plbuf_679286;
+    int i679287;
+    int  lambda_679315;
+    int plambda_679315;
+    int  read_channel_679320;
+    int pread_channel_679320;
+    int  lower_679325;
+    int plower_679325;
+    int  lower_679361;
+    int plower_679361;
+    int  lower_679397;
+    int plower_679397;
+    int  lower_679433;
+    int plower_679433;
+    int  lower_679456;
+    int plower_679456;
+    int  lower_679479;
+    int plower_679479;
+    int  _679407;
+    int p_679407;
+    int  _679371;
+    int p_679371;
+    int  _679335;
+    int p_679335;
+    #line 122 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
+    
+    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_679299_slot;
+    int* value_679299;
+    value_679299 = &value_679299_slot;
+    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_679301_slot;
+    int* value_679301;
+    value_679301 = &value_679301_slot;
+    #line 331 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+    int value_679272_slot;
+    int* value_679272;
+    value_679272 = &value_679272_slot;
+    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_679309_slot;
+    int* value_679309;
+    value_679309 = &value_679309_slot;
+    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_679305_slot;
+    int* value_679305;
+    value_679305 = &value_679305_slot;
+    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_679311_slot;
+    int* value_679311;
+    value_679311 = &value_679311_slot;
+    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_679307_slot;
+    int* value_679307;
+    value_679307 = &value_679307_slot;
+    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_679303_slot;
+    int* value_679303;
+    value_679303 = &value_679303_slot;
+    #line 174 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_679279_slot;
+    int* value_679279;
+    value_679279 = &value_679279_slot;
+    #line 174 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_679274_slot;
+    int* value_679274;
+    value_679274 = &value_679274_slot;
+    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_679295_slot;
+    int* value_679295;
+    value_679295 = &value_679295_slot;
+    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_679297_slot;
+    int* value_679297;
+    value_679297 = &value_679297_slot;
+    #line 331 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+    *value_679272 = 0;
+    #line 174 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    *value_679274 = 0;
+    #line 175 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int reserver_lbuf_679278[1024];
+    plbuf_679278 = reserver_lbuf_679278;
+    #pragma HLS dependence variable=reserver_lbuf_679278 inter false
+    #pragma HLS data_pack  variable=reserver_lbuf_679278
+    l679276: ;
+        lbuf_679278 = plbuf_679278;
+        #line 174 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679279 = 0;
+        #line 175 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int reserver_lbuf_679283[1024];
+        plbuf_679283 = reserver_lbuf_679283;
+        #pragma HLS dependence variable=reserver_lbuf_679283 inter false
+        #pragma HLS data_pack  variable=reserver_lbuf_679283
+    l679281: ;
+        lbuf_679283 = plbuf_679283;
+        #line 175 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int reserver_lbuf_679286[1024];
+        plbuf_679286 = reserver_lbuf_679286;
+        #pragma HLS dependence variable=reserver_lbuf_679286 inter false
+        #pragma HLS data_pack  variable=reserver_lbuf_679286
+    l679284: ;
+        lbuf_679286 = plbuf_679286;
+        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679295 = 0;
+        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679297 = 0;
+        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679299 = 0;
+        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679301 = 0;
+        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679303 = 0;
+        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679305 = 0;
+        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679307 = 0;
+        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679309 = 0;
+        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679311 = 0;
+        #line 1 "/home/amiri/anydsl/runtime/platforms/intrinsics_thorin.impala"
+        for (i679287 = 0; i679287 < 1049601; i679287++) {
+            #pragma HLS PIPELINE
+            plambda_679315 = i679287;
+            goto l679313;
+        l679547: continue;
+        }
+        goto l682997;
+    l679313: ;
+        lambda_679315 = plambda_679315;
+        #line 872 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _679316;
+        _679316 = lambda_679315 < 1048576;
+        #line 872 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_679316) goto l679317; else goto l679570;
+    l679570: ;
+        #line 872 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        goto l679321;
+    l679317: ;
+        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
+        *lambda_641581_679267 >> read_channel_679320;
+        pread_channel_679320 = read_channel_679320;
+    l679318: ;
+        read_channel_679320 = pread_channel_679320;
+        #line 332 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+        *value_679272 = read_channel_679320;
+        #line 872 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        goto l679321;
+    l679321: ;
+        #line 785 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679551;
+        _679551 = lambda_679315 % 1024;
+        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int* _679561;
+        _679561 = lbuf_679283 + _679551;
+        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int* _679567;
+        _679567 = lbuf_679286 + _679551;
+        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int* _679552;
+        _679552 = lbuf_679278 + _679551;
+        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679553;
+        _679553 = *_679552;
+        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679555;
+        _679555 = _679553;
+        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679274 = _679555;
+        #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+        int _679557;
+        _679557 = *value_679272;
+        #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+        int _679559;
+        _679559 = _679557;
+        #line 180 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *_679552 = _679559;
+        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679562;
+        _679562 = *_679561;
+        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679564;
+        _679564 = _679562;
+        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679279 = _679564;
+        #line 180 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *_679561 = _679555;
+        #line 180 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *_679567 = _679564;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_679325 = 0;
+        goto l679323;
+    l679323: ;
+        lower_679325 = plower_679325;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        bool _679326;
+        _679326 = lower_679325 < 2;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        if (_679326) goto l679327; else goto l679358;
+    l679358: ;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_679361 = 0;
+        goto l679359;
+    l679359: ;
+        lower_679361 = plower_679361;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        bool _679362;
+        _679362 = lower_679361 < 2;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        if (_679362) goto l679363; else goto l679394;
+    l679394: ;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_679397 = 0;
+        goto l679395;
+    l679395: ;
+        lower_679397 = plower_679397;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        bool _679398;
+        _679398 = lower_679397 < 2;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        if (_679398) goto l679399; else goto l679430;
+    l679430: ;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_679433 = 0;
+        goto l679431;
+    l679431: ;
+        lower_679433 = plower_679433;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        bool _679434;
+        _679434 = lower_679433 < 1;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        if (_679434) goto l679435; else goto l679453;
+    l679453: ;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_679456 = 0;
+        goto l679454;
+    l679454: ;
+        lower_679456 = plower_679456;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        bool _679457;
+        _679457 = lower_679456 < 1;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        if (_679457) goto l679458; else goto l679476;
+    l679476: ;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_679479 = 0;
+        goto l679477;
+    l679477: ;
+        lower_679479 = plower_679479;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        bool _679480;
+        _679480 = lower_679479 < 1;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        if (_679480) goto l679481; else goto l679499;
+    l679499: ;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679502;
+        _679502 = *value_679295;
+        #line 881 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _679500;
+        _679500 = 1024 < lambda_679315;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679504;
+        _679504 = *value_679297;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679506;
+        _679506 = *value_679299;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679508;
+        _679508 = *value_679301;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679510;
+        _679510 = *value_679303;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679512;
+        _679512 = *value_679305;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679514;
+        _679514 = *value_679307;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679516;
+        _679516 = *value_679309;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679518;
+        _679518 = *value_679311;
+        #line 881 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_679500) goto l679501; else goto l679550;
+    l679550: ;
+        #line 881 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        goto l679545;
+    l679501: ;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679520;
+        _679520 = _679502;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679535;
+        _679535 = _679514;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679532;
+        _679532 = _679512;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _679533;
+        _679533 = 2 * _679532;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679526;
+        _679526 = _679508;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679540;
+        _679540 = _679518;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679537;
+        _679537 = _679516;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _679538;
+        _679538 = 2 * _679537;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679529;
+        _679529 = _679510;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _679527;
+        _679527 = 2 * _679526;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679521;
+        _679521 = _679504;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679524;
+        _679524 = _679506;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _679530;
+        _679530 = 4 * _679529;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _679522;
+        _679522 = 2 * _679521;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _679523;
+        _679523 = _679520 + _679522;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _679525;
+        _679525 = _679523 + _679524;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _679528;
+        _679528 = _679525 + _679527;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _679531;
+        _679531 = _679528 + _679530;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _679534;
+        _679534 = _679531 + _679533;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _679536;
+        _679536 = _679534 + _679535;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _679539;
+        _679539 = _679536 + _679538;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _679541;
+        _679541 = _679539 + _679540;
+        #line 57 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _679542;
+        _679542 = _679541 / 16;
+        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
+        *lambda_641581_679268 << _679542;
+    l679543: ;
+        #line 881 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        goto l679545;
+    l679545: ;
+        goto l679547;
+        
+    l682997: ;
+        return ;
+    l679481: ;
+        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679482;
+        _679482 = 3 + lower_679479;
+        #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+        int _679491;
+        _679491 = *value_679272;
+        #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+        int _679493;
+        _679493 = _679491;
+        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679483;
+        _679483 = _679482 - 1;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _679484;
+        _679484 = 1 <= _679483;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_679484) goto l679485; else goto l679497;
+    l679497: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679307 = _679493;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l679488;
+    l679485: ;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _679486;
+        _679486 = 2 <= _679483;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_679486) goto l679487; else goto l679495;
+    l679495: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679309 = _679493;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l679488;
+    l679487: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679311 = _679493;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l679488;
+    l679488: ;
+        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        int _679490;
+        _679490 = 1 + lower_679479;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_679479 = _679490;
+        goto l679477;
+    l679458: ;
+        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679459;
+        _679459 = 3 + lower_679456;
+        #line 177 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679468;
+        _679468 = *value_679274;
+        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679460;
+        _679460 = _679459 - 1;
+        #line 177 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679470;
+        _679470 = _679468;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _679461;
+        _679461 = 1 <= _679460;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_679461) goto l679462; else goto l679474;
+    l679474: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679301 = _679470;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l679465;
+    l679462: ;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _679463;
+        _679463 = 2 <= _679460;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_679463) goto l679464; else goto l679472;
+    l679472: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679303 = _679470;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l679465;
+    l679464: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679305 = _679470;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l679465;
+    l679465: ;
+        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        int _679467;
+        _679467 = 1 + lower_679456;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_679456 = _679467;
+        goto l679454;
+    l679435: ;
+        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679436;
+        _679436 = 3 + lower_679433;
+        #line 177 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679445;
+        _679445 = *value_679279;
+        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679437;
+        _679437 = _679436 - 1;
+        #line 177 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679447;
+        _679447 = _679445;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _679438;
+        _679438 = 1 <= _679437;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_679438) goto l679439; else goto l679451;
+    l679451: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679295 = _679447;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l679442;
+    l679439: ;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _679440;
+        _679440 = 2 <= _679437;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_679440) goto l679441; else goto l679449;
+    l679449: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679297 = _679447;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l679442;
+    l679441: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679299 = _679447;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l679442;
+    l679442: ;
+        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        int _679444;
+        _679444 = 1 + lower_679433;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_679433 = _679444;
+        goto l679431;
+    l679399: ;
+        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        int _679400;
+        _679400 = 1 + lower_679397;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _679401;
+        _679401 = 1 <= _679400;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_679401) goto l679402; else goto l679426;
+    l679426: ;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679427;
+        _679427 = *value_679307;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679429;
+        _679429 = _679427;
+        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        p_679407 = _679429;
+        goto l679405;
+    l679402: ;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _679403;
+        _679403 = 2 <= _679400;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_679403) goto l679404; else goto l679422;
+    l679422: ;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679423;
+        _679423 = *value_679309;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679425;
+        _679425 = _679423;
+        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        p_679407 = _679425;
+        goto l679405;
+    l679404: ;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679419;
+        _679419 = *value_679311;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679421;
+        _679421 = _679419;
+        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        p_679407 = _679421;
+        goto l679405;
+    l679405: ;
+        _679407 = p_679407;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _679408;
+        _679408 = 1 <= lower_679397;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_679408) goto l679409; else goto l679417;
+    l679417: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679307 = _679407;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l679412;
+    l679409: ;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _679410;
+        _679410 = 2 <= lower_679397;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_679410) goto l679411; else goto l679415;
+    l679415: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679309 = _679407;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l679412;
+    l679411: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679311 = _679407;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l679412;
+    l679412: ;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_679397 = _679400;
+        goto l679395;
+    l679363: ;
+        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        int _679364;
+        _679364 = 1 + lower_679361;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _679365;
+        _679365 = 1 <= _679364;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_679365) goto l679366; else goto l679390;
+    l679390: ;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679391;
+        _679391 = *value_679301;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679393;
+        _679393 = _679391;
+        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        p_679371 = _679393;
+        goto l679369;
+    l679366: ;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _679367;
+        _679367 = 2 <= _679364;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_679367) goto l679368; else goto l679386;
+    l679386: ;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679387;
+        _679387 = *value_679303;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679389;
+        _679389 = _679387;
+        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        p_679371 = _679389;
+        goto l679369;
+    l679368: ;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679383;
+        _679383 = *value_679305;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679385;
+        _679385 = _679383;
+        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        p_679371 = _679385;
+        goto l679369;
+    l679369: ;
+        _679371 = p_679371;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _679372;
+        _679372 = 1 <= lower_679361;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_679372) goto l679373; else goto l679381;
+    l679381: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679301 = _679371;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l679376;
+    l679373: ;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _679374;
+        _679374 = 2 <= lower_679361;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_679374) goto l679375; else goto l679379;
+    l679379: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679303 = _679371;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l679376;
+    l679375: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679305 = _679371;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l679376;
+    l679376: ;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_679361 = _679364;
+        goto l679359;
+    l679327: ;
+        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        int _679328;
+        _679328 = 1 + lower_679325;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _679329;
+        _679329 = 1 <= _679328;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_679329) goto l679330; else goto l679354;
+    l679354: ;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679355;
+        _679355 = *value_679295;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679357;
+        _679357 = _679355;
+        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        p_679335 = _679357;
+        goto l679333;
+    l679330: ;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _679331;
+        _679331 = 2 <= _679328;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_679331) goto l679332; else goto l679350;
+    l679350: ;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679351;
+        _679351 = *value_679297;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679353;
+        _679353 = _679351;
+        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        p_679335 = _679353;
+        goto l679333;
+    l679332: ;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679347;
+        _679347 = *value_679299;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679349;
+        _679349 = _679347;
+        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        p_679335 = _679349;
+        goto l679333;
+    l679333: ;
+        _679335 = p_679335;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _679336;
+        _679336 = 1 <= lower_679325;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_679336) goto l679337; else goto l679345;
+    l679345: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679295 = _679335;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l679340;
+    l679337: ;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _679338;
+        _679338 = 2 <= lower_679325;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_679338) goto l679339; else goto l679343;
+    l679343: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679297 = _679335;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l679340;
+    l679339: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679299 = _679335;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l679340;
+    l679340: ;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_679325 = _679328;
+        goto l679323;
+}
+
+void lambda_641906(hls::stream<channel_i32_299216>* lambda_641906_678183, hls::stream<channel_i32_299216>* lambda_641906_678184) {
+#pragma HLS INLINE off
+    int*  lbuf_678202;
+    int* plbuf_678202;
+    int*  lbuf_678207;
+    int* plbuf_678207;
+    int*  lbuf_678210;
+    int* plbuf_678210;
+    int i678211;
+    int  lambda_678240;
+    int plambda_678240;
+    int  read_channel_678250;
+    int pread_channel_678250;
+    int  lower_678255;
+    int plower_678255;
+    int  lower_678293;
+    int plower_678293;
+    int  lower_678329;
+    int plower_678329;
+    int  lower_678365;
+    int plower_678365;
+    int  lower_678389;
+    int plower_678389;
+    int  lower_678412;
+    int plower_678412;
+    int  _678339;
+    int p_678339;
+    int  _678303;
+    int p_678303;
+    int  _678267;
+    int p_678267;
+    #line 122 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
+    
+    #line 174 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_678197_slot;
+    int* value_678197;
+    value_678197 = &value_678197_slot;
+    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_678225_slot;
+    int* value_678225;
+    value_678225 = &value_678225_slot;
+    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_678231_slot;
+    int* value_678231;
+    value_678231 = &value_678231_slot;
+    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_678221_slot;
+    int* value_678221;
+    value_678221 = &value_678221_slot;
+    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_678223_slot;
+    int* value_678223;
+    value_678223 = &value_678223_slot;
+    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_678229_slot;
+    int* value_678229;
+    value_678229 = &value_678229_slot;
+    #line 174 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_678203_slot;
+    int* value_678203;
+    value_678203 = &value_678203_slot;
+    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_678233_slot;
+    int* value_678233;
+    value_678233 = &value_678233_slot;
+    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_678235_slot;
+    int* value_678235;
+    value_678235 = &value_678235_slot;
+    #line 331 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+    int value_678194_slot;
+    int* value_678194;
+    value_678194 = &value_678194_slot;
+    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_678227_slot;
+    int* value_678227;
+    value_678227 = &value_678227_slot;
+    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_678219_slot;
+    int* value_678219;
+    value_678219 = &value_678219_slot;
+    #line 331 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+    *value_678194 = 0;
+    #line 174 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    *value_678197 = 0;
+    #line 175 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int reserver_lbuf_678202[1024];
+    plbuf_678202 = reserver_lbuf_678202;
+    #pragma HLS dependence variable=reserver_lbuf_678202 inter false
+    #pragma HLS data_pack  variable=reserver_lbuf_678202
+    l678200: ;
+        lbuf_678202 = plbuf_678202;
+        #line 174 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678203 = 0;
+        #line 175 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int reserver_lbuf_678207[1024];
+        plbuf_678207 = reserver_lbuf_678207;
+        #pragma HLS dependence variable=reserver_lbuf_678207 inter false
+        #pragma HLS data_pack  variable=reserver_lbuf_678207
+    l678205: ;
+        lbuf_678207 = plbuf_678207;
+        #line 175 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int reserver_lbuf_678210[1024];
+        plbuf_678210 = reserver_lbuf_678210;
+        #pragma HLS dependence variable=reserver_lbuf_678210 inter false
+        #pragma HLS data_pack  variable=reserver_lbuf_678210
+    l678208: ;
+        lbuf_678210 = plbuf_678210;
+        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678219 = 0;
+        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678221 = 0;
+        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678223 = 0;
+        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678225 = 0;
+        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678227 = 0;
+        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678229 = 0;
+        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678231 = 0;
+        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678233 = 0;
+        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678235 = 0;
+        #line 1 "/home/amiri/anydsl/runtime/platforms/intrinsics_thorin.impala"
+        for (i678211 = 0; i678211 < 1049601; i678211++) {
+            #pragma HLS PIPELINE
+            plambda_678240 = i678211;
+            goto l678238;
+        l678487: continue;
+        }
+        goto l682999;
+    l678238: ;
+        lambda_678240 = plambda_678240;
+        #line 872 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _678242;
+        _678242 = lambda_678240 < 1048576;
+        #line 872 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_678242) goto l678243; else goto l678510;
+    l678510: ;
+        #line 872 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        goto l678251;
+    l678243: ;
+        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
+        *lambda_641906_678183 >> read_channel_678250;
+        pread_channel_678250 = read_channel_678250;
+    l678248: ;
+        read_channel_678250 = pread_channel_678250;
+        #line 332 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+        *value_678194 = read_channel_678250;
+        #line 872 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        goto l678251;
+    l678251: ;
+        #line 785 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678491;
+        _678491 = lambda_678240 % 1024;
+        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int* _678507;
+        _678507 = lbuf_678210 + _678491;
+        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int* _678501;
+        _678501 = lbuf_678207 + _678491;
+        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int* _678492;
+        _678492 = lbuf_678202 + _678491;
+        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678493;
+        _678493 = *_678492;
+        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678495;
+        _678495 = _678493;
+        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678197 = _678495;
+        #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+        int _678497;
+        _678497 = *value_678194;
+        #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+        int _678499;
+        _678499 = _678497;
+        #line 180 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *_678492 = _678499;
+        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678502;
+        _678502 = *_678501;
+        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678504;
+        _678504 = _678502;
+        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678203 = _678504;
+        #line 180 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *_678501 = _678495;
+        #line 180 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *_678507 = _678504;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_678255 = 0;
+        goto l678253;
+    l678253: ;
+        lower_678255 = plower_678255;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        bool _678257;
+        _678257 = lower_678255 < 2;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        if (_678257) goto l678258; else goto l678290;
+    l678290: ;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_678293 = 0;
+        goto l678291;
+    l678291: ;
+        lower_678293 = plower_678293;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        bool _678294;
+        _678294 = lower_678293 < 2;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        if (_678294) goto l678295; else goto l678326;
+    l678326: ;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_678329 = 0;
+        goto l678327;
+    l678327: ;
+        lower_678329 = plower_678329;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        bool _678330;
+        _678330 = lower_678329 < 2;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        if (_678330) goto l678331; else goto l678362;
+    l678362: ;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_678365 = 0;
+        goto l678363;
+    l678363: ;
+        lower_678365 = plower_678365;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        bool _678366;
+        _678366 = lower_678365 < 1;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        if (_678366) goto l678367; else goto l678386;
+    l678386: ;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_678389 = 0;
+        goto l678387;
+    l678387: ;
+        lower_678389 = plower_678389;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        bool _678390;
+        _678390 = lower_678389 < 1;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        if (_678390) goto l678391; else goto l678409;
+    l678409: ;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_678412 = 0;
+        goto l678410;
+    l678410: ;
+        lower_678412 = plower_678412;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        bool _678413;
+        _678413 = lower_678412 < 1;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        if (_678413) goto l678414; else goto l678432;
+    l678432: ;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678440;
+        _678440 = *value_678219;
+        #line 881 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _678433;
+        _678433 = 1024 < lambda_678240;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678442;
+        _678442 = *value_678221;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678444;
+        _678444 = *value_678223;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678446;
+        _678446 = *value_678225;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678448;
+        _678448 = *value_678227;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678450;
+        _678450 = *value_678229;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678452;
+        _678452 = *value_678231;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678454;
+        _678454 = *value_678233;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678456;
+        _678456 = *value_678235;
+        #line 881 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_678433) goto l678434; else goto l678490;
+    l678490: ;
+        #line 881 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        goto l678485;
+    l678434: ;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678476;
+        _678476 = _678454;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678479;
+        _678479 = _678456;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678464;
+        _678464 = _678446;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678458;
+        _678458 = _678440;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678459;
+        _678459 = _678442;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _678477;
+        _678477 = 2 * _678476;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _678465;
+        _678465 = 2 * _678464;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678468;
+        _678468 = _678448;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _678469;
+        _678469 = 4 * _678468;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678462;
+        _678462 = _678444;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678471;
+        _678471 = _678450;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678474;
+        _678474 = _678452;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _678460;
+        _678460 = 2 * _678459;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _678472;
+        _678472 = 2 * _678471;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _678461;
+        _678461 = _678458 + _678460;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _678463;
+        _678463 = _678461 + _678462;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _678466;
+        _678466 = _678463 + _678465;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _678470;
+        _678470 = _678466 + _678469;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _678473;
+        _678473 = _678470 + _678472;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _678475;
+        _678475 = _678473 + _678474;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _678478;
+        _678478 = _678475 + _678477;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _678480;
+        _678480 = _678478 + _678479;
+        #line 57 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _678482;
+        _678482 = _678480 / 16;
+        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
+        *lambda_641906_678184 << _678482;
+    l678483: ;
+        #line 881 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        goto l678485;
+    l678485: ;
+        goto l678487;
+        
+    l682999: ;
+        return ;
+    l678414: ;
+        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678415;
+        _678415 = 3 + lower_678412;
+        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678416;
+        _678416 = _678415 - 1;
+        #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+        int _678424;
+        _678424 = *value_678194;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _678417;
+        _678417 = 1 <= _678416;
+        #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+        int _678426;
+        _678426 = _678424;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_678417) goto l678418; else goto l678430;
+    l678430: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678231 = _678426;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l678421;
+    l678418: ;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _678419;
+        _678419 = 2 <= _678416;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_678419) goto l678420; else goto l678428;
+    l678428: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678233 = _678426;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l678421;
+    l678420: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678235 = _678426;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l678421;
+    l678421: ;
+        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        int _678423;
+        _678423 = 1 + lower_678412;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_678412 = _678423;
+        goto l678410;
+    l678391: ;
+        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678392;
+        _678392 = 3 + lower_678389;
+        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678393;
+        _678393 = _678392 - 1;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _678394;
+        _678394 = 1 <= _678393;
+        #line 177 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678401;
+        _678401 = *value_678197;
+        #line 177 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678403;
+        _678403 = _678401;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_678394) goto l678395; else goto l678407;
+    l678407: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678225 = _678403;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l678398;
+    l678395: ;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _678396;
+        _678396 = 2 <= _678393;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_678396) goto l678397; else goto l678405;
+    l678405: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678227 = _678403;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l678398;
+    l678397: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678229 = _678403;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l678398;
+    l678398: ;
+        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        int _678400;
+        _678400 = 1 + lower_678389;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_678389 = _678400;
+        goto l678387;
+    l678367: ;
+        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678369;
+        _678369 = 3 + lower_678365;
+        #line 177 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678378;
+        _678378 = *value_678203;
+        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678370;
+        _678370 = _678369 - 1;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _678371;
+        _678371 = 1 <= _678370;
+        #line 177 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678380;
+        _678380 = _678378;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_678371) goto l678372; else goto l678384;
+    l678384: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678219 = _678380;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l678375;
+    l678372: ;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _678373;
+        _678373 = 2 <= _678370;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_678373) goto l678374; else goto l678382;
+    l678382: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678221 = _678380;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l678375;
+    l678374: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678223 = _678380;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l678375;
+    l678375: ;
+        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        int _678377;
+        _678377 = 1 + lower_678365;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_678365 = _678377;
+        goto l678363;
+    l678331: ;
+        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        int _678332;
+        _678332 = 1 + lower_678329;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _678333;
+        _678333 = 1 <= _678332;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_678333) goto l678334; else goto l678358;
+    l678358: ;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678359;
+        _678359 = *value_678231;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678361;
+        _678361 = _678359;
+        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        p_678339 = _678361;
+        goto l678337;
+    l678334: ;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _678335;
+        _678335 = 2 <= _678332;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_678335) goto l678336; else goto l678354;
+    l678354: ;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678355;
+        _678355 = *value_678233;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678357;
+        _678357 = _678355;
+        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        p_678339 = _678357;
+        goto l678337;
+    l678336: ;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678351;
+        _678351 = *value_678235;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678353;
+        _678353 = _678351;
+        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        p_678339 = _678353;
+        goto l678337;
+    l678337: ;
+        _678339 = p_678339;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _678340;
+        _678340 = 1 <= lower_678329;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_678340) goto l678341; else goto l678349;
+    l678349: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678231 = _678339;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l678344;
+    l678341: ;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _678342;
+        _678342 = 2 <= lower_678329;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_678342) goto l678343; else goto l678347;
+    l678347: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678233 = _678339;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l678344;
+    l678343: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678235 = _678339;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l678344;
+    l678344: ;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_678329 = _678332;
+        goto l678327;
+    l678295: ;
+        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        int _678296;
+        _678296 = 1 + lower_678293;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _678297;
+        _678297 = 1 <= _678296;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_678297) goto l678298; else goto l678322;
+    l678322: ;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678323;
+        _678323 = *value_678225;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678325;
+        _678325 = _678323;
+        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        p_678303 = _678325;
+        goto l678301;
+    l678298: ;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _678299;
+        _678299 = 2 <= _678296;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_678299) goto l678300; else goto l678318;
+    l678318: ;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678319;
+        _678319 = *value_678227;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678321;
+        _678321 = _678319;
+        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        p_678303 = _678321;
+        goto l678301;
+    l678300: ;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678315;
+        _678315 = *value_678229;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678317;
+        _678317 = _678315;
+        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        p_678303 = _678317;
+        goto l678301;
+    l678301: ;
+        _678303 = p_678303;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _678304;
+        _678304 = 1 <= lower_678293;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_678304) goto l678305; else goto l678313;
+    l678313: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678225 = _678303;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l678308;
+    l678305: ;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _678306;
+        _678306 = 2 <= lower_678293;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_678306) goto l678307; else goto l678311;
+    l678311: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678227 = _678303;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l678308;
+    l678307: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678229 = _678303;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l678308;
+    l678308: ;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_678293 = _678296;
+        goto l678291;
+    l678258: ;
+        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        int _678260;
+        _678260 = 1 + lower_678255;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _678261;
+        _678261 = 1 <= _678260;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_678261) goto l678262; else goto l678286;
+    l678286: ;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678287;
+        _678287 = *value_678219;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678289;
+        _678289 = _678287;
+        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        p_678267 = _678289;
+        goto l678265;
+    l678262: ;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _678263;
+        _678263 = 2 <= _678260;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_678263) goto l678264; else goto l678282;
+    l678282: ;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678283;
+        _678283 = *value_678221;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678285;
+        _678285 = _678283;
+        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        p_678267 = _678285;
+        goto l678265;
+    l678264: ;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678279;
+        _678279 = *value_678223;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678281;
+        _678281 = _678279;
+        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        p_678267 = _678281;
+        goto l678265;
+    l678265: ;
+        _678267 = p_678267;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _678268;
+        _678268 = 1 <= lower_678255;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_678268) goto l678269; else goto l678277;
+    l678277: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678219 = _678267;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l678272;
+    l678269: ;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _678270;
+        _678270 = 2 <= lower_678255;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_678270) goto l678271; else goto l678275;
+    l678275: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678221 = _678267;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l678272;
+    l678271: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678223 = _678267;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l678272;
+    l678272: ;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_678255 = _678260;
+        goto l678253;
+}
+
+void lambda_641254(hls::stream<channel_i32_299216>* lambda_641254_678552, hls::stream<channel_i32_299216>* lambda_641254_678553) {
+#pragma HLS INLINE off
+    int*  lbuf_678563;
+    int* plbuf_678563;
+    int*  lbuf_678568;
+    int* plbuf_678568;
+    int*  lbuf_678571;
+    int* plbuf_678571;
+    int i678572;
+    int  lambda_678600;
+    int plambda_678600;
+    int  read_channel_678605;
+    int pread_channel_678605;
+    int  lower_678610;
+    int plower_678610;
+    int  lower_678646;
+    int plower_678646;
+    int  lower_678682;
+    int plower_678682;
+    int  lower_678718;
+    int plower_678718;
+    int  lower_678741;
+    int plower_678741;
+    int  lower_678764;
+    int plower_678764;
+    int  _678692;
+    int p_678692;
+    int  _678656;
+    int p_678656;
+    int  _678620;
+    int p_678620;
+    #line 122 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
+    
+    #line 174 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_678564_slot;
+    int* value_678564;
+    value_678564 = &value_678564_slot;
+    #line 331 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+    int value_678557_slot;
+    int* value_678557;
+    value_678557 = &value_678557_slot;
+    #line 331 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+    *value_678557 = 0;
+    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_678588_slot;
+    int* value_678588;
+    value_678588 = &value_678588_slot;
+    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_678592_slot;
+    int* value_678592;
+    value_678592 = &value_678592_slot;
+    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_678586_slot;
+    int* value_678586;
+    value_678586 = &value_678586_slot;
+    #line 174 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_678559_slot;
+    int* value_678559;
+    value_678559 = &value_678559_slot;
+    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_678580_slot;
+    int* value_678580;
+    value_678580 = &value_678580_slot;
+    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_678584_slot;
+    int* value_678584;
+    value_678584 = &value_678584_slot;
+    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_678582_slot;
+    int* value_678582;
+    value_678582 = &value_678582_slot;
+    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_678594_slot;
+    int* value_678594;
+    value_678594 = &value_678594_slot;
+    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_678590_slot;
+    int* value_678590;
+    value_678590 = &value_678590_slot;
+    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_678596_slot;
+    int* value_678596;
+    value_678596 = &value_678596_slot;
+    #line 174 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    *value_678559 = 0;
+    #line 175 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int reserver_lbuf_678563[1024];
+    plbuf_678563 = reserver_lbuf_678563;
+    #pragma HLS dependence variable=reserver_lbuf_678563 inter false
+    #pragma HLS data_pack  variable=reserver_lbuf_678563
+    l678561: ;
+        lbuf_678563 = plbuf_678563;
+        #line 174 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678564 = 0;
+        #line 175 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int reserver_lbuf_678568[1024];
+        plbuf_678568 = reserver_lbuf_678568;
+        #pragma HLS dependence variable=reserver_lbuf_678568 inter false
+        #pragma HLS data_pack  variable=reserver_lbuf_678568
+    l678566: ;
+        lbuf_678568 = plbuf_678568;
+        #line 175 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int reserver_lbuf_678571[1024];
+        plbuf_678571 = reserver_lbuf_678571;
+        #pragma HLS dependence variable=reserver_lbuf_678571 inter false
+        #pragma HLS data_pack  variable=reserver_lbuf_678571
+    l678569: ;
+        lbuf_678571 = plbuf_678571;
+        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678580 = 0;
+        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678582 = 0;
+        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678584 = 0;
+        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678586 = 0;
+        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678588 = 0;
+        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678590 = 0;
+        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678592 = 0;
+        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678594 = 0;
+        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678596 = 0;
+        #line 1 "/home/amiri/anydsl/runtime/platforms/intrinsics_thorin.impala"
+        for (i678572 = 0; i678572 < 1049601; i678572++) {
+            #pragma HLS PIPELINE
+            plambda_678600 = i678572;
+            goto l678598;
+        l678832: continue;
+        }
+        goto l683001;
+    l678598: ;
+        lambda_678600 = plambda_678600;
+        #line 872 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _678601;
+        _678601 = lambda_678600 < 1048576;
+        #line 872 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_678601) goto l678602; else goto l678855;
+    l678855: ;
+        #line 872 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        goto l678606;
+    l678602: ;
+        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
+        *lambda_641254_678552 >> read_channel_678605;
+        pread_channel_678605 = read_channel_678605;
+    l678603: ;
+        read_channel_678605 = pread_channel_678605;
+        #line 332 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+        *value_678557 = read_channel_678605;
+        #line 872 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        goto l678606;
+    l678606: ;
+        #line 785 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678836;
+        _678836 = lambda_678600 % 1024;
+        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int* _678837;
+        _678837 = lbuf_678563 + _678836;
+        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int* _678846;
+        _678846 = lbuf_678568 + _678836;
+        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int* _678852;
+        _678852 = lbuf_678571 + _678836;
+        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678838;
+        _678838 = *_678837;
+        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678840;
+        _678840 = _678838;
+        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678559 = _678840;
+        #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+        int _678842;
+        _678842 = *value_678557;
+        #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+        int _678844;
+        _678844 = _678842;
+        #line 180 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *_678837 = _678844;
+        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678847;
+        _678847 = *_678846;
+        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678849;
+        _678849 = _678847;
+        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678564 = _678849;
+        #line 180 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *_678846 = _678840;
+        #line 180 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *_678852 = _678849;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_678610 = 0;
+        goto l678608;
+    l678608: ;
+        lower_678610 = plower_678610;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        bool _678611;
+        _678611 = lower_678610 < 2;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        if (_678611) goto l678612; else goto l678643;
+    l678643: ;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_678646 = 0;
+        goto l678644;
+    l678644: ;
+        lower_678646 = plower_678646;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        bool _678647;
+        _678647 = lower_678646 < 2;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        if (_678647) goto l678648; else goto l678679;
+    l678679: ;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_678682 = 0;
+        goto l678680;
+    l678680: ;
+        lower_678682 = plower_678682;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        bool _678683;
+        _678683 = lower_678682 < 2;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        if (_678683) goto l678684; else goto l678715;
+    l678715: ;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_678718 = 0;
+        goto l678716;
+    l678716: ;
+        lower_678718 = plower_678718;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        bool _678719;
+        _678719 = lower_678718 < 1;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        if (_678719) goto l678720; else goto l678738;
+    l678738: ;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_678741 = 0;
+        goto l678739;
+    l678739: ;
+        lower_678741 = plower_678741;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        bool _678742;
+        _678742 = lower_678741 < 1;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        if (_678742) goto l678743; else goto l678761;
+    l678761: ;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_678764 = 0;
+        goto l678762;
+    l678762: ;
+        lower_678764 = plower_678764;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        bool _678765;
+        _678765 = lower_678764 < 1;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        if (_678765) goto l678766; else goto l678784;
+    l678784: ;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678787;
+        _678787 = *value_678580;
+        #line 881 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _678785;
+        _678785 = 1024 < lambda_678600;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678789;
+        _678789 = *value_678582;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678791;
+        _678791 = *value_678584;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678793;
+        _678793 = *value_678586;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678795;
+        _678795 = *value_678588;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678797;
+        _678797 = *value_678590;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678799;
+        _678799 = *value_678592;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678801;
+        _678801 = *value_678594;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678803;
+        _678803 = *value_678596;
+        #line 881 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_678785) goto l678786; else goto l678835;
+    l678835: ;
+        #line 881 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        goto l678830;
+    l678786: ;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678822;
+        _678822 = _678801;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678806;
+        _678806 = _678789;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678809;
+        _678809 = _678791;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _678823;
+        _678823 = 2 * _678822;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678811;
+        _678811 = _678793;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678820;
+        _678820 = _678799;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678805;
+        _678805 = _678787;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678817;
+        _678817 = _678797;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678825;
+        _678825 = _678803;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678814;
+        _678814 = _678795;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _678807;
+        _678807 = 2 * _678806;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _678812;
+        _678812 = 2 * _678811;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _678808;
+        _678808 = _678805 + _678807;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _678818;
+        _678818 = 2 * _678817;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _678815;
+        _678815 = 4 * _678814;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _678810;
+        _678810 = _678808 + _678809;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _678813;
+        _678813 = _678810 + _678812;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _678816;
+        _678816 = _678813 + _678815;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _678819;
+        _678819 = _678816 + _678818;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _678821;
+        _678821 = _678819 + _678820;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _678824;
+        _678824 = _678821 + _678823;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _678826;
+        _678826 = _678824 + _678825;
+        #line 57 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _678827;
+        _678827 = _678826 / 16;
+        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
+        *lambda_641254_678553 << _678827;
+    l678828: ;
+        #line 881 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        goto l678830;
+    l678830: ;
+        goto l678832;
+        
+    l683001: ;
+        return ;
+    l678766: ;
+        #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+        int _678776;
+        _678776 = *value_678557;
+        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678767;
+        _678767 = 3 + lower_678764;
+        #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+        int _678778;
+        _678778 = _678776;
+        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678768;
+        _678768 = _678767 - 1;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _678769;
+        _678769 = 1 <= _678768;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_678769) goto l678770; else goto l678782;
+    l678782: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678592 = _678778;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l678773;
+    l678770: ;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _678771;
+        _678771 = 2 <= _678768;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_678771) goto l678772; else goto l678780;
+    l678780: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678594 = _678778;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l678773;
+    l678772: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678596 = _678778;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l678773;
+    l678773: ;
+        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        int _678775;
+        _678775 = 1 + lower_678764;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_678764 = _678775;
+        goto l678762;
+    l678743: ;
+        #line 177 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678753;
+        _678753 = *value_678559;
+        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678744;
+        _678744 = 3 + lower_678741;
+        #line 177 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678755;
+        _678755 = _678753;
+        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678745;
+        _678745 = _678744 - 1;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _678746;
+        _678746 = 1 <= _678745;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_678746) goto l678747; else goto l678759;
+    l678759: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678586 = _678755;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l678750;
+    l678747: ;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _678748;
+        _678748 = 2 <= _678745;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_678748) goto l678749; else goto l678757;
+    l678757: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678588 = _678755;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l678750;
+    l678749: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678590 = _678755;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l678750;
+    l678750: ;
+        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        int _678752;
+        _678752 = 1 + lower_678741;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_678741 = _678752;
+        goto l678739;
+    l678720: ;
+        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678721;
+        _678721 = 3 + lower_678718;
+        #line 177 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678730;
+        _678730 = *value_678564;
+        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678722;
+        _678722 = _678721 - 1;
+        #line 177 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678732;
+        _678732 = _678730;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _678723;
+        _678723 = 1 <= _678722;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_678723) goto l678724; else goto l678736;
+    l678736: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678580 = _678732;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l678727;
+    l678724: ;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _678725;
+        _678725 = 2 <= _678722;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_678725) goto l678726; else goto l678734;
+    l678734: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678582 = _678732;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l678727;
+    l678726: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678584 = _678732;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l678727;
+    l678727: ;
+        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        int _678729;
+        _678729 = 1 + lower_678718;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_678718 = _678729;
+        goto l678716;
+    l678684: ;
+        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        int _678685;
+        _678685 = 1 + lower_678682;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _678686;
+        _678686 = 1 <= _678685;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_678686) goto l678687; else goto l678711;
+    l678711: ;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678712;
+        _678712 = *value_678592;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678714;
+        _678714 = _678712;
+        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        p_678692 = _678714;
+        goto l678690;
+    l678687: ;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _678688;
+        _678688 = 2 <= _678685;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_678688) goto l678689; else goto l678707;
+    l678707: ;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678708;
+        _678708 = *value_678594;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678710;
+        _678710 = _678708;
+        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        p_678692 = _678710;
+        goto l678690;
+    l678689: ;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678704;
+        _678704 = *value_678596;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678706;
+        _678706 = _678704;
+        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        p_678692 = _678706;
+        goto l678690;
+    l678690: ;
+        _678692 = p_678692;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _678693;
+        _678693 = 1 <= lower_678682;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_678693) goto l678694; else goto l678702;
+    l678702: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678592 = _678692;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l678697;
+    l678694: ;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _678695;
+        _678695 = 2 <= lower_678682;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_678695) goto l678696; else goto l678700;
+    l678700: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678594 = _678692;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l678697;
+    l678696: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678596 = _678692;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l678697;
+    l678697: ;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_678682 = _678685;
+        goto l678680;
+    l678648: ;
+        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        int _678649;
+        _678649 = 1 + lower_678646;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _678650;
+        _678650 = 1 <= _678649;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_678650) goto l678651; else goto l678675;
+    l678675: ;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678676;
+        _678676 = *value_678586;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678678;
+        _678678 = _678676;
+        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        p_678656 = _678678;
+        goto l678654;
+    l678651: ;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _678652;
+        _678652 = 2 <= _678649;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_678652) goto l678653; else goto l678671;
+    l678671: ;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678672;
+        _678672 = *value_678588;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678674;
+        _678674 = _678672;
+        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        p_678656 = _678674;
+        goto l678654;
+    l678653: ;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678668;
+        _678668 = *value_678590;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678670;
+        _678670 = _678668;
+        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        p_678656 = _678670;
+        goto l678654;
+    l678654: ;
+        _678656 = p_678656;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _678657;
+        _678657 = 1 <= lower_678646;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_678657) goto l678658; else goto l678666;
+    l678666: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678586 = _678656;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l678661;
+    l678658: ;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _678659;
+        _678659 = 2 <= lower_678646;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_678659) goto l678660; else goto l678664;
+    l678664: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678588 = _678656;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l678661;
+    l678660: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678590 = _678656;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l678661;
+    l678661: ;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_678646 = _678649;
+        goto l678644;
+    l678612: ;
+        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        int _678613;
+        _678613 = 1 + lower_678610;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _678614;
+        _678614 = 1 <= _678613;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_678614) goto l678615; else goto l678639;
+    l678639: ;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678640;
+        _678640 = *value_678580;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678642;
+        _678642 = _678640;
+        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        p_678620 = _678642;
+        goto l678618;
+    l678615: ;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _678616;
+        _678616 = 2 <= _678613;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_678616) goto l678617; else goto l678635;
+    l678635: ;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678636;
+        _678636 = *value_678582;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678638;
+        _678638 = _678636;
+        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        p_678620 = _678638;
+        goto l678618;
+    l678617: ;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678632;
+        _678632 = *value_678584;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _678634;
+        _678634 = _678632;
+        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        p_678620 = _678634;
+        goto l678618;
+    l678618: ;
+        _678620 = p_678620;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _678621;
+        _678621 = 1 <= lower_678610;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_678621) goto l678622; else goto l678630;
+    l678630: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678580 = _678620;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l678625;
+    l678622: ;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _678623;
+        _678623 = 2 <= lower_678610;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_678623) goto l678624; else goto l678628;
+    l678628: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678582 = _678620;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l678625;
+    l678624: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678584 = _678620;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l678625;
+    l678625: ;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_678610 = _678613;
+        goto l678608;
+}
+
+void lambda_640999(hls::stream<channel_i32_299216>* lambda_640999_679871, hls::stream<channel_i32_299216>* lambda_640999_679872, hls::stream<channel_i32_299216>* lambda_640999_679873) {
+#pragma HLS INLINE off
+    int i679874;
+    int  lambda_679889;
+    int plambda_679889;
+    int  read_channel_679892;
+    int pread_channel_679892;
     #line 122 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
     
     #line 278 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-    int value_694840_slot;
-    int* value_694840;
-    value_694840 = &value_694840_slot;
+    int value_679885_slot;
+    int* value_679885;
+    value_679885 = &value_679885_slot;
     #line 278 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-    *value_694840 = 0;
+    *value_679885 = 0;
     #line 1 "/home/amiri/anydsl/runtime/platforms/intrinsics_thorin.impala"
-    for (i694827 = 0; i694827 < 1048576; i694827++) {
+    for (i679874 = 0; i679874 < 1048576; i679874++) {
         #pragma HLS PIPELINE
-        plambda_694844 = i694827;
-        goto l694842;
-    l694857: continue;
+        plambda_679889 = i679874;
+        goto l679887;
+    l679901: continue;
     }
-    goto l699692;
-    l694842: ;
-        lambda_694844 = plambda_694844;
-        #line 4 "/home/amiri/anydsl/stincilla/mapping_fpga_img_hls.impala"
-        int* _694845;
-        _694845 = lambda_655317_694824 + lambda_694844;
-        #line 4 "/home/amiri/anydsl/stincilla/mapping_fpga_img_hls.impala"
-        int _694846;
-        _694846 = *_694845;
-        #line 4 "/home/amiri/anydsl/stincilla/mapping_fpga_img_hls.impala"
-        int _694848;
-        _694848 = _694846;
+    goto l683003;
+    l679887: ;
+        lambda_679889 = plambda_679889;
+        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
+        *lambda_640999_679871 >> read_channel_679892;
+        pread_channel_679892 = read_channel_679892;
+    l679890: ;
+        read_channel_679892 = pread_channel_679892;
         #line 281 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-        *value_694840 = _694848;
+        *value_679885 = read_channel_679892;
         #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
-        *lambda_655317_694825 << _694848;
-    l694850: ;
+        *lambda_640999_679872 << read_channel_679892;
+    l679894: ;
         #line 279 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-        int _694852;
-        _694852 = *value_694840;
+        int _679896;
+        _679896 = *value_679885;
         #line 279 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-        int _694854;
-        _694854 = _694852;
+        int _679898;
+        _679898 = _679896;
         #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
-        *lambda_655317_694826 << _694854;
-    l694855: ;
-        goto l694857;
-
-    l699692: ;
+        *lambda_640999_679873 << _679898;
+    l679899: ;
+        goto l679901;
+        
+    l683003: ;
         return ;
 }
 
-void lambda_656309(hls::stream<channel_i32_307617>* lambda_656309_695929, hls::stream<channel_i32_307617>* lambda_656309_695930) {
+void lambda_640682(hls::stream<channel_i32_299216>* lambda_640682_678905, hls::stream<channel_i32_299216>* lambda_640682_678906) {
 #pragma HLS INLINE off
-    int*  lbuf_695940;
-    int* plbuf_695940;
-    int*  lbuf_695945;
-    int* plbuf_695945;
-    int*  lbuf_695948;
-    int* plbuf_695948;
-    int i695949;
-    int  lambda_695979;
-    int plambda_695979;
-    int  read_channel_695984;
-    int pread_channel_695984;
-    int  lower_695989;
-    int plower_695989;
-    int  lower_696025;
-    int plower_696025;
-    int  lower_696061;
-    int plower_696061;
-    int  lower_696097;
-    int plower_696097;
-    int  lower_696120;
-    int plower_696120;
-    int  lower_696143;
-    int plower_696143;
-    int  _696071;
-    int p_696071;
-    int  _696035;
-    int p_696035;
-    int  _695999;
-    int p_695999;
+    int*  lbuf_678916;
+    int* plbuf_678916;
+    int*  lbuf_678921;
+    int* plbuf_678921;
+    int*  lbuf_678924;
+    int* plbuf_678924;
+    int i678925;
+    int  lambda_678953;
+    int plambda_678953;
+    int  read_channel_678958;
+    int pread_channel_678958;
+    int  lower_678963;
+    int plower_678963;
+    int  lower_678999;
+    int plower_678999;
+    int  lower_679035;
+    int plower_679035;
+    int  lower_679071;
+    int plower_679071;
+    int  lower_679094;
+    int plower_679094;
+    int  lower_679117;
+    int plower_679117;
+    int  _679045;
+    int p_679045;
+    int  _679009;
+    int p_679009;
+    int  _678973;
+    int p_678973;
     #line 122 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
     
     #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_695957_slot;
-    int* value_695957;
-    value_695957 = &value_695957_slot;
+    int value_678943_slot;
+    int* value_678943;
+    value_678943 = &value_678943_slot;
     #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_695961_slot;
-    int* value_695961;
-    value_695961 = &value_695961_slot;
+    int value_678949_slot;
+    int* value_678949;
+    value_678949 = &value_678949_slot;
+    #line 174 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_678917_slot;
+    int* value_678917;
+    value_678917 = &value_678917_slot;
     #line 331 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-    int value_695934_slot;
-    int* value_695934;
-    value_695934 = &value_695934_slot;
+    int value_678910_slot;
+    int* value_678910;
+    value_678910 = &value_678910_slot;
     #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_695971_slot;
-    int* value_695971;
-    value_695971 = &value_695971_slot;
+    int value_678937_slot;
+    int* value_678937;
+    value_678937 = &value_678937_slot;
     #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_695963_slot;
-    int* value_695963;
-    value_695963 = &value_695963_slot;
+    int value_678941_slot;
+    int* value_678941;
+    value_678941 = &value_678941_slot;
+    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_678935_slot;
+    int* value_678935;
+    value_678935 = &value_678935_slot;
+    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_678947_slot;
+    int* value_678947;
+    value_678947 = &value_678947_slot;
+    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_678939_slot;
+    int* value_678939;
+    value_678939 = &value_678939_slot;
+    #line 174 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_678912_slot;
+    int* value_678912;
+    value_678912 = &value_678912_slot;
+    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_678945_slot;
+    int* value_678945;
+    value_678945 = &value_678945_slot;
+    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_678933_slot;
+    int* value_678933;
+    value_678933 = &value_678933_slot;
     #line 331 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-    *value_695934 = 0;
-    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_695969_slot;
-    int* value_695969;
-    value_695969 = &value_695969_slot;
-    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_695959_slot;
-    int* value_695959;
-    value_695959 = &value_695959_slot;
-    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_695967_slot;
-    int* value_695967;
-    value_695967 = &value_695967_slot;
+    *value_678910 = 0;
     #line 174 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_695941_slot;
-    int* value_695941;
-    value_695941 = &value_695941_slot;
-    #line 174 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_695936_slot;
-    int* value_695936;
-    value_695936 = &value_695936_slot;
-    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_695973_slot;
-    int* value_695973;
-    value_695973 = &value_695973_slot;
-    #line 782 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int col_ridx_695975_slot;
-    int* col_ridx_695975;
-    col_ridx_695975 = &col_ridx_695975_slot;
-    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int value_695965_slot;
-    int* value_695965;
-    value_695965 = &value_695965_slot;
-    #line 174 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    *value_695936 = 0;
+    *value_678912 = 0;
     #line 175 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-    int reserver_lbuf_695940[1024];
-    plbuf_695940 = reserver_lbuf_695940;
-    #pragma HLS dependence variable=reserver_lbuf_695940 inter false
-    #pragma HLS data_pack  variable=reserver_lbuf_695940
-    l695938: ;
-        lbuf_695940 = plbuf_695940;
+    int reserver_lbuf_678916[1024];
+    plbuf_678916 = reserver_lbuf_678916;
+    #pragma HLS dependence variable=reserver_lbuf_678916 inter false
+    #pragma HLS data_pack  variable=reserver_lbuf_678916
+    l678914: ;
+        lbuf_678916 = plbuf_678916;
         #line 174 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695941 = 0;
+        *value_678917 = 0;
         #line 175 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int reserver_lbuf_695945[1024];
-        plbuf_695945 = reserver_lbuf_695945;
-        #pragma HLS dependence variable=reserver_lbuf_695945 inter false
-        #pragma HLS data_pack  variable=reserver_lbuf_695945
-    l695943: ;
-        lbuf_695945 = plbuf_695945;
+        int reserver_lbuf_678921[1024];
+        plbuf_678921 = reserver_lbuf_678921;
+        #pragma HLS dependence variable=reserver_lbuf_678921 inter false
+        #pragma HLS data_pack  variable=reserver_lbuf_678921
+    l678919: ;
+        lbuf_678921 = plbuf_678921;
         #line 175 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int reserver_lbuf_695948[1024];
-        plbuf_695948 = reserver_lbuf_695948;
-        #pragma HLS dependence variable=reserver_lbuf_695948 inter false
-        #pragma HLS data_pack  variable=reserver_lbuf_695948
-    l695946: ;
-        lbuf_695948 = plbuf_695948;
+        int reserver_lbuf_678924[1024];
+        plbuf_678924 = reserver_lbuf_678924;
+        #pragma HLS dependence variable=reserver_lbuf_678924 inter false
+        #pragma HLS data_pack  variable=reserver_lbuf_678924
+    l678922: ;
+        lbuf_678924 = plbuf_678924;
         #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695957 = 0;
+        *value_678933 = 0;
         #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695959 = 0;
+        *value_678935 = 0;
         #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695961 = 0;
+        *value_678937 = 0;
         #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695963 = 0;
+        *value_678939 = 0;
         #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695965 = 0;
+        *value_678941 = 0;
         #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695967 = 0;
+        *value_678943 = 0;
         #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695969 = 0;
+        *value_678945 = 0;
         #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695971 = 0;
+        *value_678947 = 0;
         #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695973 = 0;
-        #line 782 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *col_ridx_695975 = 0;
+        *value_678949 = 0;
         #line 1 "/home/amiri/anydsl/runtime/platforms/intrinsics_thorin.impala"
-        for (i695949 = 0; i695949 < 1049601; i695949++) {
+        for (i678925 = 0; i678925 < 1049601; i678925++) {
             #pragma HLS PIPELINE
-            plambda_695979 = i695949;
-            goto l695977;
-        l696218: continue;
+            plambda_678953 = i678925;
+            goto l678951;
+        l679173: continue;
         }
-        goto l699694;
-    l695977: ;
-        lambda_695979 = plambda_695979;
+        goto l683005;
+    l678951: ;
+        lambda_678953 = plambda_678953;
         #line 872 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695980;
-        _695980 = lambda_695979 < 1048576;
+        bool _678954;
+        _678954 = lambda_678953 < 1048576;
         #line 872 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695980) goto l695981; else goto l696247;
-    l696247: ;
+        if (_678954) goto l678955; else goto l679196;
+    l679196: ;
         #line 872 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        goto l695985;
-    l695981: ;
+        goto l678959;
+    l678955: ;
         #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
-        *lambda_656309_695929 >> read_channel_695984;
-        pread_channel_695984 = read_channel_695984;
-    l695982: ;
-        read_channel_695984 = pread_channel_695984;
+        *lambda_640682_678905 >> read_channel_678958;
+        pread_channel_678958 = read_channel_678958;
+    l678956: ;
+        read_channel_678958 = pread_channel_678958;
         #line 332 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-        *value_695934 = read_channel_695984;
+        *value_678910 = read_channel_678958;
         #line 872 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        goto l695985;
-    l695985: ;
+        goto l678959;
+    l678959: ;
         #line 785 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696226;
-        _696226 = *col_ridx_695975;
-        #line 785 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696228;
-        _696228 = _696226;
+        int _679177;
+        _679177 = lambda_678953 % 1024;
         #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int* _696244;
-        _696244 = lbuf_695948 + _696228;
+        int* _679187;
+        _679187 = lbuf_678921 + _679177;
         #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int* _696238;
-        _696238 = lbuf_695945 + _696228;
+        int* _679178;
+        _679178 = lbuf_678916 + _679177;
         #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int* _696229;
-        _696229 = lbuf_695940 + _696228;
+        int _679179;
+        _679179 = *_679178;
         #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696230;
-        _696230 = *_696229;
+        int* _679193;
+        _679193 = lbuf_678924 + _679177;
         #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696232;
-        _696232 = _696230;
+        int _679181;
+        _679181 = _679179;
         #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695936 = _696232;
+        *value_678912 = _679181;
         #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-        int _696234;
-        _696234 = *value_695934;
+        int _679183;
+        _679183 = *value_678910;
         #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-        int _696236;
-        _696236 = _696234;
+        int _679185;
+        _679185 = _679183;
         #line 180 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *_696229 = _696236;
+        *_679178 = _679185;
         #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696239;
-        _696239 = *_696238;
+        int _679188;
+        _679188 = *_679187;
         #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696241;
-        _696241 = _696239;
+        int _679190;
+        _679190 = _679188;
         #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695941 = _696241;
+        *value_678917 = _679190;
         #line 180 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *_696238 = _696232;
+        *_679187 = _679181;
         #line 180 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *_696244 = _696241;
+        *_679193 = _679190;
         #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_695989 = 0;
-        goto l695987;
-    l695987: ;
-        lower_695989 = plower_695989;
+        plower_678963 = 0;
+        goto l678961;
+    l678961: ;
+        lower_678963 = plower_678963;
         #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        bool _695990;
-        _695990 = lower_695989 < 2;
+        bool _678964;
+        _678964 = lower_678963 < 2;
         #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        if (_695990) goto l695991; else goto l696022;
-    l696022: ;
+        if (_678964) goto l678965; else goto l678996;
+    l678996: ;
         #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_696025 = 0;
-        goto l696023;
-    l696023: ;
-        lower_696025 = plower_696025;
+        plower_678999 = 0;
+        goto l678997;
+    l678997: ;
+        lower_678999 = plower_678999;
         #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        bool _696026;
-        _696026 = lower_696025 < 2;
+        bool _679000;
+        _679000 = lower_678999 < 2;
         #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        if (_696026) goto l696027; else goto l696058;
-    l696058: ;
+        if (_679000) goto l679001; else goto l679032;
+    l679032: ;
         #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_696061 = 0;
-        goto l696059;
-    l696059: ;
-        lower_696061 = plower_696061;
+        plower_679035 = 0;
+        goto l679033;
+    l679033: ;
+        lower_679035 = plower_679035;
         #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        bool _696062;
-        _696062 = lower_696061 < 2;
+        bool _679036;
+        _679036 = lower_679035 < 2;
         #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        if (_696062) goto l696063; else goto l696094;
-    l696094: ;
+        if (_679036) goto l679037; else goto l679068;
+    l679068: ;
         #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_696097 = 0;
-        goto l696095;
-    l696095: ;
-        lower_696097 = plower_696097;
+        plower_679071 = 0;
+        goto l679069;
+    l679069: ;
+        lower_679071 = plower_679071;
         #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        bool _696098;
-        _696098 = lower_696097 < 1;
+        bool _679072;
+        _679072 = lower_679071 < 1;
         #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        if (_696098) goto l696099; else goto l696117;
-    l696117: ;
+        if (_679072) goto l679073; else goto l679091;
+    l679091: ;
         #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_696120 = 0;
-        goto l696118;
-    l696118: ;
-        lower_696120 = plower_696120;
+        plower_679094 = 0;
+        goto l679092;
+    l679092: ;
+        lower_679094 = plower_679094;
         #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        bool _696121;
-        _696121 = lower_696120 < 1;
+        bool _679095;
+        _679095 = lower_679094 < 1;
         #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        if (_696121) goto l696122; else goto l696140;
-    l696140: ;
+        if (_679095) goto l679096; else goto l679114;
+    l679114: ;
         #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_696143 = 0;
-        goto l696141;
-    l696141: ;
-        lower_696143 = plower_696143;
+        plower_679117 = 0;
+        goto l679115;
+    l679115: ;
+        lower_679117 = plower_679117;
         #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        bool _696144;
-        _696144 = lower_696143 < 1;
+        bool _679118;
+        _679118 = lower_679117 < 1;
         #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        if (_696144) goto l696145; else goto l696163;
-    l696163: ;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696166;
-        _696166 = *value_695957;
+        if (_679118) goto l679119; else goto l679137;
+    l679137: ;
         #line 881 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _696164;
-        _696164 = 1024 < lambda_695979;
+        bool _679138;
+        _679138 = 1024 < lambda_678953;
         #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696168;
-        _696168 = *value_695959;
+        int _679140;
+        _679140 = *value_678933;
         #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696170;
-        _696170 = *value_695961;
+        int _679142;
+        _679142 = *value_678937;
         #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696172;
-        _696172 = *value_695963;
+        int _679144;
+        _679144 = *value_678939;
         #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696174;
-        _696174 = *value_695965;
+        int _679146;
+        _679146 = *value_678943;
         #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696176;
-        _696176 = *value_695967;
+        int _679148;
+        _679148 = *value_678945;
         #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696178;
-        _696178 = *value_695969;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696180;
-        _696180 = *value_695971;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696182;
-        _696182 = *value_695973;
+        int _679150;
+        _679150 = *value_678949;
         #line 881 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_696164) goto l696165; else goto l696225;
-    l696225: ;
+        if (_679138) goto l679139; else goto l679176;
+    l679176: ;
         #line 881 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        goto l696209;
-    l696165: ;
+        goto l679171;
+    l679139: ;
         #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696190;
-        _696190 = _696172;
+        int _679164;
+        _679164 = _679148;
         #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696188;
-        _696188 = _696170;
+        int _679158;
+        _679158 = _679144;
         #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696185;
-        _696185 = _696168;
+        int _679155;
+        _679155 = _679142;
         #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696184;
-        _696184 = _696166;
+        int _679161;
+        _679161 = _679146;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _679162;
+        _679162 = 2 * _679161;
         #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696193;
-        _696193 = _696174;
+        int _679167;
+        _679167 = _679150;
         #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696201;
-        _696201 = _696180;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696204;
-        _696204 = _696182;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696199;
-        _696199 = _696178;
+        int _679153;
+        _679153 = _679140;
         #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _696186;
-        _696186 = 2 * _696185;
+        int _679154;
+        _679154 = -1 * _679153;
         #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _696202;
-        _696202 = 2 * _696201;
+        int _679165;
+        _679165 = -1 * _679164;
         #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _696191;
-        _696191 = 2 * _696190;
-        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696196;
-        _696196 = _696176;
+        int _679159;
+        _679159 = -2 * _679158;
         #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _696187;
-        _696187 = _696184 + _696186;
+        int _679156;
+        _679156 = _679154 + _679155;
         #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _696189;
-        _696189 = _696187 + _696188;
+        int _679160;
+        _679160 = _679156 + _679159;
         #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _696194;
-        _696194 = 4 * _696193;
+        int _679163;
+        _679163 = _679160 + _679162;
         #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _696192;
-        _696192 = _696189 + _696191;
+        int _679166;
+        _679166 = _679163 + _679165;
         #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _696197;
-        _696197 = 2 * _696196;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _696195;
-        _696195 = _696192 + _696194;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _696198;
-        _696198 = _696195 + _696197;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _696200;
-        _696200 = _696198 + _696199;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _696203;
-        _696203 = _696200 + _696202;
-        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _696205;
-        _696205 = _696203 + _696204;
-        #line 57 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
-        int _696206;
-        _696206 = _696205 / 16;
+        int _679168;
+        _679168 = _679166 + _679167;
         #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
-        *lambda_656309_695930 << _696206;
-    l696207: ;
+        *lambda_640682_678906 << _679168;
+    l679169: ;
         #line 881 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        goto l696209;
-    l696209: ;
-        #line 788 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696211;
-        _696211 = *col_ridx_695975;
-        #line 788 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696212;
-        _696212 = _696211;
-        #line 788 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696213;
-        _696213 = 1 + _696212;
-        #line 789 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _696214;
-        _696214 = _696213 == 1024;
-        #line 788 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *col_ridx_695975 = _696213;
-        #line 789 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_696214) goto l696215; else goto l696224;
-    l696224: ;
-        goto l696216;
-    l696215: ;
-        #line 789 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *col_ridx_695975 = 0;
-        goto l696216;
-    l696216: ;
-        goto l696218;
+        goto l679171;
+    l679171: ;
+        goto l679173;
         
-    l699694: ;
+    l683005: ;
         return ;
-    l696145: ;
-        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696146;
-        _696146 = 3 + lower_696143;
+    l679119: ;
         #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-        int _696155;
-        _696155 = *value_695934;
-        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696147;
-        _696147 = _696146 - 1;
+        int _679129;
+        _679129 = *value_678910;
         #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
-        int _696157;
-        _696157 = _696155;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _696148;
-        _696148 = 1 <= _696147;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_696148) goto l696149; else goto l696161;
-    l696161: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695969 = _696157;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l696152;
-    l696149: ;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _696150;
-        _696150 = 2 <= _696147;
-        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_696150) goto l696151; else goto l696159;
-    l696159: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695971 = _696157;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l696152;
-    l696151: ;
-        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695973 = _696157;
-        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l696152;
-    l696152: ;
-        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        int _696154;
-        _696154 = 1 + lower_696143;
-        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_696143 = _696154;
-        goto l696141;
-    l696122: ;
-        #line 177 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696132;
-        _696132 = *value_695936;
-        #line 177 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696134;
-        _696134 = _696132;
+        int _679131;
+        _679131 = _679129;
         #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696123;
-        _696123 = 3 + lower_696120;
+        int _679120;
+        _679120 = 3 + lower_679117;
         #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696124;
-        _696124 = _696123 - 1;
+        int _679121;
+        _679121 = _679120 - 1;
         #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _696125;
-        _696125 = 1 <= _696124;
+        bool _679122;
+        _679122 = 1 <= _679121;
         #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_696125) goto l696126; else goto l696138;
-    l696138: ;
+        if (_679122) goto l679123; else goto l679135;
+    l679135: ;
         #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695963 = _696134;
+        *value_678945 = _679131;
         #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l696129;
-    l696126: ;
+        goto l679126;
+    l679123: ;
         #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _696127;
-        _696127 = 2 <= _696124;
+        bool _679124;
+        _679124 = 2 <= _679121;
         #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_696127) goto l696128; else goto l696136;
-    l696136: ;
+        if (_679124) goto l679125; else goto l679133;
+    l679133: ;
         #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695965 = _696134;
+        *value_678947 = _679131;
         #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l696129;
-    l696128: ;
+        goto l679126;
+    l679125: ;
         #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695967 = _696134;
+        *value_678949 = _679131;
         #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l696129;
-    l696129: ;
+        goto l679126;
+    l679126: ;
         #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        int _696131;
-        _696131 = 1 + lower_696120;
+        int _679128;
+        _679128 = 1 + lower_679117;
         #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_696120 = _696131;
-        goto l696118;
-    l696099: ;
+        plower_679117 = _679128;
+        goto l679115;
+    l679096: ;
         #line 177 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696109;
-        _696109 = *value_695941;
+        int _679106;
+        _679106 = *value_678912;
+        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679097;
+        _679097 = 3 + lower_679094;
         #line 177 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696111;
-        _696111 = _696109;
+        int _679108;
+        _679108 = _679106;
         #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696100;
-        _696100 = 3 + lower_696097;
+        int _679098;
+        _679098 = _679097 - 1;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _679099;
+        _679099 = 1 <= _679098;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_679099) goto l679100; else goto l679112;
+    l679112: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678939 = _679108;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l679103;
+    l679100: ;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _679101;
+        _679101 = 2 <= _679098;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_679101) goto l679102; else goto l679110;
+    l679110: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678941 = _679108;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l679103;
+    l679102: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_678943 = _679108;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l679103;
+    l679103: ;
+        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        int _679105;
+        _679105 = 1 + lower_679094;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_679094 = _679105;
+        goto l679092;
+    l679073: ;
         #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696101;
-        _696101 = _696100 - 1;
+        int _679074;
+        _679074 = 3 + lower_679071;
+        #line 177 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679083;
+        _679083 = *value_678917;
+        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679075;
+        _679075 = _679074 - 1;
+        #line 177 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679085;
+        _679085 = _679083;
         #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _696102;
-        _696102 = 1 <= _696101;
+        bool _679076;
+        _679076 = 1 <= _679075;
         #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_696102) goto l696103; else goto l696115;
-    l696115: ;
+        if (_679076) goto l679077; else goto l679089;
+    l679089: ;
         #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695957 = _696111;
+        *value_678933 = _679085;
         #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l696106;
-    l696103: ;
+        goto l679080;
+    l679077: ;
         #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _696104;
-        _696104 = 2 <= _696101;
+        bool _679078;
+        _679078 = 2 <= _679075;
         #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_696104) goto l696105; else goto l696113;
-    l696113: ;
+        if (_679078) goto l679079; else goto l679087;
+    l679087: ;
         #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695959 = _696111;
+        *value_678935 = _679085;
         #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l696106;
-    l696105: ;
+        goto l679080;
+    l679079: ;
         #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695961 = _696111;
+        *value_678937 = _679085;
         #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l696106;
-    l696106: ;
+        goto l679080;
+    l679080: ;
         #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        int _696108;
-        _696108 = 1 + lower_696097;
+        int _679082;
+        _679082 = 1 + lower_679071;
         #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_696097 = _696108;
-        goto l696095;
-    l696063: ;
+        plower_679071 = _679082;
+        goto l679069;
+    l679037: ;
         #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        int _696064;
-        _696064 = 1 + lower_696061;
+        int _679038;
+        _679038 = 1 + lower_679035;
         #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _696065;
-        _696065 = 1 <= _696064;
+        bool _679039;
+        _679039 = 1 <= _679038;
         #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_696065) goto l696066; else goto l696090;
-    l696090: ;
+        if (_679039) goto l679040; else goto l679064;
+    l679064: ;
         #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696091;
-        _696091 = *value_695969;
+        int _679065;
+        _679065 = *value_678945;
         #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696093;
-        _696093 = _696091;
+        int _679067;
+        _679067 = _679065;
         #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_696071 = _696093;
-        goto l696069;
-    l696066: ;
+        p_679045 = _679067;
+        goto l679043;
+    l679040: ;
         #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _696067;
-        _696067 = 2 <= _696064;
+        bool _679041;
+        _679041 = 2 <= _679038;
         #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_696067) goto l696068; else goto l696086;
-    l696086: ;
+        if (_679041) goto l679042; else goto l679060;
+    l679060: ;
         #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696087;
-        _696087 = *value_695971;
+        int _679061;
+        _679061 = *value_678947;
         #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696089;
-        _696089 = _696087;
+        int _679063;
+        _679063 = _679061;
         #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_696071 = _696089;
-        goto l696069;
-    l696068: ;
+        p_679045 = _679063;
+        goto l679043;
+    l679042: ;
         #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696083;
-        _696083 = *value_695973;
+        int _679057;
+        _679057 = *value_678949;
         #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696085;
-        _696085 = _696083;
+        int _679059;
+        _679059 = _679057;
         #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_696071 = _696085;
-        goto l696069;
-    l696069: ;
-        _696071 = p_696071;
+        p_679045 = _679059;
+        goto l679043;
+    l679043: ;
+        _679045 = p_679045;
         #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _696072;
-        _696072 = 1 <= lower_696061;
+        bool _679046;
+        _679046 = 1 <= lower_679035;
         #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_696072) goto l696073; else goto l696081;
-    l696081: ;
+        if (_679046) goto l679047; else goto l679055;
+    l679055: ;
         #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695969 = _696071;
+        *value_678945 = _679045;
         #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l696076;
-    l696073: ;
+        goto l679050;
+    l679047: ;
         #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _696074;
-        _696074 = 2 <= lower_696061;
+        bool _679048;
+        _679048 = 2 <= lower_679035;
         #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_696074) goto l696075; else goto l696079;
-    l696079: ;
+        if (_679048) goto l679049; else goto l679053;
+    l679053: ;
         #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695971 = _696071;
+        *value_678947 = _679045;
         #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l696076;
-    l696075: ;
+        goto l679050;
+    l679049: ;
         #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695973 = _696071;
+        *value_678949 = _679045;
         #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l696076;
-    l696076: ;
+        goto l679050;
+    l679050: ;
         #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_696061 = _696064;
-        goto l696059;
-    l696027: ;
+        plower_679035 = _679038;
+        goto l679033;
+    l679001: ;
         #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        int _696028;
-        _696028 = 1 + lower_696025;
+        int _679002;
+        _679002 = 1 + lower_678999;
         #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _696029;
-        _696029 = 1 <= _696028;
+        bool _679003;
+        _679003 = 1 <= _679002;
         #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_696029) goto l696030; else goto l696054;
-    l696054: ;
+        if (_679003) goto l679004; else goto l679028;
+    l679028: ;
         #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696055;
-        _696055 = *value_695963;
+        int _679029;
+        _679029 = *value_678939;
         #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696057;
-        _696057 = _696055;
+        int _679031;
+        _679031 = _679029;
         #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_696035 = _696057;
-        goto l696033;
-    l696030: ;
+        p_679009 = _679031;
+        goto l679007;
+    l679004: ;
         #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _696031;
-        _696031 = 2 <= _696028;
+        bool _679005;
+        _679005 = 2 <= _679002;
         #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_696031) goto l696032; else goto l696050;
-    l696050: ;
+        if (_679005) goto l679006; else goto l679024;
+    l679024: ;
         #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696051;
-        _696051 = *value_695965;
+        int _679025;
+        _679025 = *value_678941;
         #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696053;
-        _696053 = _696051;
+        int _679027;
+        _679027 = _679025;
         #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_696035 = _696053;
-        goto l696033;
-    l696032: ;
+        p_679009 = _679027;
+        goto l679007;
+    l679006: ;
         #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696047;
-        _696047 = *value_695967;
+        int _679021;
+        _679021 = *value_678943;
         #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696049;
-        _696049 = _696047;
+        int _679023;
+        _679023 = _679021;
         #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_696035 = _696049;
-        goto l696033;
-    l696033: ;
-        _696035 = p_696035;
+        p_679009 = _679023;
+        goto l679007;
+    l679007: ;
+        _679009 = p_679009;
         #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _696036;
-        _696036 = 1 <= lower_696025;
+        bool _679010;
+        _679010 = 1 <= lower_678999;
         #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_696036) goto l696037; else goto l696045;
-    l696045: ;
+        if (_679010) goto l679011; else goto l679019;
+    l679019: ;
         #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695963 = _696035;
+        *value_678939 = _679009;
         #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l696040;
-    l696037: ;
+        goto l679014;
+    l679011: ;
         #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _696038;
-        _696038 = 2 <= lower_696025;
+        bool _679012;
+        _679012 = 2 <= lower_678999;
         #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_696038) goto l696039; else goto l696043;
-    l696043: ;
+        if (_679012) goto l679013; else goto l679017;
+    l679017: ;
         #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695965 = _696035;
+        *value_678941 = _679009;
         #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l696040;
-    l696039: ;
+        goto l679014;
+    l679013: ;
         #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695967 = _696035;
+        *value_678943 = _679009;
         #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l696040;
-    l696040: ;
+        goto l679014;
+    l679014: ;
         #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_696025 = _696028;
-        goto l696023;
-    l695991: ;
+        plower_678999 = _679002;
+        goto l678997;
+    l678965: ;
         #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        int _695992;
-        _695992 = 1 + lower_695989;
+        int _678966;
+        _678966 = 1 + lower_678963;
         #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695993;
-        _695993 = 1 <= _695992;
+        bool _678967;
+        _678967 = 1 <= _678966;
         #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695993) goto l695994; else goto l696018;
-    l696018: ;
+        if (_678967) goto l678968; else goto l678992;
+    l678992: ;
         #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696019;
-        _696019 = *value_695957;
+        int _678993;
+        _678993 = *value_678933;
         #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696021;
-        _696021 = _696019;
+        int _678995;
+        _678995 = _678993;
         #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_695999 = _696021;
-        goto l695997;
-    l695994: ;
+        p_678973 = _678995;
+        goto l678971;
+    l678968: ;
         #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _695995;
-        _695995 = 2 <= _695992;
+        bool _678969;
+        _678969 = 2 <= _678966;
         #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_695995) goto l695996; else goto l696014;
-    l696014: ;
+        if (_678969) goto l678970; else goto l678988;
+    l678988: ;
         #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696015;
-        _696015 = *value_695959;
+        int _678989;
+        _678989 = *value_678935;
         #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696017;
-        _696017 = _696015;
+        int _678991;
+        _678991 = _678989;
         #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_695999 = _696017;
-        goto l695997;
-    l695996: ;
+        p_678973 = _678991;
+        goto l678971;
+    l678970: ;
         #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696011;
-        _696011 = *value_695961;
+        int _678985;
+        _678985 = *value_678937;
         #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        int _696013;
-        _696013 = _696011;
+        int _678987;
+        _678987 = _678985;
         #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        p_695999 = _696013;
-        goto l695997;
-    l695997: ;
-        _695999 = p_695999;
+        p_678973 = _678987;
+        goto l678971;
+    l678971: ;
+        _678973 = p_678973;
         #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _696000;
-        _696000 = 1 <= lower_695989;
+        bool _678974;
+        _678974 = 1 <= lower_678963;
         #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_696000) goto l696001; else goto l696009;
-    l696009: ;
+        if (_678974) goto l678975; else goto l678983;
+    l678983: ;
         #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695957 = _695999;
+        *value_678933 = _678973;
         #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l696004;
-    l696001: ;
+        goto l678978;
+    l678975: ;
         #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        bool _696002;
-        _696002 = 2 <= lower_695989;
+        bool _678976;
+        _678976 = 2 <= lower_678963;
         #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        if (_696002) goto l696003; else goto l696007;
-    l696007: ;
+        if (_678976) goto l678977; else goto l678981;
+    l678981: ;
         #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695959 = _695999;
+        *value_678935 = _678973;
         #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l696004;
-    l696003: ;
+        goto l678978;
+    l678977: ;
         #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
-        *value_695961 = _695999;
+        *value_678937 = _678973;
         #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        goto l696004;
-    l696004: ;
+        goto l678978;
+    l678978: ;
         #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
-        plower_695989 = _695992;
-        goto l695987;
+        plower_678963 = _678966;
+        goto l678961;
+}
+
+void lambda_640356(hls::stream<channel_i32_299216>* lambda_640356_679576, hls::stream<channel_i32_299216>* lambda_640356_679577) {
+#pragma HLS INLINE off
+    int*  lbuf_679587;
+    int* plbuf_679587;
+    int*  lbuf_679592;
+    int* plbuf_679592;
+    int*  lbuf_679595;
+    int* plbuf_679595;
+    int i679596;
+    int  lambda_679624;
+    int plambda_679624;
+    int  read_channel_679629;
+    int pread_channel_679629;
+    int  lower_679634;
+    int plower_679634;
+    int  lower_679670;
+    int plower_679670;
+    int  lower_679706;
+    int plower_679706;
+    int  lower_679742;
+    int plower_679742;
+    int  lower_679765;
+    int plower_679765;
+    int  lower_679788;
+    int plower_679788;
+    int  _679716;
+    int p_679716;
+    int  _679680;
+    int p_679680;
+    int  _679644;
+    int p_679644;
+    #line 122 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
+    
+    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_679616_slot;
+    int* value_679616;
+    value_679616 = &value_679616_slot;
+    #line 174 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_679588_slot;
+    int* value_679588;
+    value_679588 = &value_679588_slot;
+    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_679614_slot;
+    int* value_679614;
+    value_679614 = &value_679614_slot;
+    #line 174 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_679583_slot;
+    int* value_679583;
+    value_679583 = &value_679583_slot;
+    #line 331 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+    int value_679581_slot;
+    int* value_679581;
+    value_679581 = &value_679581_slot;
+    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_679606_slot;
+    int* value_679606;
+    value_679606 = &value_679606_slot;
+    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_679618_slot;
+    int* value_679618;
+    value_679618 = &value_679618_slot;
+    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_679610_slot;
+    int* value_679610;
+    value_679610 = &value_679610_slot;
+    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_679620_slot;
+    int* value_679620;
+    value_679620 = &value_679620_slot;
+    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_679604_slot;
+    int* value_679604;
+    value_679604 = &value_679604_slot;
+    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_679612_slot;
+    int* value_679612;
+    value_679612 = &value_679612_slot;
+    #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int value_679608_slot;
+    int* value_679608;
+    value_679608 = &value_679608_slot;
+    #line 331 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+    *value_679581 = 0;
+    #line 174 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    *value_679583 = 0;
+    #line 175 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+    int reserver_lbuf_679587[1024];
+    plbuf_679587 = reserver_lbuf_679587;
+    #pragma HLS dependence variable=reserver_lbuf_679587 inter false
+    #pragma HLS data_pack  variable=reserver_lbuf_679587
+    l679585: ;
+        lbuf_679587 = plbuf_679587;
+        #line 174 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679588 = 0;
+        #line 175 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int reserver_lbuf_679592[1024];
+        plbuf_679592 = reserver_lbuf_679592;
+        #pragma HLS dependence variable=reserver_lbuf_679592 inter false
+        #pragma HLS data_pack  variable=reserver_lbuf_679592
+    l679590: ;
+        lbuf_679592 = plbuf_679592;
+        #line 175 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int reserver_lbuf_679595[1024];
+        plbuf_679595 = reserver_lbuf_679595;
+        #pragma HLS dependence variable=reserver_lbuf_679595 inter false
+        #pragma HLS data_pack  variable=reserver_lbuf_679595
+    l679593: ;
+        lbuf_679595 = plbuf_679595;
+        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679604 = 0;
+        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679606 = 0;
+        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679608 = 0;
+        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679610 = 0;
+        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679612 = 0;
+        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679614 = 0;
+        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679616 = 0;
+        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679618 = 0;
+        #line 293 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679620 = 0;
+        #line 1 "/home/amiri/anydsl/runtime/platforms/intrinsics_thorin.impala"
+        for (i679596 = 0; i679596 < 1049601; i679596++) {
+            #pragma HLS PIPELINE
+            plambda_679624 = i679596;
+            goto l679622;
+        l679842: continue;
+        }
+        goto l683007;
+    l679622: ;
+        lambda_679624 = plambda_679624;
+        #line 872 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _679625;
+        _679625 = lambda_679624 < 1048576;
+        #line 872 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_679625) goto l679626; else goto l679865;
+    l679865: ;
+        #line 872 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        goto l679630;
+    l679626: ;
+        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
+        *lambda_640356_679576 >> read_channel_679629;
+        pread_channel_679629 = read_channel_679629;
+    l679627: ;
+        read_channel_679629 = pread_channel_679629;
+        #line 332 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+        *value_679581 = read_channel_679629;
+        #line 872 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        goto l679630;
+    l679630: ;
+        #line 785 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679846;
+        _679846 = lambda_679624 % 1024;
+        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int* _679856;
+        _679856 = lbuf_679592 + _679846;
+        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int* _679862;
+        _679862 = lbuf_679595 + _679846;
+        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int* _679847;
+        _679847 = lbuf_679587 + _679846;
+        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679848;
+        _679848 = *_679847;
+        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679850;
+        _679850 = _679848;
+        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679583 = _679850;
+        #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+        int _679852;
+        _679852 = *value_679581;
+        #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+        int _679854;
+        _679854 = _679852;
+        #line 180 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *_679847 = _679854;
+        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679857;
+        _679857 = *_679856;
+        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679859;
+        _679859 = _679857;
+        #line 179 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679588 = _679859;
+        #line 180 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *_679856 = _679850;
+        #line 180 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *_679862 = _679859;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_679634 = 0;
+        goto l679632;
+    l679632: ;
+        lower_679634 = plower_679634;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        bool _679635;
+        _679635 = lower_679634 < 2;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        if (_679635) goto l679636; else goto l679667;
+    l679667: ;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_679670 = 0;
+        goto l679668;
+    l679668: ;
+        lower_679670 = plower_679670;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        bool _679671;
+        _679671 = lower_679670 < 2;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        if (_679671) goto l679672; else goto l679703;
+    l679703: ;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_679706 = 0;
+        goto l679704;
+    l679704: ;
+        lower_679706 = plower_679706;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        bool _679707;
+        _679707 = lower_679706 < 2;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        if (_679707) goto l679708; else goto l679739;
+    l679739: ;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_679742 = 0;
+        goto l679740;
+    l679740: ;
+        lower_679742 = plower_679742;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        bool _679743;
+        _679743 = lower_679742 < 1;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        if (_679743) goto l679744; else goto l679762;
+    l679762: ;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_679765 = 0;
+        goto l679763;
+    l679763: ;
+        lower_679765 = plower_679765;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        bool _679766;
+        _679766 = lower_679765 < 1;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        if (_679766) goto l679767; else goto l679785;
+    l679785: ;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_679788 = 0;
+        goto l679786;
+    l679786: ;
+        lower_679788 = plower_679788;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        bool _679789;
+        _679789 = lower_679788 < 1;
+        #line 85 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        if (_679789) goto l679790; else goto l679808;
+    l679808: ;
+        #line 881 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _679809;
+        _679809 = 1024 < lambda_679624;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679811;
+        _679811 = *value_679604;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679813;
+        _679813 = *value_679606;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679815;
+        _679815 = *value_679608;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679817;
+        _679817 = *value_679616;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679819;
+        _679819 = *value_679618;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679821;
+        _679821 = *value_679620;
+        #line 881 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_679809) goto l679810; else goto l679845;
+    l679845: ;
+        #line 881 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        goto l679840;
+    l679810: ;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679828;
+        _679828 = _679815;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679831;
+        _679831 = _679817;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679825;
+        _679825 = _679813;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679823;
+        _679823 = _679811;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _679826;
+        _679826 = -2 * _679825;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679836;
+        _679836 = _679821;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _679829;
+        _679829 = -1 * _679828;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679833;
+        _679833 = _679819;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _679824;
+        _679824 = -1 * _679823;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _679827;
+        _679827 = _679824 + _679826;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _679830;
+        _679830 = _679827 + _679829;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _679834;
+        _679834 = 2 * _679833;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _679832;
+        _679832 = _679830 + _679831;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _679835;
+        _679835 = _679832 + _679834;
+        #line 49 "/home/amiri/anydsl/stincilla/stencil_lib.impala"
+        int _679837;
+        _679837 = _679835 + _679836;
+        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
+        *lambda_640356_679577 << _679837;
+    l679838: ;
+        #line 881 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        goto l679840;
+    l679840: ;
+        goto l679842;
+        
+    l683007: ;
+        return ;
+    l679790: ;
+        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679791;
+        _679791 = 3 + lower_679788;
+        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679792;
+        _679792 = _679791 - 1;
+        #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+        int _679800;
+        _679800 = *value_679581;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _679793;
+        _679793 = 1 <= _679792;
+        #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+        int _679802;
+        _679802 = _679800;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_679793) goto l679794; else goto l679806;
+    l679806: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679616 = _679802;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l679797;
+    l679794: ;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _679795;
+        _679795 = 2 <= _679792;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_679795) goto l679796; else goto l679804;
+    l679804: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679618 = _679802;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l679797;
+    l679796: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679620 = _679802;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l679797;
+    l679797: ;
+        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        int _679799;
+        _679799 = 1 + lower_679788;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_679788 = _679799;
+        goto l679786;
+    l679767: ;
+        #line 177 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679777;
+        _679777 = *value_679583;
+        #line 177 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679779;
+        _679779 = _679777;
+        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679768;
+        _679768 = 3 + lower_679765;
+        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679769;
+        _679769 = _679768 - 1;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _679770;
+        _679770 = 1 <= _679769;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_679770) goto l679771; else goto l679783;
+    l679783: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679610 = _679779;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l679774;
+    l679771: ;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _679772;
+        _679772 = 2 <= _679769;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_679772) goto l679773; else goto l679781;
+    l679781: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679612 = _679779;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l679774;
+    l679773: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679614 = _679779;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l679774;
+    l679774: ;
+        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        int _679776;
+        _679776 = 1 + lower_679765;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_679765 = _679776;
+        goto l679763;
+    l679744: ;
+        #line 177 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679754;
+        _679754 = *value_679588;
+        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679745;
+        _679745 = 3 + lower_679742;
+        #line 177 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679756;
+        _679756 = _679754;
+        #line 402 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679746;
+        _679746 = _679745 - 1;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _679747;
+        _679747 = 1 <= _679746;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_679747) goto l679748; else goto l679760;
+    l679760: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679604 = _679756;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l679751;
+    l679748: ;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _679749;
+        _679749 = 2 <= _679746;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_679749) goto l679750; else goto l679758;
+    l679758: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679606 = _679756;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l679751;
+    l679750: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679608 = _679756;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l679751;
+    l679751: ;
+        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        int _679753;
+        _679753 = 1 + lower_679742;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_679742 = _679753;
+        goto l679740;
+    l679708: ;
+        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        int _679709;
+        _679709 = 1 + lower_679706;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _679710;
+        _679710 = 1 <= _679709;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_679710) goto l679711; else goto l679735;
+    l679735: ;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679736;
+        _679736 = *value_679616;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679738;
+        _679738 = _679736;
+        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        p_679716 = _679738;
+        goto l679714;
+    l679711: ;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _679712;
+        _679712 = 2 <= _679709;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_679712) goto l679713; else goto l679731;
+    l679731: ;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679732;
+        _679732 = *value_679618;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679734;
+        _679734 = _679732;
+        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        p_679716 = _679734;
+        goto l679714;
+    l679713: ;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679728;
+        _679728 = *value_679620;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679730;
+        _679730 = _679728;
+        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        p_679716 = _679730;
+        goto l679714;
+    l679714: ;
+        _679716 = p_679716;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _679717;
+        _679717 = 1 <= lower_679706;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_679717) goto l679718; else goto l679726;
+    l679726: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679616 = _679716;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l679721;
+    l679718: ;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _679719;
+        _679719 = 2 <= lower_679706;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_679719) goto l679720; else goto l679724;
+    l679724: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679618 = _679716;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l679721;
+    l679720: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679620 = _679716;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l679721;
+    l679721: ;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_679706 = _679709;
+        goto l679704;
+    l679672: ;
+        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        int _679673;
+        _679673 = 1 + lower_679670;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _679674;
+        _679674 = 1 <= _679673;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_679674) goto l679675; else goto l679699;
+    l679699: ;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679700;
+        _679700 = *value_679610;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679702;
+        _679702 = _679700;
+        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        p_679680 = _679702;
+        goto l679678;
+    l679675: ;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _679676;
+        _679676 = 2 <= _679673;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_679676) goto l679677; else goto l679695;
+    l679695: ;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679696;
+        _679696 = *value_679612;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679698;
+        _679698 = _679696;
+        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        p_679680 = _679698;
+        goto l679678;
+    l679677: ;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679692;
+        _679692 = *value_679614;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679694;
+        _679694 = _679692;
+        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        p_679680 = _679694;
+        goto l679678;
+    l679678: ;
+        _679680 = p_679680;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _679681;
+        _679681 = 1 <= lower_679670;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_679681) goto l679682; else goto l679690;
+    l679690: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679610 = _679680;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l679685;
+    l679682: ;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _679683;
+        _679683 = 2 <= lower_679670;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_679683) goto l679684; else goto l679688;
+    l679688: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679612 = _679680;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l679685;
+    l679684: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679614 = _679680;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l679685;
+    l679685: ;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_679670 = _679673;
+        goto l679668;
+    l679636: ;
+        #line 87 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        int _679637;
+        _679637 = 1 + lower_679634;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _679638;
+        _679638 = 1 <= _679637;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_679638) goto l679639; else goto l679663;
+    l679663: ;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679664;
+        _679664 = *value_679604;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679666;
+        _679666 = _679664;
+        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        p_679644 = _679666;
+        goto l679642;
+    l679639: ;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _679640;
+        _679640 = 2 <= _679637;
+        #line 308 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_679640) goto l679641; else goto l679659;
+    l679659: ;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679660;
+        _679660 = *value_679606;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679662;
+        _679662 = _679660;
+        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        p_679644 = _679662;
+        goto l679642;
+    l679641: ;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679656;
+        _679656 = *value_679608;
+        #line 296 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        int _679658;
+        _679658 = _679656;
+        #line 395 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        p_679644 = _679658;
+        goto l679642;
+    l679642: ;
+        _679644 = p_679644;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _679645;
+        _679645 = 1 <= lower_679634;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_679645) goto l679646; else goto l679654;
+    l679654: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679604 = _679644;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l679649;
+    l679646: ;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        bool _679647;
+        _679647 = 2 <= lower_679634;
+        #line 307 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        if (_679647) goto l679648; else goto l679652;
+    l679652: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679606 = _679644;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l679649;
+    l679648: ;
+        #line 295 "/home/amiri/anydsl/stincilla/mapping_fpga.impala"
+        *value_679608 = _679644;
+        #line 86 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        goto l679649;
+    l679649: ;
+        #line 84 "/home/amiri/anydsl/runtime/src/runtime.impala"
+        plower_679634 = _679637;
+        goto l679632;
+}
+
+void lambda_641113(hls::stream<channel_i32_299216>* lambda_641113_679913, hls::stream<channel_i32_299216>* lambda_641113_679914) {
+#pragma HLS INLINE off
+    int i679915;
+    int  lambda_679925;
+    int plambda_679925;
+    int  read_channel_679928;
+    int pread_channel_679928;
+    #line 1 "/home/amiri/anydsl/runtime/platforms/intrinsics_thorin.impala"
+    for (i679915 = 0; i679915 < 1048576; i679915++) {
+        #pragma HLS PIPELINE
+        plambda_679925 = i679915;
+        goto l679923;
+    l679932: continue;
+    }
+    goto l683009;
+    l679923: ;
+        lambda_679925 = plambda_679925;
+        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
+        *lambda_641113_679913 >> read_channel_679928;
+        pread_channel_679928 = read_channel_679928;
+    l679926: ;
+        read_channel_679928 = pread_channel_679928;
+        #line 72 "/home/amiri/anydsl/stincilla/apps/harris_corner/harris_corner.impala"
+        int _679929;
+        _679929 = read_channel_679928 * read_channel_679928;
+        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
+        *lambda_641113_679914 << _679929;
+    l679930: ;
+        goto l679932;
+        
+    l683009: ;
+        return ;
+}
+
+void lambda_641059(hls::stream<channel_i32_299216>* lambda_641059_679202, hls::stream<channel_i32_299216>* lambda_641059_679203, hls::stream<channel_i32_299216>* lambda_641059_679204) {
+#pragma HLS INLINE off
+    int i679205;
+    int  lambda_679220;
+    int plambda_679220;
+    int  read_channel_679223;
+    int pread_channel_679223;
+    #line 122 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
+    
+    #line 278 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+    int value_679216_slot;
+    int* value_679216;
+    value_679216 = &value_679216_slot;
+    #line 278 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+    *value_679216 = 0;
+    #line 1 "/home/amiri/anydsl/runtime/platforms/intrinsics_thorin.impala"
+    for (i679205 = 0; i679205 < 1048576; i679205++) {
+        #pragma HLS PIPELINE
+        plambda_679220 = i679205;
+        goto l679218;
+    l679232: continue;
+    }
+    goto l683011;
+    l679218: ;
+        lambda_679220 = plambda_679220;
+        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
+        *lambda_641059_679202 >> read_channel_679223;
+        pread_channel_679223 = read_channel_679223;
+    l679221: ;
+        read_channel_679223 = pread_channel_679223;
+        #line 281 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+        *value_679216 = read_channel_679223;
+        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
+        *lambda_641059_679203 << read_channel_679223;
+    l679225: ;
+        #line 279 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+        int _679227;
+        _679227 = *value_679216;
+        #line 279 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+        int _679229;
+        _679229 = _679227;
+        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
+        *lambda_641059_679204 << _679229;
+    l679230: ;
+        goto l679232;
+        
+    l683011: ;
+        return ;
+}
+
+
+void lambda_640292(int lambda_640292_678864[1048576], hls::stream<channel_i32_299216>* lambda_640292_678865, hls::stream<channel_i32_299216>* lambda_640292_678866) {
+#pragma HLS INLINE off
+    int i678867;
+    int  lambda_678882;
+    int plambda_678882;
+    #line 122 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
+    
+    #line 278 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+    int value_678878_slot;
+    int* value_678878;
+    value_678878 = &value_678878_slot;
+    #line 278 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+    *value_678878 = 0;
+    #line 1 "/home/amiri/anydsl/runtime/platforms/intrinsics_thorin.impala"
+    for (i678867 = 0; i678867 < 1048576; i678867++) {
+        #pragma HLS PIPELINE
+        plambda_678882 = i678867;
+        goto l678880;
+    l678895: continue;
+    }
+    goto l683015;
+    l678880: ;
+        lambda_678882 = plambda_678882;
+        #line 4 "/home/amiri/anydsl/stincilla/mapping_fpga_img_hls.impala"
+        int* _678883;
+        _678883 = lambda_640292_678864 + lambda_678882;
+        #line 4 "/home/amiri/anydsl/stincilla/mapping_fpga_img_hls.impala"
+        int _678884;
+        _678884 = *_678883;
+        #line 4 "/home/amiri/anydsl/stincilla/mapping_fpga_img_hls.impala"
+        int _678886;
+        _678886 = _678884;
+        #line 281 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+        *value_678878 = _678886;
+        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
+        *lambda_640292_678865 << _678886;
+    l678888: ;
+        #line 279 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+        int _678890;
+        _678890 = *value_678878;
+        #line 279 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+        int _678892;
+        _678892 = _678890;
+        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
+        *lambda_640292_678866 << _678892;
+    l678893: ;
+        goto l678895;
+        
+    l683015: ;
+        return ;
+}
+
+void lambda_642237(int lambda_642237_679942[1048576], hls::stream<channel_i32_299216>* lambda_642237_679943, hls::stream<channel_i32_299216>* lambda_642237_679944, hls::stream<channel_i32_299216>* lambda_642237_679945) {
+#pragma HLS INLINE off
+    int i679946;
+    int  lambda_679963;
+    int plambda_679963;
+    int  read_channel_679966;
+    int pread_channel_679966;
+    int  read_channel_679970;
+    int pread_channel_679970;
+    int  read_channel_679974;
+    int pread_channel_679974;
+    #line 122 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
+    
+    #line 331 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+    int value_679959_slot;
+    int* value_679959;
+    value_679959 = &value_679959_slot;
+    #line 331 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+    int value_679957_slot;
+    int* value_679957;
+    value_679957 = &value_679957_slot;
+    #line 331 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+    *value_679957 = 0;
+    #line 331 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+    *value_679959 = 0;
+    #line 1 "/home/amiri/anydsl/runtime/platforms/intrinsics_thorin.impala"
+    for (i679946 = 0; i679946 < 1048576; i679946++) {
+        #pragma HLS PIPELINE
+        plambda_679963 = i679946;
+        goto l679961;
+    l679975: continue;
+    }
+    goto l683017;
+    l679961: ;
+        lambda_679963 = plambda_679963;
+        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
+        *lambda_642237_679943 >> read_channel_679966;
+        pread_channel_679966 = read_channel_679966;
+    l679964: ;
+        read_channel_679966 = pread_channel_679966;
+        #line 332 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+        *value_679957 = read_channel_679966;
+        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
+        *lambda_642237_679944 >> read_channel_679970;
+        pread_channel_679970 = read_channel_679970;
+    l679968: ;
+        read_channel_679970 = pread_channel_679970;
+        #line 332 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+        *value_679959 = read_channel_679970;
+        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
+        *lambda_642237_679945 >> read_channel_679974;
+        pread_channel_679974 = read_channel_679974;
+    l679972: ;
+        read_channel_679974 = pread_channel_679974;
+        #line 96 "/home/amiri/anydsl/stincilla/apps/harris_corner/harris_corner.impala"
+        int _679986;
+        _679986 = read_channel_679974 * read_channel_679974;
+        #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+        int _679978;
+        _679978 = *value_679957;
+        #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+        int _679980;
+        _679980 = *value_679959;
+        #line 34 "/home/amiri/anydsl/stincilla/mapping_fpga_img_hls.impala"
+        int* _679982;
+        _679982 = lambda_642237_679942 + lambda_679963;
+        #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+        int _679983;
+        _679983 = _679978;
+        #line 333 "/home/amiri/anydsl/stincilla/stencil_lib_img_fpga.impala"
+        int _679984;
+        _679984 = _679980;
+        #line 96 "/home/amiri/anydsl/stincilla/apps/harris_corner/harris_corner.impala"
+        int _679985;
+        _679985 = _679983 * _679984;
+        #line 97 "/home/amiri/anydsl/stincilla/apps/harris_corner/harris_corner.impala"
+        int trace_679988;
+        trace_679988 = _679983 + _679984;
+        #line 96 "/home/amiri/anydsl/stincilla/apps/harris_corner/harris_corner.impala"
+        int det_679987;
+        det_679987 = _679985 - _679986;
+        #line 98 "/home/amiri/anydsl/stincilla/apps/harris_corner/harris_corner.impala"
+        int _679989;
+        _679989 = trace_679988 * trace_679988;
+        #line 98 "/home/amiri/anydsl/stincilla/apps/harris_corner/harris_corner.impala"
+        int _679990;
+        _679990 = 4 * _679989;
+        #line 98 "/home/amiri/anydsl/stincilla/apps/harris_corner/harris_corner.impala"
+        int _679992;
+        _679992 = _679990 / 100;
+        #line 98 "/home/amiri/anydsl/stincilla/apps/harris_corner/harris_corner.impala"
+        int _679993;
+        _679993 = det_679987 - _679992;
+        #line 34 "/home/amiri/anydsl/stincilla/mapping_fpga_img_hls.impala"
+        *_679982 = _679993;
+        goto l679975;
+        
+    l683017: ;
+        return ;
+}
+
+void lambda_641156(hls::stream<channel_i32_299216>* lambda_641156_679240, hls::stream<channel_i32_299216>* lambda_641156_679241) {
+#pragma HLS INLINE off
+    int i679242;
+    int  lambda_679252;
+    int plambda_679252;
+    int  read_channel_679255;
+    int pread_channel_679255;
+    #line 1 "/home/amiri/anydsl/runtime/platforms/intrinsics_thorin.impala"
+    for (i679242 = 0; i679242 < 1048576; i679242++) {
+        #pragma HLS PIPELINE
+        plambda_679252 = i679242;
+        goto l679250;
+    l679259: continue;
+    }
+    goto l683019;
+    l679250: ;
+        lambda_679252 = plambda_679252;
+        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
+        *lambda_641156_679240 >> read_channel_679255;
+        pread_channel_679255 = read_channel_679255;
+    l679253: ;
+        read_channel_679255 = pread_channel_679255;
+        #line 75 "/home/amiri/anydsl/stincilla/apps/harris_corner/harris_corner.impala"
+        int _679256;
+        _679256 = read_channel_679255 * read_channel_679255;
+        #line 63 "/home/amiri/anydsl/runtime/platforms/intrinsics_hls.impala"
+        *lambda_641156_679241 << _679256;
+    l679257: ;
+        goto l679259;
+        
+    l683019: ;
+        return ;
 }
 
 }
