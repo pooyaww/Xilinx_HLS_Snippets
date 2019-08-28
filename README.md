@@ -27,7 +27,7 @@
     feedbacks between kernels) so in case there is a need for feedback it should be implemented inside the same kernel, or using
     AXI-Streaming interface between HW modules (IPs). It is possoble either by generic HDL codding or by TCL coding between IPs.
 
-11. - [ ] caling hls_top from llvm for *host <-> C-simulation* interface
+11. - [ ] caling hls_top from llvm for *host <-> C-simulation* interface (basically new host code generation according to new device code)
     - using RPO on cfg and replacing the first HLS module. (the problem of side-effect shoudl be taken into account)
 12. - [X] Discuss the problem of ordering in test_single_kernel code (an array which can be manipulated both in single and other kernels)
     - Solved by using modulus operator (cares should be taken in case of devision by numbers which are not powers of 2)
