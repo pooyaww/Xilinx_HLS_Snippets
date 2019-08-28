@@ -29,7 +29,8 @@
 
 11. - [ ] caling hls_top from llvm for *host <-> C-simulation* interface
     - using RPO on cfg and replacing the first HLS module. (the problem of side-effect shoudl be taken into account)
-12. - [ ] Discuss the problem of ordering in test_single_kernel code (an array which can be manipulated both in single and other kernels)
+12. - [X] Discuss the problem of ordering in test_single_kernel code (an array which can be manipulated both in single and other kernels)
+    - Solved by using modulus operator (cares should be taken in case of devision by numbers which are not powers of 2)
 13. - [ ] Adding OpenCL backend for Xilinx FPGA
     - hls -> intel or xilinx
     - opencl -> intel or xilinx,the required [code for Xilinx](https://github.com/Xilinx/SDSoC_Examples/tree/master/ocl/getting_started) is similar to Intel Fpga OpenCL but with different pragmas. 
