@@ -13,7 +13,7 @@
 4. - [X] Type of channels should be modified via "Typedef" expression, the cuurent struct base declaration does not work
 5. - [X] ````extern "C" {}```` should be removed from generated HLS codes
     - solved by putting the hpp file into *extern C* scope
-6. - [ ] Due to a bug in vivado HLS and some ubuntu versions gmph library has to be included directly into the heade file ``` #include "/opt/Xilinx/Vivado/2019.1/include/gmp.h"```
+6. - [ ] Probably due to a bug in vivado_HLS 2019.1 on ubuntu 18.04 *gmph* library has to be included directly into the heade file ``` #include "/opt/Xilinx/Vivado/2019.1/include/gmp.h"```
 7. - [X] Pragmas for interface synthesis should be added via C-backend modifications
 8. - [ ] A dummy testbench or an auto generated testbench should be added
 9. - [X] In case of using a channel in READ mode, the corresponding variable should be initialized(tested via \*.read() HLS method)
