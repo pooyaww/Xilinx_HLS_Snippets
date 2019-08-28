@@ -17,6 +17,7 @@
 7. - [X] Pragmas for interface synthesis should be added via C-backend modifications
 8. - [ ] A dummy testbench or an auto generated testbench should be added
 9. - [X] In case of using a channel in READ mode, the corresponding variable should be initialized(tested via \*.read() HLS method)
+10.- [ ] Currently, the dummy test bench calls the hls_top() while providing an all zero array initialized by {0}, but apparently vivado_hls has a bug for using this kind of initialization, so the Cosimulation stage get *X signal* on output port.  
 
 ******
 ###### Major required implementation
