@@ -4,3 +4,6 @@
    - ``` vivado_hls -f run_hls_top.tcl ```
 
 - tested with *vivado 2019.1*
+
+![DATAFLOW analysis](filter_chain_dataflow.png "Harris corner dataflow")
+![kernels out wave forms](filter_chain_wave.png  "kernels write out wave forms")
