@@ -4,7 +4,7 @@
 
 - Top modules test:
 ``` vivado_hls -f run_hls_top.tcl ```
-
+******
 #### AnyHLS required code modifications
 1. - [ ] spliting file into kernels, headers, top function and testbench
     - Solution: modifications in build organization (CMAKE)
@@ -28,7 +28,10 @@
     AXI-Streaming interface between HW modules (IPs). It is possoble either by generic HDL codding or by TCL coding between IPs.
 
 11. - [ ] caling hls_top from llvm for *host <-> C-simulation* interface
-    - using rpo on cfg and replacing the first HLS module. (the problem of side-effect shoudl be taken into account)
-12. - [ ] Adding OpenCL backend for Xilinx FPGA
+    - using RPO on cfg and replacing the first HLS module. (the problem of side-effect shoudl be taken into account)
+12. - [ ] Discuss the problem of ordering in test_single_kernel code (an array which can be manipulated both in single and other kernels)
+13. - [ ] Adding OpenCL backend for Xilinx FPGA
     - hls -> intel or xilinx
     - opencl -> intel or xilinx,the required [code for Xilinx](https://github.com/Xilinx/SDSoC_Examples/tree/master/ocl/getting_started) is similar to Intel Fpga OpenCL but with different pragmas. 
+    -SDaccel for applications via PCIe (accelerators) similar to aocl(Alveo u200 board via xilinx_u200_xdma_201830_1 as the platform)
+    - for zynq board we can use SDSoC to generate IPs based .cl code ( Not sure about host RT on ARM )
