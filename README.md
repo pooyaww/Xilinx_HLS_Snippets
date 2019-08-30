@@ -17,7 +17,8 @@
 7. - [X] Pragmas for interface synthesis should be added via C-backend modifications
 8. - [ ] A dummy testbench or an auto generated testbench should be added
 9. - [X] In case of using a channel in READ mode, the corresponding variable should be initialized(tested via \*.read() HLS method)
-10. - [ ] Currently, the dummy test bench calls the hls_top() while providing an all zero array initialized by {0}, but apparently vivado_hls has a bug for using this kind of initialization, so the Cosimulation stage get *X signal* on output port.  
+10. - [X] Currently, the dummy test bench calls the hls_top() while providing an all zero array initialized by {0}, but apparently vivado_hls has a bug for using this kind of initialization, so the Cosimulation stage get *X signal* on output port.
+    - Solved by chanign initialization method
 
 ******
 ###### Major required implementation
@@ -36,4 +37,4 @@
     - hls -> intel or xilinx
     - opencl -> intel or xilinx,the required [code for Xilinx](https://github.com/Xilinx/SDSoC_Examples/tree/master/ocl/getting_started) is similar to Intel Fpga OpenCL but with different pragmas. 
     - SDaccel for applications via PCIe (accelerators) similar to aocl(Alveo u200 board via xilinx_u200_xdma_201830_1 as the platform)
-    - for zynq board we can use SDSoC to generate IPs based .cl code ( Not sure about host RT on ARM )
+    - for zynq board we can use SDSoC to generate IPs based on .cl code ( Not sure about host RT on ARM )
