@@ -35,7 +35,8 @@
     - Solved by using modulus operator (cares should be taken in case of devision by numbers which are not powers of 2)
 13. - [ ] Adding OpenCL backend for Xilinx FPGA
     - hls -> intel or xilinx
-    - opencl -> intel or xilinx,the required [code for Xilinx](https://github.com/Xilinx/SDSoC_Examples/tree/master/ocl/getting_started) is similar to Intel Fpga OpenCL but with different pragmas. (uses gcc with -lxilinxopencl and a SoC platform for host, and xocc for kernel)
-    - SDaccel for applications via PCIe (accelerators) similar to aocl(Alveo u200 board via xilinx_u200_xdma_201830_1 as the platform). it uses Xilinx Runtime (XRT) and xcpp for host code compilation. xocc for kernel
-    - for zynq board we can use SDSoC to generate IPs based on .cl code (host RT on ARM is implemented using zocl and PetaLinux ).
- 14. - [ ] Importing Vivado_HLS IP to both SDaccel and SDsoc, as know as *RTL KERNELS* in SDaccel flow. it requires a particular interface and code requirements. These requirements can both be applied while designig the IP in vivado HLS or by using *RTL Kernel Wizard*
+    - opencl -> intel or xilinx
+    - OpenCL code on Xilinx can be used both with accelerator platforms and embedded platforms.
+    - In case of embedded (FPGA<->ARM host),SDSoc is used. [the required code](https://github.com/Xilinx/SDSoC_Examples/tree/master/ocl/getting_started) is similar to Intel Fpga OpenCL but with different pragmas, attributes. (uses gcc with -lxilinxopencl and a SoC platform for host, and xocc for kernel).It means for zynq boards we can use SDSoC to generate IPs based on .cl code (host RT on ARM is implemented using zocl and PetaLinux ).
+    - In case of Accelerators (FPGA <-> workstation host), SDAccel for applications via PCIe is used, similar to aocl(Alveo u200 board via xilinx_u200_xdma_201830_1 as the platform). It uses Xilinx Runtime (XRT) and xcpp for host code compilation. xocc for kernel. [example code](https://github.com/Xilinx/SDAccel_Examples)
+ 14. - [ ] Importing Vivado_HLS IP to both SDaccel and SDsoc, as know as using *RTL KERNELS* in SDaccel flow. It requires a particular interface and code requirements. These requirements can both be applied while designig the IP in vivado HLS or by using *RTL Kernel Wizard*
