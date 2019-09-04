@@ -37,5 +37,5 @@
     - hls -> intel or xilinx
     - opencl -> intel or xilinx,the required [code for Xilinx](https://github.com/Xilinx/SDSoC_Examples/tree/master/ocl/getting_started) is similar to Intel Fpga OpenCL but with different pragmas. (uses gcc with -lxilinxopencl and a SoC platform for host, and xocc for kernel)
     - SDaccel for applications via PCIe (accelerators) similar to aocl(Alveo u200 board via xilinx_u200_xdma_201830_1 as the platform). it uses Xilinx Runtime (XRT) and xcpp for host code compilation. xocc for kernel
-    - for zynq board we can use SDSoC to generate IPs based on .cl code ( Not sure about host RT on ARM ).
- 14. - [ ] Importing Vivado_HLS IP to both SDaccel and SDsoc, as know as *RTL KERNELS* in SDaccel flow. it requires a particular interface and code requirements. These requirements can both be applied while designig the IP in vivado HLS or by using *RTL Kernel Wizard* 
+    - for zynq board we can use SDSoC to generate IPs based on .cl code (host RT on ARM is implemented using zocl and PetaLinux ).
+ 14. - [ ] Importing Vivado_HLS IP to both SDaccel and SDsoc, as know as *RTL KERNELS* in SDaccel flow. it requires a particular interface and code requirements. These requirements can both be applied while designig the IP in vivado HLS or by using *RTL Kernel Wizard*
