@@ -50,3 +50,5 @@
 15. - My impression: 
         - SDAccel is made mainly for OpenCL so any vivado_hls generated code should be modified (function signature and iterface pragmas) to match the dynamic region of dsa (BSP).
         - SDSoC mainly uses vivado_hls and autogenerates the required wraper to imitate interface pragmas automatically, but it also supports the conventional OpenCL coding style.
+
+15. - [ ] Enabling Temporal Data Parallelism: Host-to-Kernel Dataflow : using `clEnqueueMigrateMemObjects` instead of `clEnqueueWriteBuffer` or `clEnqueueReadBuffer` to improve the performance. Also this pragma should be added to the device code: `#pragma HLS INTERFACE ap_ctrl_chain port = return bundle = control`
